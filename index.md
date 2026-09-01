@@ -5,7 +5,7 @@ title: 3D Immersive Environment
 # 3D Immersive Environment
 
 **VART3447 · 3D Immersive Environment** · Academy of Visual Arts, HKBU
-Semester 1, 2026–27 · Tuesdays, 4 hours · This page is the course. Bookmark it.
+Semester 1, 2026–27 · Tuesdays 2:30PM - 6:20PM, 4 hours · This page is the course. Bookmark it.
 
 You will build rooms — first rooms that fit inside a headset, then a room
 that *is* a room. Everything you make is published, every week, from week 1.
