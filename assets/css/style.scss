@@ -1,0 +1,148 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* ---------------------------------------------------------------
+   Spatial Media — plan-drawing skin over jekyll-theme-cayman
+   Paper white · metric grid · ink black · one blue
+   The grid is the course: 1 unit = 1 metre.
+   --------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+:root {
+  --paper: #ffffff;
+  --ink: #000000;
+  --blue: #1f3fd8;          /* links, the one accent */
+  --grid: rgba(31, 63, 216, 0.07);   /* the metre grid, faint */
+  --rule: rgba(0, 0, 0, 0.85);       /* dimension lines */
+  --rule-light: rgba(0, 0, 0, 0.15);
+}
+
+body {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  color: var(--ink);
+  background-color: var(--paper);
+  /* graph paper: a line every metre */
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* --- Header: flat paper, no gradient, no buttons ------------- */
+
+.page-header {
+  background: var(--paper);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 32px 32px;
+  color: var(--ink);
+  border-bottom: 2px solid var(--rule);
+  padding: 3rem 1rem 2rem;
+  text-align: left;
+}
+
+.project-name {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 auto 0.3rem;
+  max-width: 64rem;
+}
+
+.project-tagline {
+  color: var(--ink);
+  opacity: 0.7;
+  font-weight: 400;
+  margin: 0 auto;
+  max-width: 64rem;
+}
+
+/* cayman's header buttons (View on GitHub / Download) — off */
+.page-header .btn { display: none; }
+
+/* --- Content ------------------------------------------------- */
+
+.main-content {
+  max-width: 64rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+
+  h1, h2, h3, h4 {
+    color: var(--ink);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  /* headings sit on a dimension line */
+  h1 {
+    border-bottom: 2px solid var(--rule);
+    padding-bottom: 0.4rem;
+  }
+
+  h2 {
+    border-bottom: 1px solid var(--rule-light);
+    padding-bottom: 0.3rem;
+    margin-top: 2.5rem;
+  }
+
+  a { color: var(--blue); text-decoration: underline; text-underline-offset: 0.15em; }
+  a:hover { color: var(--ink); }
+
+  /* tables: hairlines, no zebra wash, scroll instead of overflow
+     (Quest Browser is narrow) */
+  table {
+    display: block;
+    overflow-x: auto;
+    border-collapse: collapse;
+  }
+  table th {
+    background: var(--paper);
+    color: var(--ink);
+    border-bottom: 2px solid var(--rule);
+    border-top: none; border-left: none; border-right: none;
+    font-weight: 700;
+  }
+  table td {
+    border: none;
+    border-bottom: 1px solid var(--rule-light);
+  }
+  table tr:nth-child(even) { background: transparent; }
+
+  blockquote {
+    border-left: 3px solid var(--blue);
+    color: var(--ink);
+    opacity: 0.85;
+  }
+
+  code {
+    background: rgba(31, 63, 216, 0.06);
+    color: var(--ink);
+    font-size: 0.9em;
+  }
+  pre { border: 1px solid var(--rule-light); background: #fafafa; }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--rule-light);
+    margin: 2.5rem 0;
+  }
+}
+
+/* --- Footer -------------------------------------------------- */
+
+.site-footer {
+  border-top: 2px solid var(--rule);
+  color: var(--ink);
+}
+.site-footer .site-footer-owner,
+.site-footer .site-footer-credits { color: var(--ink); opacity: 0.6; }
+
+/* --- Small screens & headset -------------------------------- */
+
+@media screen and (max-width: 42em) {
+  .page-header { padding: 2rem 1rem 1.5rem; }
+  .main-content { font-size: 1rem; }
+}
