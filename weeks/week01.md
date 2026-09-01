@@ -1,5 +1,6 @@
 ---
 title: "Week 1 · A Room You Remember"
+nav_label: "A Room You Remember"
 ---
 
 # Week 1 · A Room You Remember

@@ -1,17 +1,20 @@
 # Spatial Media course site — GitHub Pages / Jekyll config.
-# This is the only configuration file. Everything else is markdown.
+# The site uses its own layout (_layouts/default.html) and
+# stylesheet (assets/css/site.css). No theme.
 
 title: Spatial Media
 description: "VART3447 · 3D Immersive Environment · Academy of Visual Arts, HKBU · Semester 1, 2026–27"
 
-# One of GitHub Pages' built-in themes. Single column, readable on a
-# phone and in Quest Browser. Swap for jekyll-theme-minimal if you
-# prefer a sidebar. No Gemfile or build step needed for built-in themes.
-theme: jekyll-theme-cayman
+# Apply the custom layout to every page automatically, so the
+# markdown files don't need a `layout:` line.
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
 
-# Lets links between .md files work both in the repo view and on the
-# published site. (jekyll-relative-links ships enabled on GitHub Pages;
-# listing it here is belt-and-braces.)
+# Lets links between .md files work both in the repo view and on
+# the published site.
 plugins:
   - jekyll-relative-links
 relative_links:

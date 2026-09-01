@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;700;800&family=Hedvig+Letters+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+</head>
+<body>
+
+<aside class="sidebar">
+  <a class="wordmark" href="{{ '/' | relative_url }}">Spatial Media</a>
+
+  <nav>
+    <ul>
+      {% assign weekpages = site.pages | where_exp: "p", "p.path contains 'weeks/'" | sort: "path" %}
+      {% for p in weekpages %}
+      <li>
+        <a href="{{ p.url | relative_url }}">{{ p.nav_label | default: p.title }}<sup>{{ forloop.index | prepend: '00' | slice: -2, 2 }}</sup></a>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <ul class="secondary">
+      <li><a href="{{ '/rules' | relative_url }}">Rules</a></li>
+      <li><a href="{{ '/readings' | relative_url }}">Readings</a></li>
+      <li><a href="{{ '/links' | relative_url }}">Links</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<main class="content">
+{{ content }}
+
+  <footer>
+    VART3447 · 3D Immersive Environment · Academy of Visual Arts, HKBU · 2026–27
+  </footer>
+</main>
+
+</body>
+</html>

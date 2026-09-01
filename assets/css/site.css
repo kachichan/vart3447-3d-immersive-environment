@@ -1,0 +1,229 @@
+/* ---------------------------------------------------------------
+   Spatial Media — after the brand-guidelines reference:
+   Rethink Sans, hairline rules, grey secondary text,
+   orange superscript numbers, sidebar index.
+   --------------------------------------------------------------- */
+
+:root {
+  --ink: #111111;
+  --grey: #8a8a8a;
+  --hairline: #e4e4e4;
+  --accent: #f0821e;        /* the reference orange, slightly deepened for contrast */
+  --paper: #ffffff;
+  --sidebar-w: 240px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Rethink Sans", -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Sidebar -------------------------------------------------- */
+
+.sidebar {
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  width: var(--sidebar-w);
+  padding: 2rem 1.5rem;
+  border-right: 1px solid var(--hairline);
+  background: var(--paper);
+  overflow-y: auto;
+}
+
+.wordmark {
+  display: block;
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  text-decoration: none;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--hairline);
+  margin-bottom: 1.5rem;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
+
+.sidebar nav li { margin: 0 0 0.55rem; }
+
+.sidebar nav a {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+}
+.sidebar nav a:hover { color: var(--accent); }
+
+.sidebar nav sup {
+  color: var(--grey);
+  font-size: 0.6rem;
+  font-weight: 400;
+  margin-left: 0.15em;
+}
+.sidebar nav a:hover sup { color: var(--accent); }
+
+.sidebar nav .secondary {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--hairline);
+}
+.sidebar nav .secondary a { color: var(--grey); font-weight: 400; }
+.sidebar nav .secondary a:hover { color: var(--ink); }
+
+/* --- Content column ------------------------------------------ */
+
+.content {
+  margin-left: var(--sidebar-w);
+  padding: 4rem 3rem 3rem;
+  max-width: 46rem;
+}
+
+/* type */
+
+.content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  margin: 0 0 1.5rem;
+}
+
+.content h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 3.5rem 0 0.8rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--hairline);
+}
+
+.content h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 2rem 0 0.5rem;
+}
+
+.content p { margin: 0 0 1rem; }
+
+/* the paragraph straight after the h1 reads as the grey lede,
+   like the reference's right-column intro text */
+.content h1 + p {
+  color: var(--grey);
+  font-size: 1.05rem;
+}
+
+.content strong { font-weight: 700; }
+
+.content a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--hairline);
+  text-underline-offset: 0.18em;
+}
+.content a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+.content blockquote {
+  font-family: "Hedvig Letters Serif", Georgia, serif;
+  font-size: 1.1rem;
+  color: var(--ink);
+  border-left: 2px solid var(--accent);
+  margin: 1.5rem 0;
+  padding: 0.2rem 0 0.2rem 1.2rem;
+}
+
+/* tables: hairlines, tabular numbers, first column grey like the
+   reference's 01/02/03 index numerals */
+.content table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  margin: 1.5rem 0;
+  font-variant-numeric: tabular-nums;
+}
+.content th {
+  text-align: left;
+  font-weight: 700;
+  padding: 0.5rem 1.2rem 0.5rem 0;
+  border-bottom: 1px solid var(--ink);
+}
+.content td {
+  padding: 0.55rem 1.2rem 0.55rem 0;
+  border-bottom: 1px solid var(--hairline);
+  vertical-align: top;
+}
+.content td:first-child { color: var(--grey); }
+
+.content ul, .content ol { padding-left: 1.2rem; margin: 0 0 1rem; }
+.content li { margin-bottom: 0.35rem; }
+
+.content code {
+  font-size: 0.85em;
+  border: 1px solid var(--hairline);
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+}
+.content pre {
+  border: 1px solid var(--hairline);
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+.content pre code { border: none; padding: 0; }
+
+.content hr {
+  border: none;
+  border-top: 1px solid var(--hairline);
+  margin: 3rem 0;
+}
+
+.content img { max-width: 100%; }
+
+.content footer {
+  margin-top: 5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--hairline);
+  color: var(--grey);
+  font-size: 0.78rem;
+}
+
+/* --- Narrow screens & headset -------------------------------- */
+
+@media (max-width: 52em) {
+  .sidebar {
+    position: static;
+    width: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--hairline);
+    padding: 1.5rem 1.2rem 0.5rem;
+  }
+  .sidebar nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem 1.1rem;
+  }
+  .sidebar nav li { margin: 0 0 0.4rem; }
+  .sidebar nav .secondary { padding-top: 0.6rem; }
+
+  .content {
+    margin-left: 0;
+    padding: 2rem 1.2rem;
+  }
+  .content h1 { font-size: 2.1rem; }
+}
