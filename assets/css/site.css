@@ -11,6 +11,16 @@
   --accent: #f0821e;        /* the reference orange, slightly deepened for contrast */
   --paper: #ffffff;
   --sidebar-w: 240px;
+   
+}
+
+::selection {
+  background: var(--accent);
+  color: #ffffff;
+}
+::-moz-selection {
+  background: var(--accent);
+  color: #ffffff;
 }
 
 * { box-sizing: border-box; }
