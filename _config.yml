@@ -2,7 +2,7 @@
 # The site uses its own layout (_layouts/default.html) and
 # stylesheet (assets/css/site.css). No theme.
 
-title: Spatial Media
+title: 3D Immersive Environment
 description: "VART3447 · 3D Immersive Environment · Academy of Visual Arts, HKBU · Semester 1, 2026–27"
 
 # Apply the custom layout to every page automatically, so the
