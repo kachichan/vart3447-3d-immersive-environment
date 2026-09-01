@@ -1,4 +1,4 @@
-# Spatial Media — course site
+# 3D Immersive Environment — course site
 
 Student-facing materials for VART3447 (3D Immersive Environment), AVA, HKBU.
 Published via GitHub Pages at: `https://<your-username>.github.io/spatialmedia/`
