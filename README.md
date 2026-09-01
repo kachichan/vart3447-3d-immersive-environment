@@ -1,11 +1,11 @@
 # 3D Immersive Environment — course site
 
 Student-facing materials for VART3447 (3D Immersive Environment), AVA, HKBU.
-Published via GitHub Pages at: `https://<your-username>.github.io/spatialmedia/`
+Published via GitHub Pages at: `kachichan.github.io/vart3447-3d-immersive-environment/`
 
 **This repo is public. Only student-facing material goes here.**
 Session run-sheets, planning docs, and anything with "things that can sink
-this session" in it live elsewhere (a separate private repo).
+this session" in it live elsewhere (Moodle).
 
 ## Structure
 
