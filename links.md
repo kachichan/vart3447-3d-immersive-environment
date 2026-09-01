@@ -6,6 +6,13 @@ title: Links
 
 Everything you'll be asked to type or open, in one place.
 
+## Moodle
+
+**Lecture slides and reading PDFs** live on the course Moodle site,
+filed by week. Find the course in your Moodle course list and sign in
+with your HKBU account. Everything else — handouts, rules, links —
+is here on this site, no login needed.
+
 ## Every week
 
 - **Your Are.na channel** — *Spatial Media — Your Name* (you made this
