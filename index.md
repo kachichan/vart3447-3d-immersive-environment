@@ -1,8 +1,8 @@
 ---
-title: Spatial Media
+title: 3D Immersive Environment
 ---
 
-# Spatial Media
+# 3D Immersive Environment
 
 **VART3447 · 3D Immersive Environment** · Academy of Visual Arts, HKBU
 Semester 1, 2026–27 · Tuesdays, 4 hours · This page is the course. Bookmark it.
