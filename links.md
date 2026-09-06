@@ -22,15 +22,18 @@ is here on this site, no login needed.
 ## PlayCanvas
 
 - **Template project (fork this):** `LINK-TBC`
-- **Demo scene (week 1 headset check):** `playcanv.as/p/LINK-TBC`
+- **Demo scene (week 1 headset check):** `playcanv.as/p/sAsiDvtC/`
+  — PlayCanvas's own *WebXR VR Lab*. Type it exactly, including the
+  final `/`.
 - Sign in at [playcanvas.com](https://playcanvas.com) with your HKBU email
 
 ## Are.na
 
 - Sign in at [are.na](https://www.are.na)
 - Class channels: *Spatial Media 2026 — Week 01* … *Week 13*
-  (search that exact name, check the owner's username matches the
-  instructor's: `USERNAME-TBC`)
+  (search that exact name, and check the owner is the instructor:
+  [are.na/kachi-chan](https://www.are.na/kachi-chan/channels) — all the
+  class channels are listed there)
 
 ## In the headset
 
