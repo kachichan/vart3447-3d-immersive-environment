@@ -9,8 +9,15 @@ nav_label: "A Room You Remember"
 **By the end of today:** your room is on the web, at full size, and
 someone else has stood inside it.
 
-Links for today — template, demo, Week 01 channel — are on the
-[links page](../links.md) and on the projector.
+**Today's links** (also on the projector, big):
+
+| | |
+|---|---|
+| Demo, for the headset | `playcanv.as/p/tbyjAWGl/` |
+| Template, to fork | [playcanvas.com/project/1594630/overview/vart3447template](https://playcanvas.com/project/1594630/overview/vart3447template) |
+| Class channel | *3D Immersive Environment 2026 — Week 01*, owned by [kachi-chan](https://www.are.na/kachi-chan/channels) on Are.na |
+
+Everything else you'll ever need to type is on the [links page](../links.md).
 
 ---
 
@@ -35,7 +42,8 @@ Keep this drawing. You will build it.
 7. If it asks you to draw a boundary, choose **Stationary** (the one
    where you stand still).
 8. Open the **Browser** app (the globe icon).
-9. Type the demo link from the projector, exactly as written.
+9. Type the demo link exactly as written, including the final `/`:
+   `playcanv.as/p/tbyjAWGl/`
 10. When the page loads, tap the scene once. Say **Allow** if it asks.
 11. You are in a grey room. In front of you: a tall pale box (a 1.7 m
     person) and a small orange box (a chair). Do three things —
@@ -53,8 +61,10 @@ page](#troubleshooting), then put your hand up.
 ## Part 2 · Make one wall and publish it
 
 13. On your computer, go to **playcanvas.com** and sign in.
-14. Open the template link from the projector. Click **Fork** (this makes
-    your own copy — nothing you do can affect the original).
+14. Open the template:
+    [playcanvas.com/project/1594630/overview/vart3447template](https://playcanvas.com/project/1594630/overview/vart3447template).
+    Click **Fork** (this makes your own copy — nothing you do can affect
+    the original).
 15. Name your copy `vart3447-w01-yourname`. When it's done, click
     **Editor**.
 16. You'll see four areas. You only need these today:
