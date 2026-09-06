@@ -35,10 +35,9 @@ is here on this site, no login needed.
 ## Are.na
 
 - Sign in at [are.na](https://www.are.na)
-- Class channels: *3D Immersive Environment 2026 — Week 01* … *Week 13*
-  (search that exact name, and check the owner is the instructor:
-  [are.na/kachi-chan](https://www.are.na/kachi-chan/channels) — all the
-  class channels are listed there)
+- Class channels: *3D Immersive Environment 2026 — Week 01* … *Week 13*,
+  all under [are.na/kachi-chan](https://www.are.na/kachi-chan/channels).
+  - [Week 01](https://www.are.na/kachi-chan/3d-immersive-environment-2026-week-01)
 
 ## In the headset
 

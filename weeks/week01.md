@@ -15,7 +15,7 @@ someone else has stood inside it.
 |---|---|
 | Demo, for the headset | `playcanv.as/p/tbyjAWGl/` |
 | Template, to fork | [playcanvas.com/project/1594630/overview/vart3447template](https://playcanvas.com/project/1594630/overview/vart3447template) |
-| Class channel | *3D Immersive Environment 2026 — Week 01*, owned by [kachi-chan](https://www.are.na/kachi-chan/channels) on Are.na |
+| Class channel | [*3D Immersive Environment 2026 — Week 01*](https://www.are.na/kachi-chan/3d-immersive-environment-2026-week-01) on Are.na |
 
 Everything else you'll ever need to type is on the [links page](../links.md).
 
@@ -103,7 +103,8 @@ page](#troubleshooting), then put your hand up.
     before class). Paste your `playcanv.as` link into the box at the top
     of the channel and press Enter. It becomes a **block** — one card in
     your channel. Then hover over the block, click **Connect →**, and
-    choose the class channel **Week 01**. Your link is now in your
+    choose the class channel **3D Immersive Environment 2026 — Week 01**
+    ([link](https://www.are.na/kachi-chan/3d-immersive-environment-2026-week-01)). Your link is now in your
     channel *and* on the class channel on the projector.
 
 You have published. This is the first of thirteen.
@@ -153,8 +154,8 @@ weeks.
 
 ## Part 5 · Stand in someone else's
 
-35. From the **Week 01** channel, pick two rooms that aren't yours. Stand
-    in each.
+35. From the [**Week 01** channel](https://www.are.na/kachi-chan/3d-immersive-environment-2026-week-01), pick two rooms that aren't
+    yours. Stand in each.
 36. Back at your computer, leave a **comment** on the owner's block:
     **the thing I'd have got wrong if you'd only described this room to
     me.**
