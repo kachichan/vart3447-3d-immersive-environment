@@ -15,7 +15,7 @@ is here on this site, no login needed.
 
 ## Every week
 
-- **Your Are.na channel** — *Spatial Media — Your Name* (you made this
+- **Your Are.na channel** — *3D Immersive Environment — Your Name* (you made this
   before week 1; it's your portfolio for the whole course)
 - **This week's class channel** — linked from the week's page
 
@@ -30,7 +30,7 @@ is here on this site, no login needed.
 ## Are.na
 
 - Sign in at [are.na](https://www.are.na)
-- Class channels: *Spatial Media 2026 — Week 01* … *Week 13*
+- Class channels: *3D Immersive Environment 2026 — Week 01* … *Week 13*
   (search that exact name, and check the owner is the instructor:
   [are.na/kachi-chan](https://www.are.na/kachi-chan/channels) — all the
   class channels are listed there)

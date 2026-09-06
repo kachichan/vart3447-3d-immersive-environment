@@ -54,7 +54,7 @@ page](#troubleshooting), then put your hand up.
 13. On your computer, go to **playcanvas.com** and sign in.
 14. Open the template link from the projector. Click **Fork** (this makes
     your own copy).
-15. Name your copy `spatialmedia-w01-yourname`. Open it in the **Editor**.
+15. Name your copy `vart3447-w01-yourname`. Open it in the **Editor**.
 16. You'll see four areas. You only need these today:
 
     | Area | Where | What it is |
@@ -78,7 +78,7 @@ page](#troubleshooting), then put your hand up.
 23. Click **Publish** (top of the Editor) → **Publish to PlayCanvas** →
     **Publish**. Wait until it finishes.
 24. Copy the link it gives you. It looks like `playcanv.as/p/xxxxxx/`.
-25. Open your Are.na channel (*Spatial Media — Your Name* — you made this
+25. Open your Are.na channel (*3D Immersive Environment — Your Name* — you made this
     before class). Paste your `playcanv.as` link into the box at the top
     of the channel and press Enter. It becomes a **block** — one card in
     your channel. Then hover over the block, click **Connect →**, and
@@ -170,4 +170,4 @@ The [rules that last all semester](../rules.md) started today.
 | Fork button isn't there | Not signed in, or account not verified | Sign in. If your email isn't verified, ask for the spare login for today. |
 | I can't see the scene in the Editor viewport | You dragged the view away | Select something in the Hierarchy and press **F**. |
 | Testing on my iPhone doesn't work | iOS has no WebXR | It never will. Use the headset. |
-| I can't add a block on Are.na | Not signed in, or no channel yet | Sign in at are.na. On your profile, make a **new channel** named *Spatial Media — Your Name*, set to **Closed** (everyone can see it; only you can add to it). If the account itself is the problem, tell the instructor — your link goes on the class channel for you today. |
+| I can't add a block on Are.na | Not signed in, or no channel yet | Sign in at are.na. On your profile, make a **new channel** named *3D Immersive Environment — Your Name*, set to **Closed** (everyone can see it; only you can add to it). If the account itself is the problem, tell the instructor — your link goes on the class channel for you today. |
