@@ -58,7 +58,7 @@ room, shared on a rotation; the piece only works there, which is the point.
 
 | Weight | What | When |
 |---|---|---|
-| 30% | Creative studio experiments (Part A | Solo/Group) | Week 6 |
-| 30% | Creative studio project (Part B | Group) | Week 13 |
+| 30% | Creative studio experiments (Part A, Solo/Group) | Week 6 |
+| 30% | Creative studio project (Part B, Group) | Week 13 |
 | 10% | Research / presentation (the weekly publishes and comments) | Weekly |
 | 30% | Professionalism (attendance, participation, how you work) | Continuous |
