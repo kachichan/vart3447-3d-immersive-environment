@@ -21,10 +21,15 @@ is here on this site, no login needed.
 
 ## PlayCanvas
 
-- **Template project (fork this):** `LINK-TBC`
-- **Demo scene (week 1 headset check):** `playcanv.as/p/sAsiDvtC/`
-  — PlayCanvas's own *WebXR VR Lab*. Type it exactly, including the
-  final `/`.
+- **Template project (fork this):**
+  [playcanvas.com/project/1594630/overview/vart3447template](https://playcanvas.com/project/1594630/overview/vart3447template)
+  — sign in first, then click **Fork**.
+- **Demo scene (week 1 headset check):** `playcanv.as/p/tbyjAWGl/`
+  — the template, published. A grey floor, a 1.7 m box, a chair-sized
+  box. Type it exactly, including the final `/`.
+- **Spare headset check:** `playcanv.as/p/sAsiDvtC/` — PlayCanvas's own
+  *WebXR VR Lab*. Only if the demo above won't load; it has teleporting
+  in it, which we don't use.
 - Sign in at [playcanvas.com](https://playcanvas.com) with your HKBU email
 
 ## Are.na
