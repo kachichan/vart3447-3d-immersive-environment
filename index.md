@@ -25,7 +25,7 @@ that *is* a room. Everything you make is published, every week, from week 1.
 | 3 | 22 Sep | Exactly One Interaction | One thing that responds to your body |
 | 4 | 29 Sep | The Captured Thing | One scanned real object inside your room |
 | 5 | 6 Oct | Eyes Closed | A room that means something with eyes shut |
-| 6 | 13 Oct | Subtraction | Your finished piece — by removing, not adding |
+| 6 | 13 Oct | Mid-term | Presentation |
 | 7 | 20 Oct | Field trip / artist sharing | Notes and one photograph |
 | 8 | 27 Oct | The Room That Performs | A 3-minute loop in the CAVE (groups) |
 | 9 | 3 Nov | Silhouettes and Blobs | A room changed by someone being in it |
