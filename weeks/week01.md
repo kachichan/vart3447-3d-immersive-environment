@@ -15,7 +15,7 @@ someone else has stood inside it.
 |---|---|
 | Demo, for the headset | `playcanv.as/p/tbyjAWGl/` |
 | Template, to fork | [playcanvas.com/project/1594630/overview/vart3447template](https://playcanvas.com/project/1594630/overview/vart3447template) |
-| Class channel | [*3D Immersive Environment 2026 — Week 01*](https://www.are.na/kachi-chan/3d-immersive-environment-2026-week-01) on Are.na |
+| Class board | [padlet.com/chankachi/vart3447](https://padlet.com/chankachi/vart3447) — the **Week 01** column |
 
 Everything else you'll ever need to type is on the [links page](../links.md).
 
@@ -99,13 +99,13 @@ page](#troubleshooting), then put your hand up.
     each new build appears in the **Build history** list underneath, and
     you make it live by clicking its **⋯** → **Set Primary Build**. From
     now on, "publish" means: Publish, then Set Primary Build.
-25. Open your Are.na channel (*3D Immersive Environment — Your Name* — you made this
-    before class). Paste your `playcanv.as` link into the box at the top
-    of the channel and press Enter. It becomes a **block** — one card in
-    your channel. Then hover over the block, click **Connect →**, and
-    choose the class channel **3D Immersive Environment 2026 — Week 01**
-    ([link](https://www.are.na/kachi-chan/3d-immersive-environment-2026-week-01)). Your link is now in your
-    channel *and* on the class channel on the projector.
+25. Open the class board, [padlet.com/chankachi/vart3447](https://padlet.com/chankachi/vart3447).
+    Find the **Week 01** column and click the **+** at the bottom of it.
+    In the post's **Subject** line write `Week 01 — Your Name` (your
+    real name — posts are anonymous otherwise and there is no other way
+    to know it's yours). Paste your `playcanv.as` link into the body and
+    click **Publish**. The link turns into a card in the Week 01 column,
+    which is what's on the projector.
 
 You have published. This is the first of thirteen.
 
@@ -154,12 +154,12 @@ weeks.
 
 ## Part 5 · Stand in someone else's
 
-35. From the [**Week 01** channel](https://www.are.na/kachi-chan/3d-immersive-environment-2026-week-01), pick two rooms that aren't
-    yours. Stand in each.
-36. Back at your computer, leave a **comment** on the owner's block:
-    **the thing I'd have got wrong if you'd only described this room to
-    me.**
-37. Comment on your own block: **what was wrong about the scale when you
+35. From the [**Week 01** column](https://padlet.com/chankachi/vart3447) on the class board, pick two rooms
+    that aren't yours. Stand in each.
+36. Back at your computer, leave a **comment** on the owner's post,
+    signed with your name: **the thing I'd have got wrong if you'd only
+    described this room to me.**
+37. Comment on your own post: **what was wrong about the scale when you
     stood in it.**
 
 ---
@@ -193,4 +193,4 @@ The [rules that last all semester](../rules.md) started today.
 | Fork button isn't there | Not signed in, or account not verified | Sign in. If your email isn't verified, ask for the spare login for today. |
 | I can't see the scene in the Editor viewport | You dragged the view away | Select something in the Hierarchy and press **F**. |
 | Testing on my iPhone doesn't work | iOS has no WebXR | It never will. Use the headset. |
-| I can't add a block on Are.na | Not signed in, or no channel yet | Sign in at are.na. On your profile, make a **new channel** named *3D Immersive Environment — Your Name*, set to **Closed** (everyone can see it; only you can add to it). If the account itself is the problem, tell the instructor — your link goes on the class channel for you today. |
+| I can't post on the class board | Wrong column, or the board hasn't loaded | Reload the page. Make sure you clicked the **+** in the **Week 01** column, not another week's. If it still won't post, tell the instructor — your link goes on the board for you today. |

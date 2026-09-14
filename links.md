@@ -15,9 +15,11 @@ is here on this site, no login needed.
 
 ## Every week
 
-- **Your Are.na channel** — *3D Immersive Environment — Your Name* (you made this
-  before week 1; it's your portfolio for the whole course)
-- **This week's class channel** — linked from the week's page
+- **The class board:** [padlet.com/chankachi/vart3447](https://padlet.com/chankachi/vart3447) — one
+  column per week. Every week's link (weeks 1–6) or video (weeks 8–12)
+  goes in that week's column, with `Week NN — Your Name` as the subject.
+- **Your PlayCanvas account page** — lists every project you've made.
+  That's your Part A portfolio.
 
 ## PlayCanvas
 
@@ -32,12 +34,11 @@ is here on this site, no login needed.
   in it, which we don't use.
 - Sign in at [playcanvas.com](https://playcanvas.com) with your HKBU email
 
-## Are.na
+## Class board (Padlet)
 
-- Sign in at [are.na](https://www.are.na)
-- Class channels: *3D Immersive Environment 2026 — Week 01* … *Week 13*,
-  all under [are.na/kachi-chan](https://www.are.na/kachi-chan/channels).
-  - [Week 01](https://www.are.na/kachi-chan/3d-immersive-environment-2026-week-01)
+- [padlet.com/chankachi/vart3447](https://padlet.com/chankachi/vart3447) — no account needed. Post into
+  the current week's column. Subject line: `Week NN — Your Name`, every
+  time, or nobody knows it's yours.
 
 ## In the headset
 

@@ -4,16 +4,17 @@ title: Rules
 
 # Rules that last all semester
 
-**Publish every week.** Your Are.na channel is your portfolio and the
-submission record for the whole course. What's in the channel is what
-exists. Nothing is ever "not ready".
+**Publish every week.** The [class board](https://padlet.com/chankachi/vart3447) is the submission
+record for the whole course: one column per week, your post in it with
+your name in the subject line. What's on the board is what exists.
+Nothing is ever "not ready".
 
 **Turn, crouch, reach. Don't walk.** There are twenty people in this room
 wearing headsets. Anyone who walks will hit someone.
 
 **Everything you make is public.** Free PlayCanvas accounts don't have
-private projects, and your Are.na channel is visible to anyone. Make work
-you're willing to have seen.
+private projects, and the class board is visible to anyone with the link.
+Make work you're willing to have seen.
 
 **One unit is one metre.** Your body will notice when you get this wrong.
 That's the course working as intended.

@@ -12,7 +12,7 @@ that *is* a room. Everything you make is published, every week, from week 1.
 
 - [Rules that last all semester](rules.md)
 - [Readings](readings.md)
-- [Links: template, demos, channels](links.md)
+- [Links: template, demos, class board](links.md)
 
 ---
 
@@ -21,7 +21,7 @@ that *is* a room. Everything you make is published, every week, from week 1.
 | Week | Date | Topic | What you make |
 |---|---|---|---|
 | 1 | 8 Sep | [A Room You Remember](weeks/week01.md) | A room from memory, boxes only, life-size |
-| 2 | 15 Sep | Light and Time | The same room, changing over time |
+| 2 | 15 Sep | [Light and Time](weeks/week02.md) | The same room, changing over time |
 | 3 | 22 Sep | Exactly One Interaction | One thing that responds to your body |
 | 4 | 29 Sep | The Captured Thing | One scanned real object inside your room |
 | 5 | 6 Oct | Eyes Closed | A room that means something with eyes shut |
@@ -42,8 +42,8 @@ Weeks 2–13 become links as each handout is published, the week before class.
 
 **Publish every week.** What's on the board at the end of each session is
 what exists. Nothing is ever "not ready". Weeks 1–6 you publish a link;
-weeks 8–12 you publish a video. Your Are.na channel is your portfolio and
-your submission record for the whole course.
+weeks 8–12 you publish a video. The [class board](https://padlet.com/chankachi/vart3447) — one column
+per week — is your submission record for the whole course.
 
 ## Two halves
 
