@@ -22,7 +22,7 @@ that *is* a room. Everything you make is published, every week, from week 1.
 |---|---|---|---|
 | 1 | 8 Sep | [A Room You Remember](weeks/week01.md) | A room from memory, boxes only, life-size |
 | 2 | 15 Sep | [Light and Time](weeks/week02.md) | The same room, changing over time |
-| 3 | 22 Sep | Exactly One Interaction | One thing that responds to your body |
+| 3 | 22 Sep | [Exactly One Interaction](weeks/week03.md) | One thing that responds to your body |
 | 4 | 29 Sep | The Captured Thing | One scanned real object inside your room |
 | 5 | 6 Oct | Eyes Closed | A room that means something with eyes shut |
 | 6 | 13 Oct | Mid-term | Presentation |
