@@ -37,6 +37,7 @@ Keep this drawing. You will build it.
 
 ## Part 1 · Try the headset
 
+{: start="6"}
 6. Pick up your Quest 2. Put it on and adjust the strap until the picture
    is sharp.
 7. If it asks you to draw a boundary, choose **Stationary** (the one
@@ -60,6 +61,7 @@ page](#troubleshooting), then put your hand up.
 
 ## Part 2 · Make one wall and publish it
 
+{: start="13"}
 13. On your computer, go to **playcanvas.com** and sign in.
 14. Open the template:
     [playcanvas.com/project/1594630/overview/vart3447template](https://playcanvas.com/project/1594630/overview/vart3447template).
@@ -113,6 +115,7 @@ You have published. This is the first of thirteen.
 
 ## Part 3 · Build the room
 
+{: start="26"}
 26. Look at your drawing. Build it out of boxes, following these rules:
     - **Walls and floor first.** Then the things you were sure about.
     - **Real size.** Use the guesses on your drawing. Don't measure
@@ -138,6 +141,7 @@ floor.
 
 ## Part 4 · Stand in it
 
+{: start="31"}
 31. Headset on. Browser. Type **your own** link (the block in your
     channel).
 32. Same three things: crouch, reach, look down. Then a fourth: **find
@@ -154,6 +158,7 @@ weeks.
 
 ## Part 5 · Stand in someone else's
 
+{: start="35"}
 35. From the [**Week 01** column](https://padlet.com/chankachi/vart3447) on the class board, pick two rooms
     that aren't yours. Stand in each.
 36. Back at your computer, leave a **comment** on the owner's post,

@@ -48,6 +48,7 @@ That sentence is your brief for today.
 
 ## Part 2 · Relight the room (no scripts yet)
 
+{: start="2"}
 2. In the Hierarchy, click **Light**. In the Inspector:
    - **Color** — click the swatch and choose. Warm, cold, whatever the
      memory says.
@@ -93,6 +94,7 @@ to read them (next week you will).
 | `breathe` | a **lamp** (an Omni light) | The lamp gets brighter and dimmer, slowly, forever. |
 | `colourDrift` | a **box** | The box's colour drifts from one colour to another and back. Tick **glow** to make it a screen or a window. |
 
+{: start="8"}
 8. Open the template's Editor in a **second browser tab**
    (link above → **Editor**). In its **Assets** panel, open the
    **Scripts** folder, click `sun-cycle.mjs`, then shift-click
@@ -110,6 +112,7 @@ to read them (next week you will).
 
 ## Part 4 · One change over time
 
+{: start="10"}
 10. Choose **one** of the three. One. The one that is the time of day in
     your sentence.
 11. Select the thing it goes on (see the table). In the Inspector:
@@ -136,6 +139,7 @@ to read them (next week you will).
 
 ## Part 5 · Stay for a cycle
 
+{: start="16"}
 16. Headset on. Browser. Type your **week 2** link (the one in your
     Week 02 post, not last week's).
 17. This week's rule in the headset: **stand still for a whole cycle.**
@@ -150,6 +154,7 @@ to read them (next week you will).
 
 ## Part 6 · What time is it in here?
 
+{: start="20"}
 20. From the [**Week 02** column](https://padlet.com/chankachi/vart3447) on the class board, pick two
     rooms that aren't yours. Stay in each for a full cycle.
 21. Leave a **comment** on the owner's post, signed with your name:

@@ -3,7 +3,6 @@ title: "Week 3 · Exactly One Interaction"
 nav_label: "Exactly One Interaction"
 ---
 
-<!-- MIRROR of weeks/week03.md in the course-site repo. Edit there. Drafted 20 Sep 2026. -->
 <!--
 IMAGES: assets/img/week03/ — captured from the live template Editor 20 Sep 2026 (01–08, 10, 10b done).
 Still to capture by Kachi: 09-launch-window.png (Launch window with the lamp lit), 12-console.png (DevTools console, one red line),
@@ -44,15 +43,18 @@ Headset off at the bell. One question after: *what was the one interaction, and 
 
 The headset moves the **Camera**. You move the **Rig**.
 
+{: start="2"}
 2. Right-click **Root** → **New Entity**. Name it `Rig`.
    Drag **Camera** onto **Rig** so it sits inside.
 
 ![Rig containing Camera](../assets/img/week03/02-rig-hierarchy.png)
 
+{: start="3"}
 3. Click **Camera** → Position `0`, `1.6`, `0`.
 
 ![Camera position](../assets/img/week03/03-camera-local.png)
 
+{: start="4"}
 4. Click **Rig** → move it to where the visitor should **arrive**. Keep **Y = 0**. Turn it to face them the right way.
 
 ![Rig position](../assets/img/week03/02b-rig-position.png)
@@ -61,11 +63,13 @@ The headset moves the **Camera**. You move the **Rig**.
 
 ## Part 3 · Get the scripts
 
+{: start="5"}
 5. Template Editor in a second tab → **Assets › Scripts** → select all five → **Ctrl/Cmd + C**.
    Your project's tab → click in **Assets** → **Ctrl/Cmd + V**.
 
 ![Copying the scripts](../assets/img/week03/04-copy-scripts.png)
 
+{: start="6"}
 6. Open **your** `xr-enter.mjs`, delete everything, paste the new [xr-enter.mjs](../scripts/xr-enter.mjs), save. (Same name. One extra line — it lets the headset see your hands.)
 
 7. Click **Rig** → **Add Component › Script › Add Script › deskWalk**.
@@ -85,15 +89,18 @@ Pick **one**:
 | **lookAt** | the thing you look at | when you look at it for a moment, the **Target** switches on |
 | **grab** | the thing you hold | pick it up, move it, let go — headset only |
 
+{: start="8"}
 8. Click the thing → **Add Component › Script**, then **+ Add Script** → choose one.
 
 ![Add Component](../assets/img/week03/06a-add-component.png)
 ![Add Script](../assets/img/week03/06-add-script.png)
 
+{: start="9"}
 9. Drag what should change (a lamp, a box, a group) from the Hierarchy into the **Target** slot. (`grab` has no Target.)
 
 ![Target slot](../assets/img/week03/07-target-slot.png)
 
+{: start="10"}
 10. **Launch** ▶ and walk to it / look at it. Move the sliders until it feels right.
 
 ![Launch](../assets/img/week03/08-launch.png)
@@ -101,6 +108,7 @@ Pick **one**:
 Sliders worth knowing:
 **Radius** — how close. **Dwell Seconds** — how long a look has to last. **Hold Seconds** — how long it stays after you leave. **Switch Off** — the opposite: it's there until you come. **Once** — never goes back.
 
+{: start="11"}
 11. **At 4:05 pm: Publish → Set Primary Build → post in Week 03** (`Week 03 — Your Name`).
 
 ![Publish](../assets/img/week03/10-publish.png)
@@ -112,6 +120,7 @@ Sliders worth knowing:
 
 You may **keep** it as it is. Or:
 
+{: start="12"}
 12. Double-click the script in **Assets** and read it. Change a number.
 
 13. Want more? Go to [How to ask Gemini](../gemini.md). The rules fit on one line: **start from a script that works · one change · you can explain every line you keep.**
@@ -120,12 +129,14 @@ You may **keep** it as it is. Or:
 
 *(The red line looks like `Uncaught TypeError: …` — copy the whole line.)*
 
+{: start="15"}
 15. **At 5:25 pm: Publish → Set Primary Build.**
 
 ---
 
 ## Part 6 · Headset
 
+{: start="16"}
 16. Your **week-3** link. Arrive. Find your interaction without cheating. Do it, undo it, do it again.
     Using **grab**? Controllers on, TA's desk for pairing.
 
