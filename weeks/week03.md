@@ -24,10 +24,10 @@ No buttons, no menus, nothing floating.
 
 ---
 
-## 2:45 · Play
+## Play
 
-Headset on. **The Key** (stickered headsets) or **Elixir** (all others).
-Headset off at the bell. One question after: *what was the one interaction, and where was your body?*
+Headset on. **The Key** or **Elixir**.
+One question after: *what was the one interaction, and where was your body?*
 
 ---
 
