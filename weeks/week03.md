@@ -134,20 +134,6 @@ You may **keep** it as it is. Or:
 
 ---
 
-## Part 6 · Headset
-
-{: start="16"}
-16. Your **week-3** link. Arrive. Find your interaction without cheating. Do it, undo it, do it again.
-    Using **grab**? Controllers on, TA's desk for pairing.
-
-17. One fix. Publish, Set Primary Build, reload.
-
-18. Two rooms from the **Week 03** column, no instructions from the owner. Comment on their post, signed:
-    **what did you do, and what happened.**
-
-19. On your own post: **what the visitor has to do, in one sentence — and whether anyone found it.**
-
----
 
 ## Next week
 
