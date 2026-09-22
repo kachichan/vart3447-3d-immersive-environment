@@ -64,7 +64,7 @@ The headset moves the **Camera**. You move the **Rig**.
 ## Part 3 · Get the scripts
 
 {: start="5"}
-5. Template Editor in a second tab → **Assets › Scripts** → select all five → **Ctrl/Cmd + C**.
+5. Template Editor in a second tab → **Assets › Scripts** → select all six → **Ctrl/Cmd + C**.
    Your project's tab → click in **Assets** → **Ctrl/Cmd + V**.
 
 ![Copying the scripts](../assets/img/week03/04-copy-scripts.png)
@@ -73,6 +73,7 @@ The headset moves the **Camera**. You move the **Rig**.
 6. Open **your** `xr-enter.mjs`, delete everything, paste the new [xr-enter.mjs](../scripts/xr-enter.mjs), save. (Same name. One extra line — it lets the headset see your hands.)
 
 7. Click **Rig** → **Add Component › Script › Add Script › deskWalk**.
+   Then **Add Script** again → **handMarkers**. (In the headset it puts a dot on each controller or hand, so you can see what you're reaching for.)
    **Launch** ▶. Arrow keys walk, drag to look. This is your test room.
 
 ![deskWalk on the Rig](../assets/img/week03/05-deskwalk.png)
@@ -87,7 +88,7 @@ Pick **one**:
 |---|---|---|
 | **proximity** | the thing you walk up to | when you come close, the **Target** switches on |
 | **lookAt** | the thing you look at | when you look at it for a moment, the **Target** switches on |
-| **grab** | the thing you hold | pick it up, move it, let go — headset only |
+| **grab** | the thing you hold | pick it up, move it, let go — headset only. Put your **palm** on it; when the dot turns **yellow**, pull the trigger |
 
 {: start="8"}
 8. Click the thing → **Add Component › Script**, then **+ Add Script** → choose one.
@@ -154,7 +155,8 @@ Read: Borges, "On Exactitude in Science." One paragraph. Twice.
 | The whole room disappeared | Your Target contains the thing the script is on. Move the script to a different entity. |
 | I arrive at the ceiling / in the floor | Camera goes at `0, 1.6, 0` **inside** Rig. Rig's **Y = 0**. |
 | I can't walk in the Launch window | `deskWalk` isn't on the **Rig**. Click inside the window first. |
-| grab won't pick it up | Hand closer to the **centre** of the thing; raise **Radius**. Pull the **trigger**, not the grip. Controllers paired? |
+| grab won't pick it up | Put your **palm** on it, not the tip of the controller. Wait for the dot to turn **yellow**, then pull the **trigger** (not the grip). Dot stays white even up close? Raise **Radius**. |
+| No dot on my controller or hand | `handMarkers` isn't on the **Rig**: redo step 7. Still nothing? Your `hand-markers.mjs` is an old copy. Paste it again from the link at the top. |
 | grab does nothing with hands | Your `xr-enter.mjs` is the old one. Redo step 6. |
 | I pasted Gemini's code and now nothing works | Look for `pc.createScript` — that's the other language. Ask Gemini again with the [preamble](../gemini.md). |
 | Red line in the console | Copy it. Paste into Gemini with the script: *"This error appeared. Explain in one sentence, then give me the whole corrected file."* Three tries, then a human. |
