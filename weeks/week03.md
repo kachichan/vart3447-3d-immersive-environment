@@ -18,7 +18,7 @@ No buttons, no menus, nothing floating.
 | | |
 |---|---|
 | Template | [playcanvas.com/project/1594630/overview/vart3447template](https://playcanvas.com/project/1594630/overview/vart3447template) |
-| Scripts as text | [proximity.mjs](../scripts/proximity.mjs) · [look-at.mjs](../scripts/look-at.mjs) · [grab.mjs](../scripts/grab.mjs) · [desk-walk.mjs](../scripts/desk-walk.mjs) · [xr-enter.mjs](../scripts/xr-enter.mjs) |
+| Scripts as text | [proximity.mjs](../scripts/proximity.mjs) · [look-at.mjs](../scripts/look-at.mjs) · [grab.mjs](../scripts/grab.mjs) · [desk-walk.mjs](../scripts/desk-walk.mjs) · [xr-enter.mjs](../scripts/xr-enter.mjs) · [hand-markers.mjs](../scripts/hand-markers.mjs) |
 | Gemini page | [How to ask Gemini](../gemini.md) |
 | Class board | [padlet.com/chankachi/vart3447](https://padlet.com/chankachi/vart3447) — **Week 03** column |
 
