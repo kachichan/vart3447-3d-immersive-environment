@@ -27,7 +27,8 @@ is here on this site, no login needed.
   anything about a script, read [How to ask Gemini](gemini.md) and paste the block at the top of that page.
 - The five course scripts, as text: [proximity.mjs](scripts/proximity.mjs) · [look-at.mjs](scripts/look-at.mjs)
   · [grab.mjs](scripts/grab.mjs) · [desk-walk.mjs](scripts/desk-walk.mjs) · [xr-enter.mjs](scripts/xr-enter.mjs)
-  (and week 2's [sun-cycle.mjs](scripts/sun-cycle.mjs) · [breathe.mjs](scripts/breathe.mjs) · [colour-drift.mjs](scripts/colour-drift.mjs)).
+  (and week 2's [sun-cycle.mjs](scripts/sun-cycle.mjs) · [breathe.mjs](scripts/breathe.mjs) · [colour-drift.mjs](scripts/colour-drift.mjs),
+  and week 4's [fit-scan.mjs](scripts/fit-scan.mjs)).
 
 ## PlayCanvas
 
@@ -41,6 +42,13 @@ is here on this site, no login needed.
   *WebXR VR Lab*. Only if the demo above won't load; it has teleporting
   in it, which we don't use.
 - Sign in at [playcanvas.com](https://playcanvas.com) with your HKBU email
+
+## Scanning (week 4)
+
+- **Scaniverse** (iPhone and Android): the scanner. Choose **Splat**, export **SPZ** (or PLY).
+- **SuperSplat** — [superspl.at/editor](https://superspl.at/editor): free, in the browser. Clean the scan, export **SOG**.
+- Files from phone to computer: **Google Drive** (or AirDrop, iPhone → Mac).
+- Backup scanner for meshes: **KIRI Engine** (Photo Scan → GLB). Only if your teacher says "mesh".
 
 ## Class board (Padlet)
 
