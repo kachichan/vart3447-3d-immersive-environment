@@ -33,7 +33,7 @@ It keeps its **real size**. Everything else stays boxes.
 - **Shade.** Never in direct sun: the shadows get baked in, and your phone overheats.
 - **Not taller than about 1.2 m.** You must be able to walk all the way round it.
 - **Still.** Nothing that moves in the wind, and **no people** in the scan.
-- Groups of three. **Back in the room by 3:35.**
+- Groups of three. **Back in the room at the time on the board.**
 
 1. Open **Scaniverse** → new scan → **Splat**.
 2. Walk a **slow** full circle round the object. Then again, lower. Then again, higher. **60–120 seconds.** Keep the whole object in the frame.
@@ -44,7 +44,7 @@ It keeps its **real size**. Everything else stays boxes.
 
 ---
 
-## Play (3:35) · two homes
+## Play · two homes
 
 Put your phone face up on the desk with the app open, so it keeps processing.
 
@@ -141,7 +141,7 @@ A scan's centre point is often far away from the object. So we put it in a **Hol
 ![The real thing next to the 1.7 m box](../assets/img/week04/09-in-the-room.png)
 
 {: start="21"}
-21. **At 4:35 pm: Publish → Set Primary Build → post in Week 04** (`Week 04 — Your Name`).
+21. **When your teacher calls it: Publish → Set Primary Build → post in Week 04** (`Week 04 — Your Name`).
 
 ![Publish](../assets/img/week03/10-publish.png)
 ![Set Primary Build](../assets/img/week03/10b-set-primary.png)
@@ -166,7 +166,7 @@ A scan's centre point is often far away from the object. So we put it in a **Hol
 Still **one** interaction.
 
 {: start="25"}
-25. **At 5:35 pm: Publish → Set Primary Build.**
+25. **Before the headsets: Publish → Set Primary Build.**
 26. Headset. **Turn your head fast.** If it stutters, see the troubleshooting table.
 27. In **two** other people's posts, comment: **what the real thing is · what the scan left out.** Sign it.
 28. On **your own** post: **agree or disagree (the light), and why.** One sentence.
