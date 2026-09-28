@@ -5,7 +5,7 @@ nav_label: "The Captured Thing"
 
 <!--
 Drafted 28 Sep 2026. Splats first, mesh as fallback.
-IMAGES: assets/img/week04/ 01–09 were captured 28 Sep 2026 from SuperSplat 3.4.1 and the PlayCanvas Editor 2.33.2.
+IMAGES: assets/img/week04/ 01–09 were recaptured at 2x on 28 Sep 2026 from SuperSplat 3.4.1 and the PlayCanvas Editor 2.33.2.
 The demo splat is PlayCanvas's example guitar, standing in for a student scan.
 Phone screens (Scaniverse) are not captured. If you want them, add 00a-scaniverse-splat.png, 00b-crop.png and 00c-export.png from your own phone tonight.
 VERIFY tonight: the exact Scaniverse Classic labels ("Splat", crop, "Export"/"Share", SPZ/PLY).
@@ -44,10 +44,21 @@ It keeps its **real size**. Everything else stays boxes.
 
 ---
 
-## Play (3:35)
+## Play (3:35) · two homes
 
-Headset on. Put your phone face up on the desk with the app open, so it keeps processing.
-One question after: *what was the thing, and what did the scan leave out?*
+Put your phone face up on the desk with the app open, so it keeps processing.
+
+| Odd-numbered headset | Even-numbered headset |
+|---|---|
+| **Anne Frank House VR**: built by hand, from photographs and plans | **Home After War**: scanned with a camera |
+
+Both deal with real loss (the Holocaust; war). If either is too heavy for you today, take the **splat link** on the board instead. You don't need to explain.
+
+After, find someone who was in **the other house**:
+
+1. Which home did you believe? What made you believe it, or stop?
+2. One was built by hand, one was scanned. Where could you tell?
+3. What did each one leave out? Who decided: a person, or the camera?
 
 ---
 
@@ -58,7 +69,7 @@ A splat keeps **everything** the camera saw: the floor, the wall, stray specks i
 {: start="7"}
 7. On the lab computer, download your file from **drive.google.com**.
    Open **[superspl.at/editor](https://superspl.at/editor)** and drag the file onto the page.
-   Bottom right: **Splats** is how heavy your scan is.
+   Bottom right: **Splats** is how heavy your scan is (outlined).
 
 ![Your scan in SuperSplat](../assets/img/week04/01-supersplat-open.png)
 
@@ -67,7 +78,7 @@ A splat keeps **everything** the camera saw: the floor, the wall, stray specks i
    Press **Delete**. Turn the view (drag), and repeat until only the object is left.
 
 ![Select the floor](../assets/img/week04/02-supersplat-select.png)
-![Deleted](../assets/img/week04/03-supersplat-deleted.png)
+![Deleted: Splats goes down, Deleted goes up](../assets/img/week04/03-supersplat-deleted.png)
 
 {: start="9"}
 9. **Splats** under about **150,000**? Good. Over? Delete more.
@@ -76,7 +87,7 @@ A splat keeps **everything** the camera saw: the floor, the wall, stray specks i
 ![Export as SOG](../assets/img/week04/04-supersplat-export.png)
 
 {: start="11"}
-11. **SH Bands: 0**. **Location**: your Downloads folder. **Export**.
+11. **Location**: your Downloads folder. **SH Bands: 0**. **Export**.
 
 ![SOG settings](../assets/img/week04/05-supersplat-sog.png)
 
@@ -130,14 +141,14 @@ A scan's centre point is often far away from the object. So we put it in a **Hol
 ![The real thing next to the 1.7 m box](../assets/img/week04/09-in-the-room.png)
 
 {: start="21"}
-21. **At 4:30 pm: Publish → Set Primary Build → post in Week 04** (`Week 04 — Your Name`).
+21. **At 4:35 pm: Publish → Set Primary Build → post in Week 04** (`Week 04 — Your Name`).
 
 ![Publish](../assets/img/week03/10-publish.png)
 ![Set Primary Build](../assets/img/week03/10b-set-primary.png)
 
 ---
 
-## Part 5 · After the break: place, light, connect
+## Part 5 · Place, light, connect
 
 {: start="22"}
 22. **Place.** Stand where the visitor arrives (**Launch**, arrow keys). Can they find it? Turn **Holder** to hide the scan's bad side.
