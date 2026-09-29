@@ -20,7 +20,7 @@ It keeps its **real size**. Everything else stays boxes.
 | | |
 |---|---|
 | Template | [playcanvas.com/project/1594630/overview/vart3447template](https://playcanvas.com/project/1594630/overview/vart3447template) |
-| New script | [fit-scan.mjs](../scripts/fit-scan.mjs) |
+| New scripts | [fit-scan.mjs](../scripts/fit-scan.mjs) · [teleport.mjs](../scripts/teleport.mjs) |
 | Cleaning tool | [superspl.at/editor](https://superspl.at/editor), free, in the browser, no account |
 | Class board | [padlet.com/chankachi/vart3447](https://padlet.com/chankachi/vart3447): **Week 04** column |
 
@@ -166,10 +166,15 @@ A scan's centre point is often far away from the object. So we put it in a **Hol
 Still **one** interaction.
 
 {: start="25"}
-25. **Before the headsets: Publish → Set Primary Build.**
-26. Headset. **Turn your head fast.** If it stutters, see the troubleshooting table.
-27. In **two** other people's posts, comment: **what the real thing is · what the scan left out.** Sign it.
-28. On **your own** post: **agree or disagree (the light), and why.** One sentence.
+25. **Walk round it.** Click **Rig** → **Add Script** → **teleport**.
+    *(Not in the list? Copy `teleport.mjs` from the template's **Scripts** folder.)*
+    In the headset: **hold the trigger** and point at the floor. **Green ring**: you can go there. **Red**: too far. **Let go** and you're standing on the ring.
+    Set **Max Distance** smaller than your room, so nobody lands inside a wall. Teleport doesn't count as your one interaction.
+26. **Before the headsets: Publish → Set Primary Build.**
+27. Headset. **Turn your head fast.** If it stutters, see the troubleshooting table.
+    Then teleport **all the way round** your real thing. Is there a side you tried to hide in step 22?
+28. In **two** other people's posts, comment: **what the real thing is · what the scan left out.** Sign it.
+29. On **your own** post: **agree or disagree (the light), and why.** One sentence.
 
 ---
 
@@ -201,5 +206,9 @@ Read: Nagel, "What Is It Like to Be a Bat?". The first ten pages. *(Moodle)*
 | proximity never fires / grab holds from far away | The script is on the scan. Put it on **Holder**. |
 | The headset stutters since the scan arrived | Fewer splats: delete more in SuperSplat. Then **Settings → Rendering → Anti-Alias** off. Still stuttering? Tell us, and we'll switch you to mesh. |
 | I pasted Gemini's code and now nothing works | Look for `pc.createScript`: that's the other language. Use the [preamble](../gemini.md). |
+| No ring when I pull the trigger | **teleport** isn't on the **Rig**. Or you're using your hands: teleport needs a **controller**. Or you're pointing up: point at the floor. |
+| The ring is red | Too far. Point closer, or raise **Max Distance** (but keep it inside your walls). |
+| I landed inside a wall, or outside the room | **Max Distance** is bigger than your room. Make it smaller. |
+| I pulled the trigger to teleport and nothing happened, next to my real thing | Something grabbable is within reach, so that pull is a **grab**. Step back from it, then aim. |
 | Headset shows last week's room | Week 4 is a **new link**. Did you **Set Primary Build**? |
 | Testing on my iPhone doesn't work | It never will. The phone is the camera; the headset is the screen. |
