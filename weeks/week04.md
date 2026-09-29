@@ -168,13 +168,44 @@ Still **one** interaction.
 {: start="25"}
 25. **Walk round it.** Click **Rig** → **Add Script** → **teleport**.
     *(Not in the list? Copy `teleport.mjs` from the template's **Scripts** folder.)*
-    In the headset: **hold the trigger**. A line comes out of the controller; point it at the floor. **Green**: you can go there. **Red**: you can't. **Let go** and you're standing on the ring.
     Set **Max Distance** smaller than your room, so nobody lands inside a wall. Teleport doesn't count as your one interaction.
+    How to use it in the headset: see **[Teleport](#teleport)** below.
 26. **Before the headsets: Publish → Set Primary Build.**
 27. Headset. **Turn your head fast.** If it stutters, see the troubleshooting table.
     Then teleport **all the way round** your real thing. Is there a side you tried to hide in step 22?
 28. In **two** other people's posts, comment: **what the real thing is · what the scan left out.** Sign it.
 29. On **your own** post: **agree or disagree (the light), and why.** One sentence.
+
+---
+
+## Teleport
+
+In the headset you can only walk as far as your boundary. Teleport takes you further, so you can get all the way round your real thing.
+
+1. Hold the **trigger** (under your index finger) and **keep holding**.
+2. A line comes out of the controller. Point it **down at the floor**.
+3. A ring appears where the line lands.
+4. **Let go.** You're standing on the ring.
+
+| You see | It means |
+|---|---|
+| **Green** line and ring | You can go there. Let go. |
+| **Red** line and ring | Too far. Point closer. |
+| **Red** line, no ring | You're not pointing at the floor. Point down. |
+| **No line** | You're next to something you can grab, so the trigger grabs instead. Step back and try again. |
+
+- You arrive **facing the same way**. To turn, turn your body.
+- The line goes **through walls**. Don't aim through them.
+- **Controllers only.** Your hands can grab, but they can't teleport.
+- **Feel dizzy?** Stop. Stand still. Take the headset off.
+
+**Settings** (click **Rig**, then look at **teleport**):
+
+| Setting | What it does |
+|---|---|
+| **Max Distance** | How far one jump can go, in metres. Keep it smaller than your room. |
+| **Floor Height** | Leave it at **0**, unless you built your floor higher up. |
+| **Marker Size** | How big the ring is. |
 
 ---
 
