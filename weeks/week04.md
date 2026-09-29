@@ -173,12 +173,6 @@ Still **one** interaction.
 
 ---
 
-## If your teacher says "mesh"
-
-Same scan rules, but choose **Mesh** in Scaniverse (or use **KIRI Engine → Photo Scan**) → **Export → GLB**. Skip Part 2. Drag the `.glb` into **Assets**, then drag the **Template** asset (the icon with the little tree) into the Hierarchy. Parts 4–5 are the same.
-
----
-
 ## Next week
 
 **Record one sound** with your phone: 30 seconds, not music, not speech.
