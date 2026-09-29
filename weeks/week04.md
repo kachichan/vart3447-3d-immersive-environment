@@ -26,6 +26,36 @@ It keeps its **real size**. Everything else stays boxes.
 
 ---
 
+## Teleport
+
+In the headset you can only walk as far as your boundary. Teleport takes you further, so you can get all the way round your real thing.
+
+1. Hold the **trigger** (under your index finger) and **keep holding**.
+2. A line comes out of the controller. Point it **down at the floor**.
+3. A ring appears where the line lands.
+4. **Let go.** You're standing on the ring.
+
+| You see | It means |
+|---|---|
+| **Green** line and ring | You can go there. Let go. |
+| **Red** line and ring | Too far. Point closer. |
+| **Red** line, no ring | You're not pointing at the floor. Point down. |
+| **No line** | You're next to something you can grab, so the trigger grabs instead. Step back and try again. |
+
+- You arrive **facing the same way**. To turn, turn your body.
+- The line goes **through walls**. Don't aim through them.
+- **Controllers only.** Your hands can grab, but they can't teleport.
+- **Feel dizzy?** Stop. Stand still. Take the headset off.
+
+**Settings** (click **Rig**, then look at **teleport**):
+
+| Setting | What it does |
+|---|---|
+| **Max Distance** | How far one jump can go, in metres. Keep it smaller than your room. |
+| **Floor Height** | Leave it at **0**, unless you built your floor higher up. |
+| **Marker Size** | How big the ring is. |
+
+---
 ## Part 1 · Scan: inside or outside
 
 **Bring** a small thing, **or find** a thing that can't be moved: a bollard, a hydrant, a railing end, a planter, a drain cover.
@@ -178,36 +208,6 @@ Still **one** interaction.
 
 ---
 
-## Teleport
-
-In the headset you can only walk as far as your boundary. Teleport takes you further, so you can get all the way round your real thing.
-
-1. Hold the **trigger** (under your index finger) and **keep holding**.
-2. A line comes out of the controller. Point it **down at the floor**.
-3. A ring appears where the line lands.
-4. **Let go.** You're standing on the ring.
-
-| You see | It means |
-|---|---|
-| **Green** line and ring | You can go there. Let go. |
-| **Red** line and ring | Too far. Point closer. |
-| **Red** line, no ring | You're not pointing at the floor. Point down. |
-| **No line** | You're next to something you can grab, so the trigger grabs instead. Step back and try again. |
-
-- You arrive **facing the same way**. To turn, turn your body.
-- The line goes **through walls**. Don't aim through them.
-- **Controllers only.** Your hands can grab, but they can't teleport.
-- **Feel dizzy?** Stop. Stand still. Take the headset off.
-
-**Settings** (click **Rig**, then look at **teleport**):
-
-| Setting | What it does |
-|---|---|
-| **Max Distance** | How far one jump can go, in metres. Keep it smaller than your room. |
-| **Floor Height** | Leave it at **0**, unless you built your floor higher up. |
-| **Marker Size** | How big the ring is. |
-
----
 
 ## Next week
 
