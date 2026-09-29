@@ -168,7 +168,7 @@ Still **one** interaction.
 {: start="25"}
 25. **Walk round it.** Click **Rig** → **Add Script** → **teleport**.
     *(Not in the list? Copy `teleport.mjs` from the template's **Scripts** folder.)*
-    In the headset: **hold the trigger** and point at the floor. **Green ring**: you can go there. **Red**: too far. **Let go** and you're standing on the ring.
+    In the headset: **hold the trigger**. A line comes out of the controller; point it at the floor. **Green**: you can go there. **Red**: you can't. **Let go** and you're standing on the ring.
     Set **Max Distance** smaller than your room, so nobody lands inside a wall. Teleport doesn't count as your one interaction.
 26. **Before the headsets: Publish → Set Primary Build.**
 27. Headset. **Turn your head fast.** If it stutters, see the troubleshooting table.
@@ -206,8 +206,8 @@ Read: Nagel, "What Is It Like to Be a Bat?". The first ten pages. *(Moodle)*
 | proximity never fires / grab holds from far away | The script is on the scan. Put it on **Holder**. |
 | The headset stutters since the scan arrived | Fewer splats: delete more in SuperSplat. Then **Settings → Rendering → Anti-Alias** off. Still stuttering? Tell us, and we'll switch you to mesh. |
 | I pasted Gemini's code and now nothing works | Look for `pc.createScript`: that's the other language. Use the [preamble](../gemini.md). |
-| No ring when I pull the trigger | **teleport** isn't on the **Rig**. Or you're using your hands: teleport needs a **controller**. Or you're pointing up: point at the floor. |
-| The ring is red | Too far. Point closer, or raise **Max Distance** (but keep it inside your walls). |
+| No line when I pull the trigger | **teleport** isn't on the **Rig**, or you didn't publish. Or you're using your hands: teleport needs a **controller**. Next to your real thing? That pull is a grab: step back. |
+| The line is red | Point **down** at the floor. Red with a ring: too far. Point closer, or raise **Max Distance** (but keep it inside your walls). |
 | I landed inside a wall, or outside the room | **Max Distance** is bigger than your room. Make it smaller. |
 | I pulled the trigger to teleport and nothing happened, next to my real thing | Something grabbable is within reach, so that pull is a **grab**. Step back from it, then aim. |
 | Headset shows last week's room | Week 4 is a **new link**. Did you **Set Primary Build**? |

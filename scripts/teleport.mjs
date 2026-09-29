@@ -1,13 +1,18 @@
-import { Script, Entity, StandardMaterial, Color, Vec3 } from 'playcanvas';
+import { Script, Entity, StandardMaterial, Color, Vec3, BLEND_NORMAL } from 'playcanvas';
 
 /**
  * Point at the floor and go there.
  *
  * Attach to the Rig (the entity the Camera sits inside), next to
- * `deskWalk`. In the headset, hold the trigger: a ring appears on the
- * floor where you're pointing. Let go and you are standing there. Point
- * somewhere impossible — the sky, past `maxDistance` — and the ring turns
- * red; let go and nothing happens.
+ * `deskWalk`. In the headset, hold the trigger: a line comes out of the
+ * controller and a ring appears on the floor where it lands. Let go and
+ * you are standing on the ring.
+ *
+ *   green — you can go there
+ *   red   — you can't: too far, or not pointing at the floor
+ *
+ * The line and ring are drawn through everything, so a thick floor or a
+ * wall can't hide them.
  *
  * You arrive facing the same way you were facing. Teleport doesn't turn
  * you: turn your own body.
@@ -17,8 +22,8 @@ import { Script, Entity, StandardMaterial, Color, Vec3 } from 'playcanvas';
  * `deskWalk` there.
  *
  * Works alongside `grab`. If there is something grabbable within reach
- * when you pull the trigger, that pull is a grab and no teleport happens,
- * so picking things up never throws you across the room.
+ * when you pull the trigger, that pull is a grab: no line, no teleport.
+ * Step back from it and aim again.
  *
  * The floor here is flat: an invisible level surface at `floorHeight`.
  * It doesn't know about your walls, so you can point through them unless
@@ -32,7 +37,7 @@ export class Teleport extends Script {
      * built the room on.
      * @attribute
      * @type {number}
-     * @range [-10, 10]
+     * @range [0, 10]
      */
     floorHeight = 0;
 
@@ -64,6 +69,9 @@ export class Teleport extends Script {
         this._grabbing = false;      // true if this trigger pull is a grab, not a teleport
         this._target = new Vec3();   // where the ring is
         this._valid = false;         // is that a place you can go?
+        this._origin = new Vec3();   // copies of the controller's ray, taken once per frame
+        this._direction = new Vec3();
+        this._end = new Vec3();      // where the line stops
         this._offset = new Vec3();   // scratch: where you stand inside the play space
         this._grabbables = [];
 
@@ -72,46 +80,65 @@ export class Teleport extends Script {
             invalid: this._makeMaterial(1, 0.3, 0.2)
         };
 
-        // The ring: a thin cylinder lying on the floor. Hidden until you aim.
-        this._marker = new Entity('teleport-marker');
-        this._marker.addComponent('render', { type: 'cylinder', castShadows: false, receiveShadows: false });
-        this._marker.render.material = this._materials.valid;
-        this._marker.enabled = false;
-        this.app.root.addChild(this._marker);
+        // The ring: a thin cylinder lying on the floor.
+        this._marker = this._makeShape('teleport-ring', 'cylinder');
+        // The line: a long thin box from the controller to the ring.
+        this._line = this._makeShape('teleport-line', 'box');
 
-        const input = this.app.xr && this.app.xr.input;
-        if (!input) {
+        const xr = this.app.xr;
+        if (!xr || !xr.input) {
             console.warn('teleport: no XR available. This script only works in a headset.');
             return;
         }
 
-        input.on('selectstart', this._onSelectStart, this);
-        input.on('selectend', this._onSelectEnd, this);
-        this.app.xr.on('start', this._findGrabbables, this);
+        xr.input.on('selectstart', this._onSelectStart, this);
+        xr.input.on('selectend', this._onSelectEnd, this);
+        xr.input.on('remove', this._onRemove, this);
+        xr.on('start', this._onXrStart, this);
         this._findGrabbables();
 
         this.on('destroy', () => {
-            input.off('selectstart', this._onSelectStart, this);
-            input.off('selectend', this._onSelectEnd, this);
-            this.app.xr.off('start', this._findGrabbables, this);
+            xr.input.off('selectstart', this._onSelectStart, this);
+            xr.input.off('selectend', this._onSelectEnd, this);
+            xr.input.off('remove', this._onRemove, this);
+            xr.off('start', this._onXrStart, this);
             this._marker.destroy();
+            this._line.destroy();
             for (const material of Object.values(this._materials)) material.destroy();
         });
     }
 
     update() {
-        if (!this._aiming || this._grabbing) {
+        if (!this._aiming || this._grabbing || !this._readRay(this._aiming)) {
             this._marker.enabled = false;
+            this._line.enabled = false;
             return;
         }
 
-        this._valid = this._aimAtFloor(this._aiming);
-        this._marker.enabled = this._valid || this._pointingDown(this._aiming);
-        if (!this._marker.enabled) return;
+        this._valid = this._aimAtFloor();
+        const material = this._valid ? this._materials.valid : this._materials.invalid;
 
-        this._marker.setPosition(this._target.x, this.floorHeight + 0.01, this._target.z);
-        this._marker.setLocalScale(this.markerSize, 0.01, this.markerSize);
-        this._marker.render.material = this._valid ? this._materials.valid : this._materials.invalid;
+        // Where the line stops: the floor if it reaches it, otherwise 3 m out.
+        const hitsFloor = this._direction.y < -0.05 && this._origin.y > this.floorHeight;
+        if (hitsFloor) {
+            this._end.set(this._target.x, this.floorHeight, this._target.z);
+        } else {
+            this._end.copy(this._direction).mulScalar(3).add(this._origin);
+        }
+        this._placeLine(this._origin, this._end, material);
+
+        // The ring only when the line actually reaches the floor.
+        this._marker.enabled = hitsFloor;
+        if (hitsFloor) {
+            this._marker.setPosition(this._target.x, this.floorHeight + 0.01, this._target.z);
+            this._marker.setLocalScale(this.markerSize, 0.01, this.markerSize);
+            this._marker.render.material = material;
+        }
+    }
+
+    _onXrStart() {
+        this._findGrabbables();
+        console.log('teleport: ready. Hold the trigger and point at the floor.');
     }
 
     _onSelectStart(source) {
@@ -119,17 +146,28 @@ export class Teleport extends Script {
 
         // If something grabbable is in reach, this pull belongs to grab.
         this._grabbing = this._grabInReach(source);
+        if (this._grabbing) console.log('teleport: something grabbable is in reach, so that pull is a grab.');
         this._aiming = source;
     }
 
     _onSelectEnd(source) {
         if (source !== this._aiming) return;
         const go = this._valid && !this._grabbing;
+        this._stopAiming();
+        if (go) this._moveTo(this._target);
+    }
+
+    // A controller put down mid-aim never sends selectend: don't stay stuck aiming.
+    _onRemove(source) {
+        if (source === this._aiming) this._stopAiming();
+    }
+
+    _stopAiming() {
         this._aiming = null;
         this._grabbing = false;
-        this._marker.enabled = false;
         this._valid = false;
-        if (go) this._moveTo(this._target);
+        this._marker.enabled = false;
+        this._line.enabled = false;
     }
 
     // Move the Rig so that you — not the Rig's origin — end up on the ring.
@@ -150,35 +188,49 @@ export class Teleport extends Script {
         );
     }
 
-    // Where does this controller's ray cross the floor? Puts it in _target.
-    // False if it points up, past maxDistance, or almost flat along the floor.
-    _aimAtFloor(source) {
-        if (!this._pointingDown(source)) return false;
-
+    // Copy the controller's ray into _origin / _direction. The engine reuses
+    // its own vectors between calls, so take copies straight away.
+    _readRay(source) {
         const origin = source.getOrigin();
+        if (!origin) return false;
+        this._origin.copy(origin);
         const direction = source.getDirection();
-        const drop = origin.y - this.floorHeight;
-        const distance = drop / -direction.y;   // steps along the ray until it reaches the floor
+        if (!direction) return false;
+        this._direction.copy(direction);
+        return true;
+    }
 
+    // Where does the ray cross the floor? Puts it in _target.
+    // False if it points up or flat, or lands past maxDistance.
+    _aimAtFloor() {
+        if (this._origin.y <= this.floorHeight) return false;
+        if (this._direction.y >= -0.05) return false;
+
+        const distance = (this._origin.y - this.floorHeight) / -this._direction.y;
         this._target.set(
-            origin.x + direction.x * distance,
+            this._origin.x + this._direction.x * distance,
             this.floorHeight,
-            origin.z + direction.z * distance
+            this._origin.z + this._direction.z * distance
         );
 
         // Measure the jump across the floor, ignoring how high you're holding the controller.
-        const dx = this._target.x - origin.x;
-        const dz = this._target.z - origin.z;
+        const dx = this._target.x - this._origin.x;
+        const dz = this._target.z - this._origin.z;
         return Math.sqrt(dx * dx + dz * dz) <= this.maxDistance;
     }
 
-    // Is the ray heading downwards at all? Flat or upward never meets the floor.
-    _pointingDown(source) {
-        const origin = source.getOrigin();
-        const direction = source.getDirection();
-        if (!origin || !direction) return false;
-        if (origin.y <= this.floorHeight) return false;
-        return direction.y < -0.05;
+    // Stretch the line between two points.
+    _placeLine(from, to, material) {
+        const length = from.distance(to);
+        if (length < 0.001) {
+            this._line.enabled = false;
+            return;
+        }
+        this._line.enabled = true;
+        this._line.setPosition((from.x + to.x) / 2, (from.y + to.y) / 2, (from.z + to.z) / 2);
+        this._line.lookAt(to);
+        this._line.setLocalScale(0.006, 0.006, length);
+        this._line.render.material = material;
     }
 
     // Is there something grabbable close enough that this trigger pull is a grab?
@@ -198,11 +250,27 @@ export class Teleport extends Script {
         this._grabbables = this.app.root.find(e => e.script && e.script.has('grab'));
     }
 
+    // A hidden shape with no shadows, added to the scene.
+    _makeShape(name, type) {
+        const entity = new Entity(name);
+        entity.addComponent('render', { type, castShadows: false, receiveShadows: false });
+        entity.render.material = this._materials.valid;
+        entity.enabled = false;
+        this.app.root.addChild(entity);
+        return entity;
+    }
+
+    // A flat colour that ignores the room's lighting and is drawn on top of
+    // everything, so a thick floor or a wall can't hide it.
     _makeMaterial(r, g, b) {
         const material = new StandardMaterial();
         material.diffuse = new Color(0, 0, 0);
         material.emissive = new Color(r, g, b);
         material.useLighting = false;
+        material.depthTest = false;
+        material.depthWrite = false;
+        material.blendType = BLEND_NORMAL;
+        material.opacity = 0.9;
         material.update();
         return material;
     }
