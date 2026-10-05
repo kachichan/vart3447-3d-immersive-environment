@@ -53,8 +53,8 @@ export class Ears extends Script {
         this._bubbles = [];   // { sound, outer, inner }
 
         this._materials = {
-            outer: this._makeMaterial(0.3, 0.6, 1, 0.08),
-            inner: this._makeMaterial(0.3, 0.6, 1, 0.18)
+            outer: this._makeMaterial(0.3, 0.6, 1, 0.16),
+            inner: this._makeMaterial(0.3, 0.6, 1, 0.3)
         };
 
         this._report();
@@ -98,7 +98,7 @@ export class Ears extends Script {
     // One console line per sound, in plain words.
     _report() {
         if (this._sounds.length === 0) {
-            console.log('ears: no sounds in this room yet. Add Component → Sound on the thing that makes the sound.');
+            console.log('ears: no sounds in this room yet. Add Component → Audio → Sound on the thing that makes the sound.');
             return;
         }
         for (const sound of this._sounds) {

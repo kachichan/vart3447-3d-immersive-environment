@@ -5,14 +5,11 @@ nav_label: "Eyes Closed"
 
 <!--
 Drafted 5 Oct 2026.
-IMAGES: reuses assets/img/week03/ (fork, copy scripts, add component, add script, target slot, publish, set primary).
-SHOT-LIST, not yet captured (add to assets/img/week05/ and turn the captions into images):
-  01-audio-asset.png    — Assets panel with an .m4a audio asset, selected, preview player visible.
-  02-sound-child.png    — Hierarchy: Holder › (scan) + Sound; Sound selected.
-  03-sound-component.png — Sound component inspector: Positional ticked, Ref Distance 1, Max Distance 4 boxed; slot with Asset, Loop, Auto Play boxed.
-  04-ears.png           — Camera with ears attached (Spatial ticked, Show Reach unticked).
-  05-reach.png          — Launch window with Show Reach on: two pale bubbles round the thing; console line visible.
-VERIFY tonight on a Quest 2 and in the live Editor: the Sound component's labels and default Max Distance; whether a new Sound component already has a slot or needs ADD SLOT; that .m4a imports as Audio; that sound starts without a second tap in the headset.
+IMAGES: assets/img/week05/, captured 5 Oct 2026 in Editor v2.33.3 from the demo fork vart3447-w05-demo
+(10b-set-primary from the template's build list). Orange boxes = what to click or check.
+VERIFIED in the live Editor: Add Component → Audio → Sound; a new Sound component already has Slot 1;
+Loop and Auto Play are OFF by default; Max Distance defaults to 10000; script labels show as camelCase.
+STILL TO VERIFY on a Quest 2: that .m4a imports as Audio; that sound starts without a second tap in the headset.
 Lightman dates: check against the Moodle copy.
 -->
 
@@ -71,14 +68,14 @@ Groups of three. One records; the other two stay **silent**.
 
 1. Open your **week-4** project → **Fork** → name it `vart3447-w05-yourname` → **Editor**.
 
-![Fork button](../assets/img/week03/01-fork.png)
+![Fork button](../assets/img/week05/01-fork.png)
 
 {: start="2"}
 2. On the computer, download your recording from **drive.google.com** (or find it in **Downloads** if you AirDropped it).
 3. Drag the file into **Assets**. **Once.** Click it: you can play it there.
    *`.m4a`, `.mp3`, `.wav` all work.*
 
-*[Image to come: your sound in Assets]*
+![Your sound in Assets](../assets/img/week05/02-audio-asset.png)
 
 ---
 
@@ -88,13 +85,13 @@ Groups of three. One records; the other two stay **silent**.
 4. Template in a second tab → **Assets › Scripts** → select **ears** and **hush** → **Ctrl/Cmd + C**.
    Your tab → click in **Assets** → **Ctrl/Cmd + V**.
 
-![Copying scripts](../assets/img/week03/04-copy-scripts.png)
+![Copying ears and hush](../assets/img/week05/03-copy-scripts.png)
 
 {: start="5"}
-5. Click **Camera** (inside **Rig**) → **Add Component › Script** → **+ Add Script** → **ears**.
-   Leave **Spatial** ticked.
+5. Click **Camera** (inside **Rig**). It already has a **Script** box with **xrEnter** in it.
+   Press **+ Add Script** in that box → **ears**. Leave **spatial** ticked.
 
-![Add Script](../assets/img/week03/06-add-script.png)
+![ears on the Camera](../assets/img/week05/04-ears.png)
 
 **Ears go on the Camera.** The Camera is your head.
 
@@ -108,12 +105,12 @@ Which thing makes the sound? Often it's your **real thing** from last week.
 6. Right-click that thing (e.g. **Holder**) → **New Entity**. Name it `Sound`.
    It sits **inside** the thing, so it goes where the thing goes.
 
-*[Image to come: Holder with Sound inside]*
+![Holder with Sound inside](../assets/img/week05/05-sound-child.png)
 
 {: start="7"}
-7. Click **Sound** → **Add Component** → **Sound**.
+7. Click **Sound** → **Add Component** → **Audio** → **Sound**.
 
-![Add Component](../assets/img/week03/06a-add-component.png)
+![Add Component, Audio, Sound](../assets/img/week05/06a-add-audio-sound.png)
 
 {: start="8"}
 8. Set:
@@ -123,11 +120,11 @@ Which thing makes the sound? Often it's your **real thing** from last week.
 | **Positional** | ticked: the sound comes **from this place** |
 | **Ref Distance** | `1`: full volume within 1 m |
 | **Max Distance** | `4`: silent beyond 4 m. **Don't skip this.** |
-| Slot → **Asset** | drag your sound here (no slot? press **ADD SLOT**) |
-| Slot → **Loop** | ticked |
-| Slot → **Auto Play** | ticked |
+| **Slot 1** → **Asset** | drag your sound here from **Assets** |
+| **Slot 1** → **Auto Play** | **tick it**: it starts unticked |
+| **Slot 1** → **Loop** | **tick it**: it starts unticked |
 
-*[Image to come: the Sound component]*
+![The Sound component](../assets/img/week05/06-sound-component.png)
 
 {: start="9"}
 9. **Launch** ▶. **Click once** in the window (sound needs a click to start).
@@ -140,18 +137,18 @@ Which thing makes the sound? Often it's your **real thing** from last week.
 ## Part 4 · See where it reaches
 
 {: start="11"}
-11. Click **Camera** → **ears** → tick **Show Reach**. **Launch**.
+11. Click **Camera** → **ears** → tick **showReach**. **Launch**.
     **Small bubble:** full volume. **Big bubble:** you can hear it. **Outside:** silence.
 
-*[Image to come: the bubbles in the Launch window]*
+![The reach bubbles in Launch](../assets/img/week05/07-reach.png)
 
 {: start="12"}
 12. **Where in your room is it silent?** That's part of the room too.
-13. **Untick Show Reach.**
+13. **Untick showReach.**
 14. **When your teacher calls it: Publish → Set Primary Build → post in Week 05** (`Week 05 — Your Name`).
 
-![Publish](../assets/img/week03/10-publish.png)
-![Set Primary Build](../assets/img/week03/10b-set-primary.png)
+![Publish](../assets/img/week05/10-publish.png)
+![Set Primary Build](../assets/img/week05/10b-set-primary.png)
 
 ---
 
@@ -162,29 +159,31 @@ Still **one** interaction.
 | Shape | How | Interaction? |
 |---|---|---|
 | **It lives in a thing** | what you have now | no: keep last week's interaction |
-| **Your interaction makes it** | your **proximity** or **lookAt** → drag **Sound** into **Target** | yes: it's the same one |
+| **Your interaction makes it** | your **proximity** or **lookAt** → drag **Sound** into **target** | yes: it's the same one |
 | **A place of silence** | **hush** on a spot (below) | yes: it **replaces** last week's |
 
-![Target slot](../assets/img/week03/07-target-slot.png)
+![Sound in the target slot](../assets/img/week05/08-target-sound.png)
 
 **hush:**
 
 {: start="15"}
 15. Right-click **Root** → **New Entity** → name it `Quiet`. Put it where the silence should be. **Y = 0.**
-16. **Add Component › Script** → **hush**.
+16. **Add Component** → **Script** → **+ Add Script** → **hush**.
+
+![hush on Quiet](../assets/img/week05/09-hush.png)
 17. Stand there (Launch, arrow keys): every **other** sound fades away.
 18. Want a sound you can **only** hear in the silence? Give **Quiet** its own `Sound` inside it, with a small **Max Distance** (`1.5`). hush leaves its own sounds alone.
 
 | hush setting | What it does |
 |---|---|
-| **Radius** | how close you stand, in metres |
-| **Level** | how loud the rest stays. `0` = silence |
-| **Fade Seconds** | how slowly the room goes quiet, and comes back |
+| **radius** | how close you stand, in metres |
+| **level** | how loud the rest stays. `0` = silence |
+| **fadeSeconds** | how slowly the room goes quiet, and comes back |
 
 **A second or third sound?** Only if it earns its place. **Four at most.**
 
 {: start="19"}
-19. **Before the headsets: Show Reach off → Publish → Set Primary Build.**
+19. **Before the headsets: showReach off → Publish → Set Primary Build.**
 
 ---
 
@@ -219,18 +218,18 @@ Read: Alan Lightman, *Einstein's Dreams*, three dreams *(Moodle)*:
 | What you see | Try this |
 |---|---|
 | My recording is a roar | That's wind. Record again in a doorway or a stairwell. |
-| No sound at all | **Click once** in the Launch window. Check the Slot has your file in **Asset**, and **Auto Play** is ticked. |
+| No sound at all | **Click once** in the Launch window. Check **Slot 1** has your file in **Asset**, and **Auto Play** and **Loop** are ticked (they start unticked). |
 | No sound in the headset | Headset volume: buttons under the headset's right side. Did you **Publish → Set Primary Build**? |
 | The sound is everywhere, the same from every side | **Max Distance** is still huge. Set it to `4`. The console says so. |
 | It's louder in one ear but doesn't come *from* the thing | **ears** isn't on the **Camera**. Put it there, not on the Rig. |
 | It comes from the middle of the room, not from the thing | **Positional** is unticked, or the **Sound** entity isn't inside the thing. |
-| The thing disappears when my interaction fires | Your **Target** is the thing. Make it the **Sound** inside it. |
+| The thing disappears when my interaction fires | Your **target** is the thing. Make it the **Sound** inside it. |
 | A tiny gap or click when it loops | That's the file format. Keep it (it's a breath), or record a longer take. |
 | My recording is mostly noise | You were too far away. Record closer: a hand's width. |
 | Two copies of my sound | You dragged it in twice. Delete one from **Assets**. |
-| hush does nothing | Is there another sound in the room? hush only quiets **other** sounds. Is **Level** at `1`? |
-| No Spatial / Show Reach ticks | Click the script asset → **Parse**. Re-add it. |
-| The bubbles are in my published room | Untick **Show Reach**, publish again. |
+| hush does nothing | Is there another sound in the room? hush only quiets **other** sounds. Is **level** at `1`? |
+| No spatial / showReach ticks | Click the script asset → **Parse**. Re-add it. |
+| The bubbles are in my published room | Untick **showReach**, publish again. |
 | The headset stutters since I added sounds | Fewer sounds. Four at most. |
 | I pasted Gemini's code and now nothing works | Look for `pc.createScript`: that's the other language. Use the [preamble](../gemini.md). |
 | Headset shows last week's room | Week 5 is a **new link**. Did you **Set Primary Build**? |

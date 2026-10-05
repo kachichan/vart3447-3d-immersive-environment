@@ -59,7 +59,7 @@ export class Hush extends Script {
             others + ' other sound' + (others === 1 ? '' : 's') + ' fade to ' + Math.round(this.level * 100) + '%' +
             (own ? ' (' + own + ' sound' + (own === 1 ? '' : 's') + ' here keep playing).' : '.'));
         if (others === 0) {
-            console.warn('hush: there are no other sounds to hush. Add Component → Sound somewhere else in the room first.');
+            console.warn('hush: there are no other sounds to hush. Add Component → Audio → Sound somewhere else in the room first.');
         }
 
         // Switched off mid-fade: let the room come back at once, not stay half-hushed.
