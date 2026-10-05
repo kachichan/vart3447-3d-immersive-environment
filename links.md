@@ -28,7 +28,8 @@ is here on this site, no login needed.
 - The five course scripts, as text: [proximity.mjs](scripts/proximity.mjs) · [look-at.mjs](scripts/look-at.mjs)
   · [grab.mjs](scripts/grab.mjs) · [desk-walk.mjs](scripts/desk-walk.mjs) · [xr-enter.mjs](scripts/xr-enter.mjs)
   (and week 2's [sun-cycle.mjs](scripts/sun-cycle.mjs) · [breathe.mjs](scripts/breathe.mjs) · [colour-drift.mjs](scripts/colour-drift.mjs),
-  and week 4's [fit-scan.mjs](scripts/fit-scan.mjs)).
+  week 4's [fit-scan.mjs](scripts/fit-scan.mjs) · [teleport.mjs](scripts/teleport.mjs),
+  and week 5's [ears.mjs](scripts/ears.mjs) · [hush.mjs](scripts/hush.mjs)).
 
 ## PlayCanvas
 
@@ -49,6 +50,12 @@ is here on this site, no login needed.
 - **SuperSplat** — [superspl.at/editor](https://superspl.at/editor): free, in the browser. Clean the scan, export **SOG**.
 - Files from phone to computer: **Google Drive** (or AirDrop, iPhone → Mac).
 - Backup scanner for meshes: **KIRI Engine** (Photo Scan → GLB). Only if your teacher says "mesh".
+
+## Sound (week 5)
+
+- Record with your phone's own voice recorder. `.m4a`, `.mp3` and `.wav` all go straight into PlayCanvas.
+- Files from phone to computer: **Google Drive** (or AirDrop, iPhone → Mac), as in week 4.
+- At the computer, wear earphones.
 
 ## Class board (Padlet)
 

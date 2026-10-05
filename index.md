@@ -24,7 +24,7 @@ that *is* a room. Everything you make is published, every week, from week 1.
 | 2 | 15 Sep | [Light and Time](weeks/week02.md) | The same room, changing over time |
 | 3 | 22 Sep | [Exactly One Interaction](weeks/week03.md) | One thing that responds to your body |
 | 4 | 29 Sep | [The Captured Thing](weeks/week04.md) | One box in your room becomes a real, scanned thing |
-| 5 | 6 Oct | Eyes Closed | A room that means something with eyes shut |
+| 5 | 6 Oct | [Eyes Closed](weeks/week05.md) | A room that means something with eyes shut |
 | 6 | 13 Oct | Mid-term | Presentation |
 | 7 | 20 Oct | Field trip / artist sharing | Notes and one photograph |
 | 8 | 27 Oct | The Room That Performs | A 3-minute loop in the CAVE (groups) |

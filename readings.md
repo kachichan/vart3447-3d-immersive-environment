@@ -27,8 +27,8 @@ filed by week (HKBU login). This page is the list; Moodle is the shelf.
 - Thomas Nagel, "What Is It Like to Be a Bat?" *(Moodle)*
 
 ## For week 6
-- Alan Lightman, *Einstein's Dreams* — three dreams (which three: on the
-  week 5 page). *(Moodle)*
+- Alan Lightman, *Einstein's Dreams* — three dreams: 14 April 1905,
+  24 April 1905 and 14 May 1905 (also on the week 5 page). *(Moodle)*
 
 ## For week 8
 - Ray Bradbury, "There Will Come Soft Rains". *(Moodle)*
