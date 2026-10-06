@@ -23,9 +23,9 @@ Thomas Nagel: you can know everything about how a bat's sonar works and still no
 
 | | |
 |---|---|
-| **Before class** | Link + slides PDF on the Padlet, **Week 6 (Mid-term)** column, by **Tue 13 Oct, 12:00 noon** |
-| **Presentation** | **Tuesday 13 October**, in class: showcase, then **5 minutes per group** |
-| **Video** | **Sunday 18 October, 23:59**, on **Moodle** |
+| **Before class** | By **Tue 13 Oct, 2:00 PM**: your **link** on the Padlet, **Week 6 (Mid-term)** column. Slides (PDF, 5 pages max) on a **USB drive** |
+| **Presentation** | **Tuesday 13 October**, in class: showcase, then **5 minutes per group**. [Timetable below](#presentation-day--tuesday-13-october) |
+| **Video + slides** | **Sunday 18 October, 23:59**, on **Moodle** |
 | Brief, and where to submit | **Moodle** (same brief as this page) |
 | New script | [buzz.mjs](../scripts/buzz.mjs): the controller vibrates |
 | Models, textures, sounds | [Where to find things](../sources.md) |
@@ -92,35 +92,47 @@ Some rhythms to start from:
 
 ---
 
-## Presentation day
+## Presentation day · Tuesday 13 October
 
-### Before class: post to the Padlet
+| Time | What |
+|---|---|
+| **by 2:00 PM** | Your **link** on the Padlet |
+| 2:30 | Slides on USB to the TA. One headset per group. Check the battery. Open the Padlet. |
+| 2:40 | **Showcase**: visit everyone's piece from the Padlet |
+| 3:40 | Headsets down. Presentations set up |
+| 3:50 | **Presentations**, in the running order: 7 minutes per group. A 5-minute pause after group 8 |
+| 5:40 | Wrap: the video, Part B, next readings |
+| 6:00 | Spare time, in case we run over |
 
-In the **Week 6 (Mid-term)** column, by **Tuesday 13 October, 12:00 noon**. Subject: `Week 06 — Your Names`.
+The **running order** goes up on Monday 12 October. **Check your slot. Missing it is missing the assessment.**
 
-1. Your published **`playcanv.as/p/…` link**. Publish, **Set Primary Build**, then test it in a headset.
-2. Your slides as a **PDF**. **5 slides at most.**
+### Before class · by 2:00 PM
 
-That post is what runs on the day: your piece on the stage headset, your PDF on the class computer.
-**The running order goes up on Monday 12 October. Check your slot. Missing it is missing the assessment.**
+1. **Your link, on the Padlet.** **Week 6 (Mid-term)** column. Subject: `Week 06 — Your Names`. The post is your published **`playcanv.as/p/…` link** and nothing else. Publish, **Set Primary Build**, then test it in a headset.
+2. **Your slides, on a USB drive.** A **PDF**, **5 pages at most**. Give it to the TA at 2:30; it goes on the class computer. Not in the cloud: no logins on the day.
+3. **Charged.** Headset at **100%**. Controllers run on **one AA battery each**: check them. Spares are with the TA. buzz drains them faster.
 
-### In class
+### Showcase · visit from the Padlet
 
-1. **Showcase.** Put your piece on your headset at your station. One of you stays with it. Visit as many others as you can. Your teacher visits every piece.
-2. **Presentations**, in the running order. When the group before you starts, wait at the side.
+1. **One headset per group.** Take turns.
+2. In the headset: **Quest Browser** → [the Padlet](https://padlet.com/chankachi/vart3447) → **Week 6 (Mid-term)** column.
+3. Start at the post **after your own** and go down the column. At the bottom, go back to the top.
+4. About **4 minutes** in each piece, then the next.
+5. **Nobody stands by their piece.** It has to speak for itself. If it only works when you explain it, better to find out now than at 3:50.
+6. **Turn, crouch, reach. Don't walk.** Everyone else is in a headset too.
 
 ### Your 5 minutes
 
 - **5 minutes, timed. You will be stopped at 5:00.**
 - One of you demos on the **stage headset** (cast to the projector) while another talks:
   1. The idea, in a sentence or two.
-  2. **The live demo.**
-  3. How you made it: one creative decision, one technical one.
+  2. **The live demo.** It opens from your Padlet post.
+  3. How you made it: one creative decision, one technical one. Your slides are on the class computer.
 - Then **one challenging question** from your teacher. Come ready to defend your choices. It might be *"explain this line of your code."*
 - **Don't read** from a phone, screen or paper. Notes are reminders only.
 - **No feedback during your slot.** Written feedback comes after.
 - **No logins on the day.** Nobody signs into Google, PlayCanvas or anything else on the stage headset or the class computer.
-- Bring a **30-second backup clip** on a **USB drive or your own laptop**, not in the cloud. If the demo fails, it plays instead.
+- Put a **30-second backup clip** on the **same USB drive**. If the demo fails, it plays instead.
 - Your credits list (see [Sources](../sources.md#credits-required)) goes on your **last slide**.
 
 ---
@@ -148,6 +160,7 @@ Or ask the TA for the cable.
 
 - On **Moodle**, by **Sunday 18 Oct, 23:59**.
 - An MP4/MOV called `StudentNumber_StudentName_Title.mp4`, or a YouTube/Vimeo link (unlisted is fine).
+- **Your slides**, as a PDF called `StudentNumber_StudentName_Title.pdf`. The version you presented, or improved after the questions.
 - End the video with your credits.
 
 ---
@@ -163,7 +176,9 @@ Or ask the TA for the cable.
 | The recording is silent | Turn the headset volume up before you record. Your room's sounds are part of the piece. |
 | Upload in the headset is slow | Record short clips, not one long one. |
 | The video file is too big for Moodle | Upload to YouTube as **unlisted** and submit the link. |
-| My slides aren't on the class computer | They come from your Padlet post. Posted after noon, or not a PDF? Tell the TA before the presentations start. |
+| My slides aren't on the class computer | They come from your USB drive. Not handed in at 2:30, or not a PDF? Find the TA before 3:40. |
+| The headset or a controller died in the showcase | Tell the TA. A controller just needs a fresh AA battery. |
+| A piece won't load from the Padlet | Wait 30 seconds; big scans are slow on shared Wi-Fi. Still nothing? Move on to the next post, and comment on theirs later. |
 | The live demo won't load | It opens from your Padlet post: is that the `/p/` link, and did you **Set Primary Build**? Otherwise play your 30-second clip. |
 | It ran smoothly last week and stutters now | Too much stuff. See the size limits on [Sources](../sources.md#keep-it-small). |
 | I pasted Gemini's code and now nothing works | Look for `pc.createScript`: that's the other language. Use the [preamble](../gemini.md). |
