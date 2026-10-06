@@ -5,10 +5,7 @@ nav_label: "Mid-term"
 
 <!--
 Drafted 6 Oct 2026. Brief text adapted from the Moodle brief (Moodle is the record for submission).
-buzz.mjs: tested against a mocked XR input in Node (pulse rhythm, onlyOnEnter, useHead, no-gamepad);
-NOT yet run on a Quest 2. Quest Browser implements GamepadHapticActuator.pulse() (Meta's Rik Cabanier,
-W3C gamepad thread, Oct 2022).
-TO VERIFY on a lab Quest 2 before Thursday: buzz on both controllers; the record-video menu wording;
+TO VERIFY on a lab Quest 2 before Thursday: the record-video menu wording;
 that system recording captures an immersive WebXR session with sound; uploading from the headset
 to Google Drive in Quest Browser; casting the lab headsets to the projector computer (each headset
 has its own Meta account; campus Wi-Fi may block casting).
@@ -27,7 +24,6 @@ Thomas Nagel: you can know everything about how a bat's sonar works and still no
 | **Presentation** | **Tuesday 13 October**, in class: showcase, then **5 minutes per group**. [Timetable below](#presentation-day--tuesday-13-october) |
 | **Video + slides** | **Sunday 18 October, 23:59**, on **Moodle** |
 | Brief, and where to submit | **Moodle** (same brief as this page) |
-| Optional script | **buzz**, the controller vibrates: on the [week 5 page](week05.md#optional--touch-buzz) |
 | Models, textures, sounds | [Where to find things](../sources.md) |
 | Class board | [padlet.com/chankachi/vart3447](https://padlet.com/chankachi/vart3447): **Week 6 (Mid-term)** column |
 
@@ -37,7 +33,7 @@ Thomas Nagel: you can know everything about how a bat's sonar works and still no
 
 - **Body.** How does it feel to *be* this thing? Use scale, movement and the senses.
   A fly is small. A building is slow.
-- **Senses beyond sight.** Sound in space (week 5). Vibration in the hand (optional: [buzz](week05.md#optional--touch-buzz)).
+- **Senses beyond sight.** Sound in space (week 5). Vibration in the hand.
   What does it *not* sense?
 - **Interaction.** What can the visitor do? It should come from what this thing *is*, not from a menu.
 - **The real room.** Not required to build, but say it in your presentation:
@@ -79,7 +75,7 @@ The **running order** goes up on Monday 12 October. **Check your slot. Missing i
 
 1. **Your link, on the Padlet.** **Week 6 (Mid-term)** column. Subject: `Week 06 — Your Names`. The post is your published **`playcanv.as/p/…` link** and nothing else. Publish, **Set Primary Build**, then test it in a headset.
 2. **Your slides, 5 at most**, in any tool. Bring them on a **USB drive** or **your own laptop**. Not in the cloud: no logins on the day.
-3. **Charged.** Headset at **100%**. Controllers run on **one AA battery each**: check them. Your teacher has spares. buzz drains them faster.
+3. **Charged.** Headset at **100%**. Controllers run on **one AA battery each**: check them. Your teacher has spares.
 
 ### Showcase · visit from the Padlet
 
