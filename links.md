@@ -29,8 +29,7 @@ is here on this site, no login needed.
   · [grab.mjs](scripts/grab.mjs) · [desk-walk.mjs](scripts/desk-walk.mjs) · [xr-enter.mjs](scripts/xr-enter.mjs)
   (and week 2's [sun-cycle.mjs](scripts/sun-cycle.mjs) · [breathe.mjs](scripts/breathe.mjs) · [colour-drift.mjs](scripts/colour-drift.mjs),
   week 4's [fit-scan.mjs](scripts/fit-scan.mjs) · [teleport.mjs](scripts/teleport.mjs),
-  week 5's [ears.mjs](scripts/ears.mjs) · [hush.mjs](scripts/hush.mjs),
-  and the mid-term's [buzz.mjs](scripts/buzz.mjs)).
+  and week 5's [ears.mjs](scripts/ears.mjs) · [hush.mjs](scripts/hush.mjs) · [buzz.mjs](scripts/buzz.mjs), optional).
 
 ## PlayCanvas
 

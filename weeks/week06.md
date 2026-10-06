@@ -23,11 +23,11 @@ Thomas Nagel: you can know everything about how a bat's sonar works and still no
 
 | | |
 |---|---|
-| **Before class** | By **Tue 13 Oct, 2:00 PM**: your **link** on the Padlet, **Week 6 (Mid-term)** column. Slides (PDF, 5 pages max) on a **USB drive** |
+| **Before class** | By **Tue 13 Oct, 2:00 PM**: your **link** on the Padlet, **Week 6 (Mid-term)** column. Slides (5 at most) on a **USB drive** or **your own laptop** |
 | **Presentation** | **Tuesday 13 October**, in class: showcase, then **5 minutes per group**. [Timetable below](#presentation-day--tuesday-13-october) |
 | **Video + slides** | **Sunday 18 October, 23:59**, on **Moodle** |
 | Brief, and where to submit | **Moodle** (same brief as this page) |
-| New script | [buzz.mjs](../scripts/buzz.mjs): the controller vibrates |
+| Optional script | **buzz**, the controller vibrates: on the [week 5 page](week05.md#optional--touch-buzz) |
 | Models, textures, sounds | [Where to find things](../sources.md) |
 | Class board | [padlet.com/chankachi/vart3447](https://padlet.com/chankachi/vart3447): **Week 6 (Mid-term)** column |
 
@@ -37,7 +37,7 @@ Thomas Nagel: you can know everything about how a bat's sonar works and still no
 
 - **Body.** How does it feel to *be* this thing? Use scale, movement and the senses.
   A fly is small. A building is slow.
-- **Senses beyond sight.** Sound in space (week 5). Vibration in the hand (**buzz**, below).
+- **Senses beyond sight.** Sound in space (week 5). Vibration in the hand (optional: [buzz](week05.md#optional--touch-buzz)).
   What does it *not* sense?
 - **Interaction.** What can the visitor do? It should come from what this thing *is*, not from a menu.
 - **The real room.** Not required to build, but say it in your presentation:
@@ -61,45 +61,14 @@ The mid-term is the **30% Creative Studio Experiments** part of the course grade
 
 ---
 
-## Buzz · the controller vibrates
-
-Attach it to a thing. Bring a controller close, and the controller shakes.
-
-1. Click the thing. **Add Component** → **Script** → **+ Add Script** → **buzz**.
-   *(Not in the list? Copy `buzz.mjs` from the template's **Scripts** folder. Or open [buzz.mjs](../scripts/buzz.mjs), copy it all, and paste it into a new script called `buzz.mjs`.)*
-2. **Publish, and Set Primary Build.** Test it **in the headset, with controllers**. It does nothing in the Launch window.
-
-| Setting | What it does |
-|---|---|
-| **radius** | how close, in metres |
-| **useHead** | ticked: your **head** coming close counts, and **both** controllers buzz |
-| **strength** | `0` nothing, `1` full |
-| **pulseMs** | how long each pulse lasts |
-| **gapMs** | silence between pulses. `0` = one long hum |
-| **closerIsStronger** | ticked: faint at the edge, strong at the centre |
-| **onlyOnEnter** | ticked: one bump when you arrive, then nothing |
-
-Some rhythms to start from:
-
-| Feels like | pulseMs | gapMs | Other |
-|---|---|---|---|
-| A heartbeat | `60` | `900` | |
-| Clicking, feeling the way in the dark | `20` | `120` | strength `0.3` |
-| A hum that grows | `100` | `0` | **closerIsStronger** |
-| Bumping into something | `80` | | **onlyOnEnter**, strength `1` |
-
-**Hands, not controllers?** Tracked hands can't vibrate. Buzz needs controllers.
-
----
-
 ## Presentation day · Tuesday 13 October
 
 | Time | What |
 |---|---|
 | **by 2:00 PM** | Your **link** on the Padlet |
-| 2:30 | Slides on USB to the TA. One headset per group. Check the battery. Open the Padlet. |
+| 2:30 | One headset per group. Check the battery. Open the Padlet. |
 | 2:40 | **Showcase**: visit everyone's piece from the Padlet |
-| 3:40 | Headsets down. Presentations set up |
+| 3:40 | Headsets down. Test your slides on the class computer, or your laptop on the projector |
 | 3:50 | **Presentations**, in the running order: 7 minutes per group. A 5-minute pause after group 8 |
 | 5:40 | Wrap: the video, Part B, next readings |
 | 6:00 | Spare time, in case we run over |
@@ -109,8 +78,8 @@ The **running order** goes up on Monday 12 October. **Check your slot. Missing i
 ### Before class · by 2:00 PM
 
 1. **Your link, on the Padlet.** **Week 6 (Mid-term)** column. Subject: `Week 06 — Your Names`. The post is your published **`playcanv.as/p/…` link** and nothing else. Publish, **Set Primary Build**, then test it in a headset.
-2. **Your slides, on a USB drive.** A **PDF**, **5 pages at most**. Give it to the TA at 2:30; it goes on the class computer. Not in the cloud: no logins on the day.
-3. **Charged.** Headset at **100%**. Controllers run on **one AA battery each**: check them. Spares are with the TA. buzz drains them faster.
+2. **Your slides, 5 at most**, in any tool. Bring them on a **USB drive** or **your own laptop**. Not in the cloud: no logins on the day.
+3. **Charged.** Headset at **100%**. Controllers run on **one AA battery each**: check them. Your teacher has spares. buzz drains them faster.
 
 ### Showcase · visit from the Padlet
 
@@ -123,16 +92,17 @@ The **running order** goes up on Monday 12 October. **Check your slot. Missing i
 
 ### Your 5 minutes
 
-- **5 minutes, timed. You will be stopped at 5:00.**
+- **5 minutes, timed. You will be stopped at 5:00.** The group after you holds the timer.
+- **When the group before you starts:** wait at the side. If you're using your own laptop, have it open, slides ready, cable in hand.
 - One of you demos on the **stage headset** (cast to the projector) while another talks:
   1. The idea, in a sentence or two.
   2. **The live demo.** It opens from your Padlet post.
-  3. How you made it: one creative decision, one technical one. Your slides are on the class computer.
+  3. How you made it: one creative decision, one technical one, on your slides.
 - Then **one challenging question** from your teacher. Come ready to defend your choices. It might be *"explain this line of your code."*
 - **Don't read** from a phone, screen or paper. Notes are reminders only.
 - **No feedback during your slot.** Written feedback comes after.
 - **No logins on the day.** Nobody signs into Google, PlayCanvas or anything else on the stage headset or the class computer.
-- Put a **30-second backup clip** on the **same USB drive**. If the demo fails, it plays instead.
+- Put a **30-second backup clip** with your slides. If the demo fails, it plays instead.
 - Your credits list (see [Sources](../sources.md#credits-required)) goes on your **last slide**.
 
 ---
@@ -154,13 +124,13 @@ The **running order** goes up on Monday 12 October. **Check your slot. Missing i
 2. **New** → **File upload** → your video.
 3. **Sign out of Google before you take the headset off.** It's a shared headset.
 
-Or ask the TA for the cable.
+Or ask your teacher for the cable.
 
 **Submitting:**
 
 - On **Moodle**, by **Sunday 18 Oct, 23:59**.
 - An MP4/MOV called `StudentNumber_StudentName_Title.mp4`, or a YouTube/Vimeo link (unlisted is fine).
-- **Your slides**, as a PDF called `StudentNumber_StudentName_Title.pdf`. The version you presented, or improved after the questions.
+- **Your slides**: a file or a link, named like the video. The version you presented, or improved after the questions.
 - End the video with your credits.
 
 ---
@@ -169,15 +139,12 @@ Or ask the TA for the cable.
 
 | Problem | Fix |
 |---|---|
-| buzz does nothing | Controllers, not hands? In the headset, not the Launch window? **strength** above 0? Published and Set Primary? |
-| buzz never stops | You're inside **radius**: make it smaller. **gapMs** `0` means one long hum. |
-| buzz is on, but I don't notice it | **strength** up, **pulseMs** longer (`100`+). |
 | The recording is square | That's the Quest default. Crop it in your editor, or use Launch-window footage for wide shots. |
 | The recording is silent | Turn the headset volume up before you record. Your room's sounds are part of the piece. |
 | Upload in the headset is slow | Record short clips, not one long one. |
 | The video file is too big for Moodle | Upload to YouTube as **unlisted** and submit the link. |
-| My slides aren't on the class computer | They come from your USB drive. Not handed in at 2:30, or not a PDF? Find the TA before 3:40. |
-| The headset or a controller died in the showcase | Tell the TA. A controller just needs a fresh AA battery. |
+| My slides won't open on the class computer | Plug in your own laptop instead. Test on the class computer at 3:40, not during your slot. |
+| The headset or a controller died in the showcase | Tell your teacher. A controller just needs a fresh AA battery. |
 | A piece won't load from the Padlet | Wait 30 seconds; big scans are slow on shared Wi-Fi. Still nothing? Move on to the next post, and comment on theirs later. |
 | The live demo won't load | It opens from your Padlet post: is that the `/p/` link, and did you **Set Primary Build**? Otherwise play your 30-second clip. |
 | It ran smoothly last week and stutters now | Too much stuff. See the size limits on [Sources](../sources.md#keep-it-small). |

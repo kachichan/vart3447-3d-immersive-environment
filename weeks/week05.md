@@ -5,6 +5,7 @@ nav_label: "Eyes Closed"
 
 <!--
 Drafted 5 Oct 2026.
+6 Oct: optional buzz section added (moved from week 6). buzz.mjs tested only against mocked XR input; verify on a Quest 2 and add it to the template's Scripts folder.
 IMAGES: assets/img/week05/, captured 5 Oct 2026 in Editor v2.33.3 from the demo fork vart3447-w05-demo
 (10b-set-primary from the template's build list). Orange boxes = what to click or check.
 VERIFIED in the live Editor: Add Component → Audio → Sound; a new Sound component already has Slot 1;
@@ -23,7 +24,7 @@ Still **one** interaction. **Silence counts.**
 | | |
 |---|---|
 | Template | [playcanvas.com/project/1594630/overview/vart3447template](https://playcanvas.com/project/1594630/overview/vart3447template) |
-| New scripts | [ears.mjs](../scripts/ears.mjs) · [hush.mjs](../scripts/hush.mjs) |
+| New scripts | [ears.mjs](../scripts/ears.mjs) · [hush.mjs](../scripts/hush.mjs) · optional: [buzz.mjs](../scripts/buzz.mjs) |
 | Class board | [padlet.com/chankachi/vart3447](https://padlet.com/chankachi/vart3447): **Week 05** column |
 
 **At the computer, wear earphones.** Twenty rooms playing at once is noise.
@@ -204,9 +205,42 @@ Swap. Then change partners and do it again.
 
 ---
 
+## Optional · Touch (buzz)
+
+**Optional.** Not part of this week's rule. It's here for the [mid-term](week06.md), where the brief asks about senses beyond sight.
+
+Attach it to a thing. Bring a controller close, and the controller shakes.
+
+1. Click the thing. **Add Component** → **Script** → **+ Add Script** → **buzz**.
+   *(Not in the list? Copy `buzz.mjs` from the template's **Scripts** folder. Or open [buzz.mjs](../scripts/buzz.mjs), copy it all, and paste it into a new script called `buzz.mjs`.)*
+2. **Publish, and Set Primary Build.** Test it **in the headset, with controllers**. It does nothing in the Launch window.
+
+| Setting | What it does |
+|---|---|
+| **radius** | how close, in metres |
+| **useHead** | ticked: your **head** coming close counts, and **both** controllers buzz |
+| **strength** | `0` nothing, `1` full |
+| **pulseMs** | how long each pulse lasts |
+| **gapMs** | silence between pulses. `0` = one long hum |
+| **closerIsStronger** | ticked: faint at the edge, strong at the centre |
+| **onlyOnEnter** | ticked: one bump when you arrive, then nothing |
+
+Some rhythms to start from:
+
+| Feels like | pulseMs | gapMs | Other |
+|---|---|---|---|
+| A heartbeat | `60` | `900` | |
+| Clicking, feeling the way in the dark | `20` | `120` | strength `0.3` |
+| A hum that grows | `100` | `0` | **closerIsStronger** |
+| Bumping into something | `80` | | **onlyOnEnter**, strength `1` |
+
+**Hands, not controllers?** Tracked hands can't vibrate. Buzz needs controllers.
+
+---
+
 ## Next week
 
-**Week 6 is the mid-term.** You present this room. Details on the week 6 page.
+**Week 6 is the mid-term: What Is It Like to Be a ___?** Brief, timetable and rules on the [week 6 page](week06.md).
 
 Read: Alan Lightman, *Einstein's Dreams*, three dreams *(Moodle)*:
 **14 April 1905** (time is a circle) · **24 April 1905** (two times) · **14 May 1905** (where time stands still).
@@ -233,4 +267,7 @@ Read: Alan Lightman, *Einstein's Dreams*, three dreams *(Moodle)*:
 | The headset stutters since I added sounds | Fewer sounds. Four at most. |
 | I pasted Gemini's code and now nothing works | Look for `pc.createScript`: that's the other language. Use the [preamble](../gemini.md). |
 | Headset shows last week's room | Week 5 is a **new link**. Did you **Set Primary Build**? |
+| buzz does nothing | Controllers, not hands? In the headset, not the Launch window? **strength** above 0? Published and Set Primary? |
+| buzz never stops | You're inside **radius**: make it smaller. **gapMs** `0` means one long hum. |
+| buzz is on, but I don't notice it | **strength** up, **pulseMs** longer (`100`+). |
 | Testing on my iPhone doesn't work | It never will. The phone records; the headset plays. |
