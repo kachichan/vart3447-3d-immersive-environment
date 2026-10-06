@@ -22,7 +22,7 @@ Thomas Nagel: you can know everything about how a bat's sonar works and still no
 |---|---|
 | **Before class** | By **Tue 13 Oct, 2:00 PM**: your **link** on the Padlet, **Week 6 (Mid-term)** column. Slides (5 at most) on a **USB drive** or **your own laptop** |
 | **Presentation** | **Tuesday 13 October**, in class: showcase, then **5 minutes per group**. [Timetable below](#presentation-day--tuesday-13-october) |
-| **Video + slides** | **Sunday 18 October, 23:59**, on **Moodle** |
+| **Video, slides + statement** | **Sunday 18 October, 23:59**, on **Moodle** |
 | Brief, and where to submit | **Moodle** (same brief as this page) |
 | Models, textures, sounds | [Where to find things](../sources.md) |
 | Class board | [padlet.com/chankachi/vart3447](https://padlet.com/chankachi/vart3447): **Week 6 (Mid-term)** column |
@@ -127,7 +127,23 @@ Or ask your teacher for the cable.
 - On **Moodle**, by **Sunday 18 Oct, 23:59**.
 - An MP4/MOV called `StudentNumber_StudentName_Title.mp4`, or a YouTube/Vimeo link (unlisted is fine).
 - **Your slides**: a file or a link, named like the video. The version you presented, or improved after the questions.
+- **Your artist statement** (below): typed into Moodle, or as a file.
 - End the video with your credits.
+
+---
+
+## Artist statement · 150–200 words
+
+One per group, submitted with the video. **Write it yourselves**, not Gemini. Answer these four, in order:
+
+1. **Title, and your answer.** *What is it like to be a ___?* One sentence.
+2. **The visitor's new body.** Its scale, its senses, what it can and can't do.
+3. **One choice about the medium.** Why VR, why this sense, why this interaction.
+4. **What they should leave with.**
+
+Credits go underneath. They don't count towards the 200 words.
+
+It counts towards **Concept and creativity** and **Presentation and video**, not as a separate mark.
 
 ---
 
