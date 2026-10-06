@@ -16,7 +16,7 @@ is here on this site, no login needed.
 ## Every week
 
 - **The class board:** [padlet.com/chankachi/vart3447](https://padlet.com/chankachi/vart3447) — one
-  column per week. Every week's link (weeks 1–6) or video (weeks 8–12)
+  column per week. Every week's link (Part A) or video (Part B)
   goes in that week's column, with `Week NN — Your Name` as the subject.
 - **Your PlayCanvas account page** — lists every project you've made.
   That's your Part A portfolio.

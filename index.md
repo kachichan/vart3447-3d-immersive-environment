@@ -26,13 +26,13 @@ that *is* a room. Everything you make is published, every week, from week 1.
 | 3 | 22 Sep | [Exactly One Interaction](weeks/week03.md) | One thing that responds to your body |
 | 4 | 29 Sep | [The Captured Thing](weeks/week04.md) | One box in your room becomes a real, scanned thing |
 | 5 | 6 Oct | [Eyes Closed](weeks/week05.md) | A room that means something with eyes shut |
-| 6 | 13 Oct | [Mid-term: What Is It Like to Be a ___?](weeks/week06.md) | A VR experience from inside something that isn't you |
-| 7 | 20 Oct | Field trip / artist sharing | Notes and one photograph |
-| 8 | 27 Oct | The Room That Performs | A 3-minute loop in the CAVE (groups) |
-| 9 | 3 Nov | Silhouettes and Blobs | A room changed by someone being in it |
-| 10 | 10 Nov | Only Works in This Room | Your group piece, declared and first-tested |
-| 11 | 17 Nov | Opening Night Rule | The piece running 10 minutes unattended |
-| 12 | 24 Nov | Dress Rehearsal | Fixes only. Documentation filmed |
+| 6 | 13 Oct | [Tutorial](weeks/week06.md) | Sign up for a slot about your mid-term |
+| 7 | 20 Oct | [Artist Sharing: k0j0](weeks/week07.md) | Notes |
+| 8 | 27 Oct | [Mid-term: What Is It Like to Be a ___?](weeks/week08.md) | A VR experience from inside something that isn't you |
+| 9 | 3 Nov | The Room That Performs | A 3-minute loop in the CAVE (groups) |
+| 10 | 10 Nov | Silhouettes and Blobs | A room changed by someone being in it |
+| 11 | 17 Nov | Only Works in This Room | Your group piece, declared and first-tested |
+| 12 | 24 Nov | Opening Night Rule | The piece running 10 minutes unattended. Then fixes only, and documentation filmed |
 | 13 | 1 Dec | Final Presentation | A public opening |
 
 Weeks 2–13 become links as each handout is published, the week before class.
@@ -42,16 +42,16 @@ Weeks 2–13 become links as each handout is published, the week before class.
 ## The one rule, up front
 
 **Publish every week.** What's on the board at the end of each session is
-what exists. Nothing is ever "not ready". Weeks 1–6 you publish a link;
-weeks 8–12 you publish a video. The [class board](https://padlet.com/chankachi/vart3447) — one column
+what exists. Nothing is ever "not ready". Part A you publish a link;
+Part B you publish a video. The [class board](https://padlet.com/chankachi/vart3447) — one column
 per week — is your submission record for the whole course.
 
 ## Two halves
 
-**Part A (weeks 1–6):** individual work for the Meta Quest 2, built in
+**Part A (weeks 1–8):** work for the Meta Quest 2, built in
 PlayCanvas in the browser. Nothing to install.
 
-**Part B (weeks 8–12):** group work in the school's immersive lab — a
+**Part B (weeks 9–12):** group work in the school's immersive lab — a
 four-wall-and-floor projection room (CAVE) driven by TouchDesigner. One
 room, shared on a rotation; the piece only works there, which is the point.
 
@@ -59,7 +59,7 @@ room, shared on a rotation; the piece only works there, which is the point.
 
 | Weight | What | When |
 |---|---|---|
-| 30% | Creative studio experiments (Part A, Solo/Group) | Week 6 |
+| 30% | Creative studio experiments (Part A, the mid-term) | Week 8 |
 | 30% | Creative studio project (Part B, Group) | Week 13 |
 | 10% | Research / presentation (the weekly publishes and comments) | Weekly |
 | 30% | Professionalism (attendance, participation, how you work) | Continuous |

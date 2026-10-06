@@ -30,16 +30,16 @@ filed by week (HKBU login). This page is the list; Moodle is the shelf.
 - Alan Lightman, *Einstein's Dreams* — three dreams: 14 April 1905,
   24 April 1905 and 14 May 1905 (also on the week 5 page). *(Moodle)*
 
-## For week 8
+## For week 9
 - Ray Bradbury, "There Will Come Soft Rains". *(Moodle)*
 - Myron Krueger, "Responsive Environments" — excerpt (pages on the
-  week 7 page). *(Moodle)*
-
-## For week 9
-- Jun'ichirō Tanizaki, *In Praise of Shadows* — excerpt (pages on the
   week 8 page). *(Moodle)*
 
-Weeks 10–13 have no new reading: production.
+## For week 10
+- Jun'ichirō Tanizaki, *In Praise of Shadows* — excerpt (pages on the
+  week 9 page). *(Moodle)*
+
+Weeks 11–13 have no new reading: production.
 
 Read in class, week 1: Italo Calvino, *Invisible Cities*, "Cities &
 Memory 3" (Zaira). No need to read it in advance.

@@ -207,7 +207,7 @@ Swap. Then change partners and do it again.
 
 ## Optional · Touch (buzz)
 
-**Optional.** Not part of this week's rule. It's here for the [mid-term](week06.md), where the brief asks about senses beyond sight.
+**Optional.** Not part of this week's rule. It's here for the [mid-term](week08.md), where the brief asks about senses beyond sight.
 
 Attach it to a thing. Bring a controller close, and the controller shakes.
 
@@ -240,7 +240,7 @@ Some rhythms to start from:
 
 ## Next week
 
-**Week 6 is the mid-term: What Is It Like to Be a ___?** Brief, timetable and rules on the [week 6 page](week06.md).
+**Week 6 is tutorials** (sign up on the [week 6 page](week06.md)). **The mid-term, What Is It Like to Be a ___?, is week 8.** Brief, timetable and rules on the [week 8 page](week08.md).
 
 Read: Alan Lightman, *Einstein's Dreams*, three dreams *(Moodle)*:
 **14 April 1905** (time is a circle) · **24 April 1905** (two times) · **14 May 1905** (where time stands still).
