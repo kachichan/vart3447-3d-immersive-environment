@@ -29,7 +29,8 @@ is here on this site, no login needed.
   · [grab.mjs](scripts/grab.mjs) · [desk-walk.mjs](scripts/desk-walk.mjs) · [xr-enter.mjs](scripts/xr-enter.mjs)
   (and week 2's [sun-cycle.mjs](scripts/sun-cycle.mjs) · [breathe.mjs](scripts/breathe.mjs) · [colour-drift.mjs](scripts/colour-drift.mjs),
   week 4's [fit-scan.mjs](scripts/fit-scan.mjs) · [teleport.mjs](scripts/teleport.mjs),
-  and week 5's [ears.mjs](scripts/ears.mjs) · [hush.mjs](scripts/hush.mjs)).
+  week 5's [ears.mjs](scripts/ears.mjs) · [hush.mjs](scripts/hush.mjs),
+  and the mid-term's [buzz.mjs](scripts/buzz.mjs)).
 
 ## PlayCanvas
 
@@ -56,6 +57,10 @@ is here on this site, no login needed.
 - Record with your phone's own voice recorder. `.m4a`, `.mp3` and `.wav` all go straight into PlayCanvas.
 - Files from phone to computer: **Google Drive** (or AirDrop, iPhone → Mac), as in week 4.
 - At the computer, wear earphones.
+
+## Models, textures, sounds
+
+- [Where to find things](sources.md): sites, licences, size limits, and how to credit what you didn't make.
 
 ## Class board (Padlet)
 

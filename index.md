@@ -13,6 +13,7 @@ that *is* a room. Everything you make is published, every week, from week 1.
 - [Rules that last all semester](rules.md)
 - [Readings](readings.md)
 - [Links: template, demos, class board](links.md)
+- [Where to find things: models, textures, sounds](sources.md)
 
 ---
 
@@ -25,7 +26,7 @@ that *is* a room. Everything you make is published, every week, from week 1.
 | 3 | 22 Sep | [Exactly One Interaction](weeks/week03.md) | One thing that responds to your body |
 | 4 | 29 Sep | [The Captured Thing](weeks/week04.md) | One box in your room becomes a real, scanned thing |
 | 5 | 6 Oct | [Eyes Closed](weeks/week05.md) | A room that means something with eyes shut |
-| 6 | 13 Oct | Mid-term | Presentation |
+| 6 | 13 Oct | [Mid-term: What Is It Like to Be a ___?](weeks/week06.md) | A VR experience from inside something that isn't you |
 | 7 | 20 Oct | Field trip / artist sharing | Notes and one photograph |
 | 8 | 27 Oct | The Room That Performs | A 3-minute loop in the CAVE (groups) |
 | 9 | 3 Nov | Silhouettes and Blobs | A room changed by someone being in it |
