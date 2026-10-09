@@ -13,7 +13,7 @@ Drafted 6 Oct 2026. Sign-up sheet linked 9 Oct (anyone with the link can edit).
 
 | | |
 |---|---|
-| Sign up | **[Mid-term tutorial sign-up](https://docs.google.com/spreadsheets/d/1h9FsB4dsEdDmssXB5Eu1Ciyoja8pRwC2pS9Hzbtvp1o/edit?usp=sharing)**: one slot per group, 15 minutes. Put every name in the group in. |
+| Sign up | **[Mid-term tutorial sign-up](https://docs.google.com/spreadsheets/d/1h9FsB4dsEdDmssXB5Eu1Ciyoja8pRwC2pS9Hzbtvp1o/edit?usp=sharing)**: one slot per group, 10 minutes, with two breaks in the afternoon. Put every name in the group in. |
 | Mid-term | [Week 8 page](week08.md): the brief, the timetable, what to submit |
 
 **Edit only your own row.** Everyone can edit the sheet, so don't move or delete anyone else's.
@@ -24,7 +24,7 @@ Drafted 6 Oct 2026. Sign-up sheet linked 9 Oct (anyone with the link can edit).
 2. **Your answer**, in one sentence: *What is it like to be a ___?*
 3. **The one thing that isn't working**, or the one decision you can't make.
 
-Fifteen minutes go fast. Come with the question, not the whole story.
+Ten minutes go fast. Come with the question, not the whole story.
 
 ## The rest of the day
 
