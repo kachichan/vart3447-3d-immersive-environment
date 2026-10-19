@@ -27,7 +27,7 @@ that *is* a room. Everything you make is published, every week, from week 1.
 | 4 | 29 Sep | [The Captured Thing](weeks/week04.md) | One box in your room becomes a real, scanned thing |
 | 5 | 6 Oct | [Eyes Closed](weeks/week05.md) | A room that means something with eyes shut |
 | 6 | 13 Oct | [Tutorial](weeks/week06.md) | Sign up for a slot about your mid-term |
-| 7 | 20 Oct | [Artist Sharing: k0j0](weeks/week07.md) | Notes |
+| 7 | 20 Oct | [Artist Sharing: k0j0 + VRC visit](weeks/week07.md) | Notes |
 | 8 | 27 Oct | [Mid-term: What Is It Like to Be a ___?](weeks/week08.md) | A VR experience from inside something that isn't you |
 | 9 | 3 Nov | The Room That Performs | A 3-minute loop in the CAVE (groups) |
 | 10 | 10 Nov | Silhouettes and Blobs | A room changed by someone being in it |
