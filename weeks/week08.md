@@ -66,8 +66,7 @@ The mid-term is the **30% Creative Studio Experiments** part of the course grade
 | 2:30 | One headset per group. Check the battery. Open the Padlet. |
 | 2:40 | **Showcase**: visit everyone's piece from the Padlet |
 | 3:40 | Headsets down. Test your slides on the class computer, or your laptop on the projector |
-| 3:50 | **Presentations**, in the running order: 7 minutes per group. A 5-minute pause after group 8 |
-| 5:40 | Wrap: the video, Part B, next readings |
+| 3:50 | **Presentations**, 7 minutes per group max.
 | 6:00 | Spare time, in case we run over |
 
 The **running order** goes up on Monday 26 October. **Check your slot. Missing it is missing the assessment.**
