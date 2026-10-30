@@ -414,6 +414,7 @@ footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 18px;
         </tbody>
       </table>
     </div>
+    <p style="margin-top:14px;font-size:0.95rem"><strong>Download:</strong> <a href="https://kachichan.github.io/vart3447-3d-immersive-environment/immersive-lab/templates/lab-2d.zip">lab-2d.zip</a> · <code>lab-3d.zip</code> (ready before week 11) · <a href="https://kachichan.github.io/vart3447-3d-immersive-environment/immersive-lab/templates/lab-3d-stereo.zip">lab-3d-stereo.zip</a>. Adapted from the Immersive Lab technician's original templates.</p>
   </div>
   <div class="wide">
     <div class="routes">
@@ -554,7 +555,7 @@ footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 18px;
     <p>Do this at home, on your own laptop, before you book the room.</p>
     <ol class="steps">
       <li><h3>Install the right TouchDesigner</h3><p>Install <strong>TouchDesigner 2025</strong>, the exact build listed on Moodle, so your file opens on the lab computer. Use the <strong>Educational licence</strong> from your tutor. The free Non-Commercial licence stops at 1280 × 1280 pixels, far too small for this room.</p></li>
-      <li><h3>Make your project folder</h3><p>Download <code>lab-2d.toe</code> from Moodle. Make a folder for your project, put the file in it and rename it after your project. Make a <code>media</code> folder next to it.</p></li>
+      <li><h3>Make your project folder</h3><p>Download <a href="https://kachichan.github.io/vart3447-3d-immersive-environment/immersive-lab/templates/lab-2d.zip">lab-2d.zip</a> and unzip it to get <code>lab-2d.toe</code>. Make a folder for your project, put the file in it and rename it after your project. Make a <code>media</code> folder next to it.</p></li>
       <li><h3>Open it and look around</h3><p>Open the file and double-click <code>project1</code> to go inside. Five orange boxes are named after the surfaces: <code>Floor</code>, <code>Front</code>, <code>Back</code>, <code>Left</code>, <code>Right</code>. Each one is a slot, already the right size for its surface. The pictures going into them are demos from TouchDesigner's own sample files.</p></li>
       <li><h3>Put your own image on the front wall</h3><p>Copy your image into <code>media</code>. In TouchDesigner press <span class="kbd">Tab</span>, choose <strong>TOP → Movie File In</strong>, place it and pick your file. Drag a wire from its right edge to the left edge of <code>Front</code>. The new wire replaces the demo. Videos work the same way.</p></li>
       <li><h3>Get the shape right</h3><p>Front and back images should be <span class="mono">3840 × 1280</span> (section 2). Side walls and floor can use their pixel size.</p></li>
@@ -563,7 +564,7 @@ footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 18px;
     </ol>
 
     <h3 style="margin-top:34px">When your group needs 3D</h3>
-    <p style="margin-top:8px">For 3D objects or a 360° picture, use <code>lab-3d.toe</code> instead. Download <code>lab-3d.zip</code> from Moodle and keep its <code>model</code> folder next to the <code>.toe</code>: the 360° test room lives there.</p>
+    <p style="margin-top:8px">For 3D objects or a 360° picture, use <code>lab-3d.toe</code> instead. Download <code>lab-3d.zip</code> from section 4 (ready before week 11), unzip it, and keep its <code>model</code> folder next to the <code>.toe</code>: the 360° test room lives there.</p>
     <ol class="steps">
       <li><h3>Leave the engine alone</h3><p>Inside <code>project1</code>, <code>CaveConfigParser</code> cuts the picture up for the room. Don't edit it, and never press its <em>Reload</em> button. Its <strong>Preview</strong> button is safe.</p></li>
       <li><h3>Add an object</h3><p>Press <span class="kbd">Tab</span>, choose <strong>COMP → Geometry</strong> and place it. Rename it so it starts with <code>geo</code>, for example <code>geo_first</code> (edit the name at the top of its parameter window). It arrives with a doughnut inside, and it is now on every surface.</p></li>
@@ -729,7 +730,7 @@ footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 18px;
 </section>
 
 <footer class="col">
-  Numbers come from the lab's own projection setup and the technician's Immersive Lab manual. VART3447 3D Immersive Environment, Academy of Visual Arts, HKBU.
+  Numbers come from the lab's own projection setup and the technician's Immersive Lab manual. The templates are adapted from the technician's originals. VART3447 3D Immersive Environment, Academy of Visual Arts, HKBU.
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
