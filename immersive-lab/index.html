@@ -208,7 +208,7 @@ footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 18px;
 <header class="top col">
   <div class="eyebrow"><a href="../" style="color:inherit">VART3447</a> · Part B · AVA121</div>
   <h1>Inside the Immersive Lab<span class="dot">.</span></h1>
-  <p class="lede">Four walls, a floor, and one big picture. This guide explains how the room works, how the TouchDesigner template fills it, and what to do before your first 30 minutes inside.</p>
+  <p class="lede">Four walls, a floor, and one big picture. This guide explains how the room works, how the lab's two TouchDesigner templates fill it, and what to do before your first 30 minutes inside.</p>
   <div class="facts">
     <div class="fact"><b>10.5 × 6 m</b><span>floor, walls 3.5 m high</span></div>
     <div class="fact"><b>5 surfaces</b><span>4 walls + floor, no ceiling</span></div>
@@ -234,7 +234,7 @@ footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 18px;
   <div class="col">
     <h2><sup class="n">1</sup>The room</h2>
     <p>The lab is a box you stand inside. Projectors cover the four walls and the floor. There is no ceiling: look up and the picture stops. Your own body casts shadows on the floor image. You come in through a door in the left wall, and the door is part of the projected picture.</p>
-    <p>Drag the model to look around. Then press <strong>Show the five cameras</strong>: the template draws each surface from one eye in the middle of the room.</p>
+    <p>Drag the model to look around. Then press <strong>Show the five cameras</strong>: the 3D template draws each surface from one eye in the middle of the room.</p>
   </div>
   <div class="wide">
     <div class="viewer" id="viewer" aria-label="3D model of the Immersive Lab. Drag to rotate." role="img">
@@ -296,23 +296,23 @@ footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 18px;
       <div>
         <div class="tablewrap">
           <table>
-            <thead><tr><th>Surface</th><th class="num">Real size</th><th class="num">Pixels</th><th class="num">Starts at (x, y)</th></tr></thead>
+            <thead><tr><th>Surface</th><th class="num">Real size</th><th class="num">Pixels</th><th class="num">Make flat images</th></tr></thead>
             <tbody>
-              <tr><td><span class="sw" style="background:var(--s-floor)"></span>Floor</td><td class="num">10.5 × 6 m</td><td class="num">3840 × 2160</td><td class="num">0, 0</td></tr>
-              <tr><td><span class="sw" style="background:var(--s-front)"></span>Front</td><td class="num">10.5 × 3.5 m</td><td class="num">3840 × 1080</td><td class="num">0, 2160</td></tr>
-              <tr><td><span class="sw" style="background:var(--s-back)"></span>Back</td><td class="num">10.5 × 3.5 m</td><td class="num">3840 × 1080</td><td class="num">0, 3240</td></tr>
-              <tr><td><span class="sw" style="background:var(--s-left)"></span>Left</td><td class="num">6 × 3.5 m</td><td class="num">1920 × 1080</td><td class="num">0, 4320</td></tr>
-              <tr><td><span class="sw" style="background:var(--s-right)"></span>Right</td><td class="num">6 × 3.5 m</td><td class="num">1920 × 1080</td><td class="num">1920, 4320</td></tr>
+              <tr><td><span class="sw" style="background:var(--s-floor)"></span>Floor</td><td class="num">10.5 × 6 m</td><td class="num">3840 × 2160</td><td class="num">3840 × 2160</td></tr>
+              <tr><td><span class="sw" style="background:var(--s-front)"></span>Front</td><td class="num">10.5 × 3.5 m</td><td class="num">3840 × 1080</td><td class="num"><strong>3840 × 1280</strong></td></tr>
+              <tr><td><span class="sw" style="background:var(--s-back)"></span>Back</td><td class="num">10.5 × 3.5 m</td><td class="num">3840 × 1080</td><td class="num"><strong>3840 × 1280</strong></td></tr>
+              <tr><td><span class="sw" style="background:var(--s-left)"></span>Left</td><td class="num">6 × 3.5 m</td><td class="num">1920 × 1080</td><td class="num">1920 × 1080</td></tr>
+              <tr><td><span class="sw" style="background:var(--s-right)"></span>Right</td><td class="num">6 × 3.5 m</td><td class="num">1920 × 1080</td><td class="num">1920 × 1080</td></tr>
             </tbody>
           </table>
         </div>
-        <p style="margin-top:14px;font-size:0.95rem">Pixel positions are measured from the top-left corner. If you build in 3D (section 4), the template does all of this for you. You need the table only for flat images.</p>
+        <p style="margin-top:14px;font-size:0.95rem">You never place these by hand: both templates put each surface in the right spot of the big picture. The last column is the size to make your own flat images; the circle test below explains the two in bold.</p>
       </div>
     </div>
 
     <h3 style="margin-top:36px">The circle test</h3>
     <p style="margin-top:8px">In the unfolded picture every circle is round. Fold it back and look at the front wall: the same circle becomes a tall oval. The front and back walls are 3 times wider than they are tall, but their slice of the image is 3.56 times wider. The image gets squeezed sideways to fit, so everything flat on those walls looks about 19% taller.</p>
-    <div class="note"><b>Fix for flat images on front and back</b>Design at true proportions, <span class="mono">3840 × 1280</span> (3 : 1), then resize to <span class="mono">3840 × 1080</span> before it goes in. It will look squashed on your screen and correct on the wall. Side walls and floor are close enough to leave alone. 3D scenes don't need any of this.</div>
+    <div class="note"><b>Fix for flat images on front and back</b>Make them <span class="mono">3840 × 1280</span>: 3 : 1, the wall's real shape. The 2D template squeezes each image into its wall's pixels, so it comes out right on the wall. Side walls and floor are close enough to leave alone. 3D scenes don't need any of this.</div>
     <p style="margin-top:18px">One pixel on the wall is about 3 mm. Think big: thin lines and small text vanish.</p>
   </div>
 </section>
@@ -321,7 +321,7 @@ footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 18px;
 <section id="sweet">
   <div class="col">
     <h2><sup class="n">3</sup>The sweet spot</h2>
-    <p>The template draws the whole room as seen from <strong>one eye</strong>, in the middle of the room, 1.5 m off the floor. From there, a 3D scene looks perfect, and corners disappear. Anywhere else, some things slide out of place.</p>
+    <p>The 3D template draws the whole room as seen from <strong>one eye</strong>, in the middle of the room, 1.5 m off the floor. From there, a 3D scene looks perfect, and corners disappear. Anywhere else, some things slide out of place. Flat images from the 2D template sit on the walls, so they are right from everywhere.</p>
     <p>Which things? Try it. This is the room from above. Drag <strong>you</strong> around the room, and drag the <strong>object</strong> (or use the buttons).</p>
   </div>
   <div class="wide">
@@ -404,10 +404,36 @@ footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 18px;
 <section id="routes">
   <div class="col">
     <h2><sup class="n">4</sup>Three ways to fill the room</h2>
-    <p>The template, <code>TDWalls_2D.toe</code>, can fill the room in three ways. You can mix them.</p>
+    <p>The lab has two templates. Start with the 2D one.</p>
+    <div class="tablewrap" style="margin-top:16px">
+      <table>
+        <thead><tr><th>Template</th><th>Does</th><th>Use it for</th></tr></thead>
+        <tbody>
+          <tr><td><code>lab-2d.toe</code></td><td>Flat images, one per surface</td><td>Weeks 9–10, and any piece that lives on the walls</td></tr>
+          <tr><td><code>lab-3d.toe</code></td><td>3D objects and 360° pictures</td><td>A group piece that needs real 3D</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
   <div class="wide">
     <div class="routes">
+      <article class="route">
+        <svg viewBox="0 0 200 130" aria-hidden="true">
+          <rect x="30" y="20" width="140" height="90" class="t-surface s-ink" stroke-width="2"/>
+          <rect x="30" y="16" width="140" height="8" style="fill:var(--accent)"/>
+          <rect x="30" y="106" width="140" height="8" class="t-ink"/>
+          <rect x="26" y="20" width="8" height="90" class="t-muted"/>
+          <rect x="166" y="20" width="8" height="90" class="t-muted"/>
+          <g class="t-muted" opacity="0.5"><rect x="50" y="40" width="100" height="6"/><rect x="50" y="54" width="70" height="6"/><rect x="50" y="68" width="85" height="6"/></g>
+        </svg>
+        <h3>Flat images</h3>
+        <p>Treat the room as five screens. The 2D template has one orange slot per surface, named <code>Floor</code>, <code>Front</code>, <code>Back</code>, <code>Left</code> and <code>Right</code>. Wire an image, a video or a live visual into a slot and it fills that surface.</p>
+        <dl>
+          <dt>Where</dt><dd><code>lab-2d.toe</code>, its five slots</dd>
+          <dt>Good for</dt><dd>Graphics, text, video, reactive visuals, webcams</dd>
+          <dt>Watch out</dt><dd>Make front and back images 3 : 1 (section 2). The upside: flat images look right from anywhere in the room.</dd>
+        </dl>
+      </article>
       <article class="route">
         <svg viewBox="0 0 200 130" aria-hidden="true">
           <circle cx="100" cy="65" r="58" fill="none" class="s-acc" stroke-width="2.5"/>
@@ -420,7 +446,7 @@ footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 18px;
         <h3>A 360° picture</h3>
         <p>Wrap the room in a 360° photo or video. The template puts it on a giant sphere around the room. Out of the box, it shows the lab's test room: a numbered checkerboard.</p>
         <dl>
-          <dt>Where</dt><dd><code>geo1</code> and <code>geo2</code> (two copies of the same sphere), coloured by <code>phong1</code> and <code>phong2</code></dd>
+          <dt>Where</dt><dd><code>lab-3d.toe</code>: <code>geo1</code> and <code>geo2</code> (two copies of the same sphere), coloured by <code>phong1</code> and <code>phong2</code></dd>
           <dt>Good for</dt><dd>360° photos and video, skies, found footage</dd>
           <dt>Watch out</dt><dd>Soft. A 360° image spreads its pixels all the way round, so the front wall gets about a quarter of its sharpness.</dd>
         </dl>
@@ -439,29 +465,15 @@ footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 18px;
         <h3>3D objects</h3>
         <p>Build things in TouchDesigner at real sizes, in metres. Any Geometry node inside <code>project1</code> whose name <strong>starts with geo</strong> appears on all five surfaces, drawn correctly for the sweet spot.</p>
         <dl>
-          <dt>Where</dt><dd>Your own <code>geo…</code> nodes; lights must be named <code>light…</code></dd>
+          <dt>Where</dt><dd><code>lab-3d.toe</code>: your own <code>geo…</code> nodes; lights must be named <code>light…</code></dd>
           <dt>Good for</dt><dd>Sculpture, architecture, anything you make</dd>
           <dt>Watch out</dt><dd>Section 3: things away from the walls slide for anyone not at the centre.</dd>
         </dl>
       </article>
-      <article class="route">
-        <svg viewBox="0 0 200 130" aria-hidden="true">
-          <rect x="30" y="20" width="140" height="90" class="t-surface s-ink" stroke-width="2"/>
-          <rect x="30" y="16" width="140" height="8" style="fill:var(--accent)"/>
-          <rect x="30" y="106" width="140" height="8" class="t-ink"/>
-          <rect x="26" y="20" width="8" height="90" class="t-muted"/>
-          <rect x="166" y="20" width="8" height="90" class="t-muted"/>
-          <g class="t-muted" opacity="0.5"><rect x="50" y="40" width="100" height="6"/><rect x="50" y="54" width="70" height="6"/><rect x="50" y="68" width="85" height="6"/></g>
-        </svg>
-        <h3>Flat images</h3>
-        <p>Paint each surface directly, like five screens. Turn the template's 3D off and plug one image (or video, or live visual) into each surface's input.</p>
-        <dl>
-          <dt>Where</dt><dd><code>CaveConfigParser</code>, Custom page, <strong>Perspective</strong> off, then wire your TOPs into its inputs</dd>
-          <dt>Good for</dt><dd>Graphics, text, video, reactive visuals</dd>
-          <dt>Watch out</dt><dd>Make each image exactly its surface's pixel size (section 2), and pre-squash front and back.</dd>
-        </dl>
-      </article>
     </div>
+  </div>
+  <div class="col">
+    <div class="note"><b>No-glasses mode and 3D-glasses mode</b>The room starts in no-glasses mode (the lab's manual calls it "2D mode"), and everything on this page works in it, including <code>lab-3d.toe</code>. There is also a version for glasses mode, <code>lab-3d-stereo.toe</code> (stereo means one picture per eye, which the glasses separate). It makes 3D objects really sit in front of or behind the walls. It costs half the sharpness, a pair of glasses for every visitor, and the lab has to switch the room over. Talk to your tutor before planning for it.</div>
   </div>
 </section>
 
@@ -469,7 +481,7 @@ footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 18px;
 <section id="coords">
   <div class="col">
     <h2><sup class="n">5</sup>Where things go</h2>
-    <p>Everything in the template is in <strong>metres</strong>. The centre of the floor is <span class="mono">0, 0, 0</span>. A default Box in TouchDesigner is exactly 1 m on each side, so you can think in real sizes.</p>
+    <p>For 3D work. Everything in the 3D template is in <strong>metres</strong>. The centre of the floor is <span class="mono">0, 0, 0</span>. A default Box in TouchDesigner is exactly 1 m on each side, so you can think in real sizes.</p>
   </div>
   <div class="col">
     <div class="coords">
@@ -542,23 +554,22 @@ footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 18px;
     <p>Do this at home, on your own laptop, before you book the room.</p>
     <ol class="steps">
       <li><h3>Install the right TouchDesigner</h3><p>Install <strong>TouchDesigner 2025</strong>, the exact build listed on Moodle, so your file opens on the lab computer. Use the <strong>Educational licence</strong> from your tutor. The free Non-Commercial licence stops at 1280 × 1280 pixels, far too small for this room.</p></li>
-      <li><h3>Get the template</h3><p>Download <code>TDWalls_2D.zip</code> from Moodle and unzip it. Keep the <code>model</code> folder next to the <code>.toe</code> file. The 360° test room lives there.</p></li>
-      <li><h3>Open it and look around</h3><p>Open <code>TDWalls_2D.toe</code> and double-click <code>project1</code> to go inside. You'll find:</p>
-        <div style="margin-top:8px"><div class="tablewrap"><table>
-          <tbody>
-            <tr><td><code>CaveConfigParser</code></td><td>The engine that cuts the picture up for the room. <strong>Don't edit it.</strong> Never press its <em>Reload</em> button.</td></tr>
-            <tr><td><code>geo1</code>, <code>geo2</code></td><td>The 360° sphere (two copies of it)</td></tr>
-            <tr><td><code>base1</code></td><td>Makes the 360° picture from the test room model</td></tr>
-            <tr><td><code>light1</code></td><td>Lights your 3D objects</td></tr>
-            <tr><td><code>preview</code></td><td>A small 3D model of the lab showing what your walls look like</td></tr>
-          </tbody>
-        </table></div></div>
-      </li>
-      <li><h3>Add your first object</h3><p>Press <span class="kbd">Tab</span>, choose <strong>COMP → Geometry</strong> and place it. Rename it so it starts with <code>geo</code>, for example <code>geo_first</code> (edit the name at the top of its parameter window). It arrives with a doughnut inside, which is fine for now. It is now on every surface.</p></li>
-      <li><h3>Move it in metres</h3><p>In its parameters, open the <strong>Xform</strong> page and set <strong>Translate</strong> to <span class="mono">0, 1.5, −2</span>: eye height, 1 m in front of the front wall. Then try <span class="mono">0, 1.5, −3</span>, exactly on the wall. Section 3 explains why the second one is safer.</p></li>
-      <li><h3>Check it in the preview</h3><p>Look at the <code>preview</code> node to see your scene on a model of the room. If it's empty, select <code>CaveConfigParser</code> and press <strong>Preview</strong> on its Custom page. That button is safe; <em>Reload</em> is not.</p></li>
-      <li><h3>Hide the test room when you don't need it</h3><p>Turn off the Render flag on <code>geo1</code> and <code>geo2</code>. Turn it back on to check alignment in the lab.</p></li>
-      <li><h3>Save into the same folder</h3><p>Save your <code>.toe</code> next to the <code>model</code> folder, and keep all your images, video and sound inside that folder too (section 7).</p></li>
+      <li><h3>Make your project folder</h3><p>Download <code>lab-2d.toe</code> from Moodle. Make a folder for your project, put the file in it and rename it after your project. Make a <code>media</code> folder next to it.</p></li>
+      <li><h3>Open it and look around</h3><p>Open the file and double-click <code>project1</code> to go inside. Five orange boxes are named after the surfaces: <code>Floor</code>, <code>Front</code>, <code>Back</code>, <code>Left</code>, <code>Right</code>. Each one is a slot, already the right size for its surface. The pictures going into them are demos from TouchDesigner's own sample files.</p></li>
+      <li><h3>Put your own image on the front wall</h3><p>Copy your image into <code>media</code>. In TouchDesigner press <span class="kbd">Tab</span>, choose <strong>TOP → Movie File In</strong>, place it and pick your file. Drag a wire from its right edge to the left edge of <code>Front</code>. The new wire replaces the demo. Videos work the same way.</p></li>
+      <li><h3>Get the shape right</h3><p>Front and back images should be <span class="mono">3840 × 1280</span> (section 2). Side walls and floor can use their pixel size.</p></li>
+      <li><h3>Check the whole picture</h3><p><code>out1</code> shows exactly what the room receives: floor on top, then front, back, and the two side walls side by side.</p></li>
+      <li><h3>Save into your folder</h3><p>Keep the <code>.toe</code> and every image, video and sound inside your project folder (section 7).</p></li>
+    </ol>
+
+    <h3 style="margin-top:34px">When your group needs 3D</h3>
+    <p style="margin-top:8px">For 3D objects or a 360° picture, use <code>lab-3d.toe</code> instead. Download <code>lab-3d.zip</code> from Moodle and keep its <code>model</code> folder next to the <code>.toe</code>: the 360° test room lives there.</p>
+    <ol class="steps">
+      <li><h3>Leave the engine alone</h3><p>Inside <code>project1</code>, <code>CaveConfigParser</code> cuts the picture up for the room. Don't edit it, and never press its <em>Reload</em> button. Its <strong>Preview</strong> button is safe.</p></li>
+      <li><h3>Add an object</h3><p>Press <span class="kbd">Tab</span>, choose <strong>COMP → Geometry</strong> and place it. Rename it so it starts with <code>geo</code>, for example <code>geo_first</code> (edit the name at the top of its parameter window). It arrives with a doughnut inside, and it is now on every surface.</p></li>
+      <li><h3>Move it in metres</h3><p>On its <strong>Xform</strong> page set <strong>Translate</strong> to <span class="mono">0, 1.5, −2</span>: eye height, 1 m in front of the front wall. Then try <span class="mono">0, 1.5, −3</span>, exactly on the wall. Section 3 explains why the second one is safer.</p></li>
+      <li><h3>Check it in the preview</h3><p>The <code>preview</code> node shows your scene on a small model of the room. If it's empty, press <strong>Preview</strong> on <code>CaveConfigParser</code>'s Custom page.</p></li>
+      <li><h3>Hide the test room when you don't need it</h3><p><code>geo1</code> and <code>geo2</code> are the 360° test room. Turn off their Render flag to hide it, and back on to check alignment in the lab.</p></li>
     </ol>
     <div class="note"><b>At home, F1 opens a giant window</b>F1 sends the picture to the room in the lab. On your laptop it opens a 3840 × 6480 window off the edge of your screen. Press <span class="kbd">Esc</span> to get back.</div>
   </div>
@@ -602,7 +613,7 @@ footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 18px;
 
     <h3 style="margin-top:34px">Before you come</h3>
     <ul class="checks">
-      <li><span>Everything is in <strong>one folder</strong>: your <code>.toe</code>, the <code>model</code> folder, and all images, video, sound and 3D models.</span></li>
+      <li><span>Everything is in <strong>one folder</strong>: your <code>.toe</code> and all images, video, sound and 3D models. With <code>lab-3d</code>, the <code>model</code> folder too.</span></li>
       <li><span>Put media in the folder <em>before</em> you load it into TouchDesigner, so paths stay short (like <span class="mono">media/sky.jpg</span>). Test: rename the folder and reopen the file. Anything missing has a wrong path.</span></li>
       <li><span>The folder is on a <strong>USB drive</strong>, or <strong>zipped</strong> on Google Drive. Unzipped folders take ages to download.</span></li>
       <li><span>You know what you're testing. Write down three questions the room has to answer.</span></li>
@@ -613,7 +624,7 @@ footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 18px;
       <li><h3>Copy and open</h3><p>Copy your folder to the lab computer and open the <code>.toe</code>.</p></li>
       <li><h3>Window popped up inside the room?</h3><p>The room is the computer's main display, so new windows often open there. Don't try to click them on the wall. Press <span class="kbd">Win</span> + <span class="kbd">←</span> or <span class="kbd">→</span> to move them back to the desk screen.</p></li>
       <li><h3>Send it to the room</h3><p>Go to the top level (press <span class="kbd">U</span> until you can't go higher), select the <code>perform</code> node and press <strong>Open as Separate Window</strong>. Or press <span class="kbd">F1</span> for Perform mode; <span class="kbd">Esc</span> leaves it.</p></li>
-      <li><h3>Check the alignment first</h3><p>Turn the test room on. Stand at the centre: the numbered grid should run unbroken round every corner. Walk to a corner and watch it bend. Now you know where the sweet spot is.</p></li>
+      <li><h3>Check the edges first</h3><p>Look at each surface: your image should reach every edge of its wall. With <code>lab-3d</code>, turn the test room on and stand at the centre: the numbered grid should run unbroken round every corner. Walk to a corner and watch it bend. Now you know where the sweet spot is.</p></li>
       <li><h3>Keep the door shut</h3><p>The door is part of the left wall's picture, and any light from outside washes it out.</p></li>
       <li><h3>Test from where your audience will stand</h3><p>Start at the door: that's where everyone first sees your piece. Then try other spots, not only the centre. Bring a phone to film the room for your documentation.</p></li>
       <li><h3>Leave on time</h3><p>Save, copy your file back, close TouchDesigner, pack up props.</p></li>
@@ -625,7 +636,7 @@ footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 18px;
 <section id="data">
   <div class="col">
     <h2><sup class="n">8</sup>Getting data and sound in</h2>
-    <p>For later weeks. The lab computer is cabled to the router of the lab's Wi-Fi network, <strong>vCave</strong> (password on Moodle). Anything on vCave can send to it: numbers with <strong>OSC</strong>, live video with <strong>NDI</strong>.</p>
+    <p>For later weeks. The lab computer is cabled to the router of the lab's Wi-Fi network, <strong>vCave</strong> (password <span class="mono">vcave123</span>). Anything on vCave can send to it: numbers with <strong>OSC</strong>, live video with <strong>NDI</strong>.</p>
   </div>
   <div class="col">
     <div class="netwrap">
@@ -695,13 +706,15 @@ footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 18px;
         <thead><tr><th>What you see</th><th>Why</th><th>Fix</th></tr></thead>
         <tbody>
           <tr><td>A window popped up on the wall</td><td>The room is the main display</td><td><span class="kbd">Win</span> + arrow keys to move it to the desk screen</td></tr>
-          <tr><td>The 360° sphere is blank</td><td>The <code>model</code> folder isn't next to the <code>.toe</code></td><td>Put it back, or re-download the template</td></tr>
+          <tr><td>Your image is on the wrong wall</td><td>It's wired into the wrong slot</td><td>Each slot is named after its surface: <code>Floor</code>, <code>Front</code>, <code>Back</code>, <code>Left</code>, <code>Right</code></td></tr>
+          <tr><td>A slot still shows the demo picture</td><td>Your new wire didn't land on the slot</td><td>Drag again, from your node's right edge to the slot's left edge</td></tr>
+          <tr><td>The 360° sphere is blank (lab-3d)</td><td>The <code>model</code> folder isn't next to the <code>.toe</code></td><td>Put it back, or re-download the template</td></tr>
           <tr><td>Everything broke after you pressed Reload</td><td>Reload rebuilds the engine from a file that only exists on the lab PC</td><td>Close without saving and reopen. If you saved, start again from a fresh template</td></tr>
           <tr><td>Your object doesn't appear</td><td>Its name doesn't start with <code>geo</code>, it's not inside <code>project1</code>, or its Render flag is off</td><td>Rename it, move it into <code>project1</code>, turn Render on</td></tr>
           <tr><td>Your object is there at home but missing in the room</td><td>It's above 3.5 m, in the ceiling hole</td><td>Bring it down or push it towards a wall</td></tr>
           <tr><td>A washed-out patch on the left wall</td><td>The door is open and outside light is getting in</td><td>Close the door</td></tr>
           <tr><td>Lines bend at the corners</td><td>You're not at the sweet spot</td><td>Expected. Stand at the centre to check, then design for the walls (section 3)</td></tr>
-          <tr><td>Flat images look tall on front and back</td><td>Those walls squeeze the image sideways</td><td>Design at 3840 × 1280, resize to 3840 × 1080 (section 2)</td></tr>
+          <tr><td>Flat images look tall on front and back</td><td>Those walls squeeze the image sideways</td><td>Make them 3840 × 1280 (section 2)</td></tr>
           <tr><td>Images and video missing on the lab PC</td><td>Their paths point to your laptop</td><td>Keep all media inside your project folder (section 7)</td></tr>
           <tr><td>The file won't open in the lab</td><td>Saved in a different TouchDesigner version</td><td>Install the build listed on Moodle and re-save</td></tr>
           <tr><td>The picture is cut off at 1280 pixels</td><td>Non-Commercial licence</td><td>Use the Educational licence</td></tr>
