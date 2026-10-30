@@ -54,6 +54,7 @@ PlayCanvas in the browser. Nothing to install.
 **Part B (weeks 9–12):** group work in the school's immersive lab — a
 four-wall-and-floor projection room (CAVE) driven by TouchDesigner. One
 room, shared on a rotation; the piece only works there, which is the point.
+Before your first visit, read the [Immersive Lab guide](immersive-lab/).
 
 ## Assessment
 
