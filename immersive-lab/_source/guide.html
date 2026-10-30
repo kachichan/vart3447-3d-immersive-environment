@@ -1,0 +1,1070 @@
+<title>Inside the Immersive Lab</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Hedvig+Letters+Serif:opsz@12..24&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column (~66ch) with wider figure bands; course-site identity — white ground, hairlines, one orange accent, grey superscript numbers. */
+:root {
+  --bg: #ffffff;
+  --surface: #f6f5f2;
+  --viewer: #efede8;
+  --line: #e3e0da;
+  --ink: #1b1a18;
+  --muted: #6c675f;
+  --accent: #f0821e;
+  --accent-ink: #b05a08;
+  --accent-wash: #fdf0e3;
+  --good: #2f7d4f;
+  --warn: #a8650b;
+  --bad: #b23a2b;
+  /* projection-surface swatches: light tints, read on both grounds */
+  --s-floor: #dedbd3;
+  --s-front: #ecd9c2;
+  --s-back: #d3ddd4;
+  --s-left: #d9d5e5;
+  --s-right: #ccdbe4;
+  --s-ink: #1b1a18;
+  --f-display: "Rethink Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --f-body: "Rethink Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --f-serif: "Hedvig Letters Serif", Georgia, "Times New Roman", serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121110; --surface: #1b1a18; --viewer: #1e1c1a; --line: #2f2c29;
+    --ink: #edeae4; --muted: #a39e95; --accent: #f28c2e; --accent-ink: #f6a65c; --accent-wash: #2a1e12;
+    --good: #6cc48f; --warn: #e3a54a; --bad: #ef7f6f;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121110; --surface: #1b1a18; --viewer: #1e1c1a; --line: #2f2c29;
+  --ink: #edeae4; --muted: #a39e95; --accent: #f28c2e; --accent-ink: #f6a65c; --accent-wash: #2a1e12;
+  --good: #6cc48f; --warn: #e3a54a; --bad: #ef7f6f;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--f-body); font-size: 17px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 64px;
+  -webkit-font-smoothing: antialiased;
+}
+.col { max-width: 720px; margin-inline: auto; }
+.wide { max-width: 1040px; margin-inline: auto; }
+a { color: var(--accent-ink); text-underline-offset: 3px; }
+a:hover { color: var(--ink); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+code, .mono { font-family: var(--f-mono); font-size: 0.86em; }
+code { background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 0.05em 0.35em; white-space: nowrap; }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; line-height: 1.12; margin: 0; }
+h2 { font-size: clamp(1.55rem, 3.4vw, 2rem); font-weight: 700; letter-spacing: -0.015em; }
+h3 { font-size: 1.12rem; font-weight: 700; }
+p { margin: 0; }
+sup.n { font-size: 0.55em; color: var(--muted); font-weight: 500; margin-right: 0.35em; vertical-align: 0.9em; letter-spacing: 0; }
+
+/* header */
+header.top { padding-block: 56px 28px; }
+.eyebrow { font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+h1 { font-size: clamp(2.4rem, 7vw, 4.2rem); font-weight: 800; letter-spacing: -0.035em; margin-top: 10px; }
+h1 .dot { color: var(--accent); }
+.lede { font-size: 1.18rem; color: var(--ink); margin-top: 16px; max-width: 34em; }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-top: 32px; }
+.fact { padding: 14px 16px 14px 0; display: flex; flex-direction: column; gap: 2px; }
+.fact b { font-size: 1.35rem; font-weight: 700; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; }
+.fact span { font-size: 0.82rem; color: var(--muted); }
+nav.toc { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.92rem; }
+nav.toc a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
+nav.toc a:hover { border-color: var(--accent); }
+nav.toc sup { color: var(--muted); font-size: 0.7em; margin-right: 2px; }
+
+section { padding-top: 64px; }
+section > .col > h2 + p, section > .col > p + p { margin-top: 14px; }
+.sub { color: var(--muted); }
+
+/* viewer */
+.viewer { position: relative; margin-top: 26px; background: var(--viewer); border-radius: 6px; overflow: hidden; aspect-ratio: 16 / 10; max-width: 100%; touch-action: pan-y; cursor: grab; user-select: none; }
+.viewer:active { cursor: grabbing; }
+.viewer canvas { display: block; width: 100%; height: 100%; }
+.viewer .hint { position: absolute; left: 12px; bottom: 10px; font-size: 0.78rem; color: var(--muted); pointer-events: none; }
+.viewer .fallback { position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; text-align: center; color: var(--muted); }
+@media (max-width: 560px) { .viewer { aspect-ratio: 4 / 3.6; } }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+button.tg {
+  font: 600 0.9rem/1 var(--f-body); color: var(--ink); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 999px; padding: 9px 14px; cursor: pointer;
+}
+button.tg:hover { border-color: var(--muted); }
+button.tg[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+button.tg.primary { border-color: var(--accent); }
+button.tg.primary[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #1b1a18; }
+.caption { margin-top: 14px; font-size: 0.96rem; color: var(--muted); min-height: 3.2em; }
+.caption strong { color: var(--ink); }
+
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 18px; font-size: 0.88rem; }
+.legend span { display: inline-flex; align-items: center; gap: 7px; }
+.legend i { width: 14px; height: 14px; border-radius: 3px; border: 1px solid rgba(0,0,0,0.15); display: inline-block; }
+
+/* two-column figure + text */
+.pair { display: grid; grid-template-columns: minmax(0, 260px) minmax(0, 1fr); gap: 32px; align-items: start; margin-top: 28px; }
+@media (max-width: 680px) { .pair { grid-template-columns: minmax(0, 1fr); } .pair .canvasmap { max-width: 260px; } }
+.canvasmap svg { width: 100%; height: auto; display: block; }
+
+table { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
+th, td { text-align: left; padding: 9px 12px 9px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+td.num, th.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tablewrap { overflow-x: auto; }
+.sw { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 7px; border: 1px solid rgba(0,0,0,0.15); vertical-align: 0; }
+
+.note { margin-top: 22px; padding: 16px 18px; background: var(--surface); border-left: 3px solid var(--accent); border-radius: 0 6px 6px 0; font-size: 0.96rem; }
+.note b { display: block; margin-bottom: 4px; }
+.rule {
+  margin-top: 26px; font-family: var(--f-serif); font-size: clamp(1.3rem, 3.2vw, 1.65rem); line-height: 1.35;
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding-block: 20px;
+}
+.rule small { display: block; font-family: var(--f-body); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+
+/* sweet spot */
+.ss { margin-top: 26px; display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+@media (max-width: 760px) { .ss { grid-template-columns: minmax(0, 1fr); } }
+.ss svg { width: 100%; height: auto; display: block; background: var(--viewer); border-radius: 6px; }
+.ss .panel { display: flex; flex-direction: column; gap: 16px; }
+.ss .group { display: flex; flex-direction: column; gap: 8px; }
+.ss .group .lab { font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.ss .group .row { display: flex; flex-wrap: wrap; gap: 6px; }
+.readout { border-top: 1px solid var(--line); padding-top: 14px; }
+.readout .big { font-size: 2.1rem; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.chip { display: inline-block; font-size: 0.8rem; font-weight: 700; padding: 3px 9px; border-radius: 999px; border: 1.5px solid currentColor; margin-top: 6px; }
+.chip.good { color: var(--good); } .chip.warn { color: var(--warn); } .chip.bad { color: var(--bad); }
+.readout p { font-size: 0.92rem; color: var(--muted); margin-top: 8px; }
+.svgkey { display: flex; flex-direction: column; gap: 6px; font-size: 0.86rem; color: var(--muted); }
+.svgkey span { display: flex; align-items: center; gap: 8px; }
+.svgkey svg { width: 30px; height: 10px; background: none; flex: none; }
+
+/* svg tokens */
+.t-ink { fill: var(--ink); } .t-muted { fill: var(--muted); } .t-acc { fill: var(--accent); } .t-bg { fill: var(--bg); } .t-surface { fill: var(--surface); }
+.s-ink { stroke: var(--ink); } .s-muted { stroke: var(--muted); } .s-acc { stroke: var(--accent); } .s-line { stroke: var(--line); }
+.svgtxt { font-family: var(--f-body); }
+
+/* routes */
+.routes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 28px; }
+@media (max-width: 880px) { .routes { grid-template-columns: minmax(0, 1fr); } }
+.route { border: 1px solid var(--line); border-radius: 8px; padding: 18px; display: flex; flex-direction: column; gap: 10px; background: var(--bg); }
+.route svg { width: 100%; height: auto; max-height: 150px; }
+.route h3 { margin-top: 4px; }
+.route p { font-size: 0.93rem; }
+.route dl { margin: 4px 0 0; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 6px 12px; font-size: 0.88rem; }
+.route dt { color: var(--muted); font-weight: 600; }
+.route dd { margin: 0; }
+
+/* coordinates */
+.coords { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; margin-top: 26px; }
+@media (max-width: 640px) { .coords { grid-template-columns: minmax(0, 1fr); } }
+.coords figure { margin: 0; }
+.coords svg { width: 100%; height: auto; display: block; background: var(--viewer); border-radius: 6px; }
+.coords figcaption { font-size: 0.84rem; color: var(--muted); margin-top: 8px; }
+
+/* steps */
+ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 26px 0 0; display: flex; flex-direction: column; gap: 0; }
+ol.steps > li { counter-increment: s; display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 6px 10px; padding: 16px 0; border-top: 1px solid var(--line); }
+ol.steps > li::before { content: counter(s); font-weight: 700; font-size: 1.15rem; color: var(--accent-ink); font-variant-numeric: tabular-nums; }
+ol.steps h3 { grid-column: 2; font-size: 1.04rem; }
+ol.steps li > p, ol.steps li > div { grid-column: 2; font-size: 0.96rem; }
+ol.steps li > p + p { margin-top: 6px; }
+.kbd { font-family: var(--f-mono); font-size: 0.82em; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; padding: 0 5px; background: var(--surface); white-space: nowrap; }
+
+.checks { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 8px; }
+.checks li { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 8px; font-size: 0.96rem; }
+.checks li::before { content: ""; width: 14px; height: 14px; border: 1.5px solid var(--muted); border-radius: 3px; margin-top: 5px; }
+
+.timeline svg { width: 100%; height: auto; display: block; min-width: 560px; }
+.timeline { overflow-x: auto; margin-top: 26px; }
+
+.rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 22px; }
+.rules div { border-top: 2px solid var(--ink); padding-top: 10px; font-size: 0.92rem; }
+.rules b { display: block; font-size: 1rem; }
+
+.netwrap { overflow-x: auto; margin-top: 26px; }
+.netwrap svg { width: 100%; min-width: 620px; height: auto; display: block; }
+
+footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 18px; font-size: 0.84rem; color: var(--muted); }
+
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+
+<header class="top col">
+  <div class="eyebrow">VART3447 · Part B · AVA121</div>
+  <h1>Inside the Immersive Lab<span class="dot">.</span></h1>
+  <p class="lede">Four walls, a floor, and one big picture. This guide explains how the room works, how the lab's two TouchDesigner templates fill it, and what to do before your first 30 minutes inside.</p>
+  <div class="facts">
+    <div class="fact"><b>10.5 × 6 m</b><span>floor, walls 3.5 m high</span></div>
+    <div class="fact"><b>5 surfaces</b><span>4 walls + floor, no ceiling</span></div>
+    <div class="fact"><b>3840 × 5400</b><span>pixels in one image</span></div>
+    <div class="fact"><b>1 sweet spot</b><span>centre, 1.5 m high</span></div>
+    <div class="fact"><b>30 min</b><span>per booked slot</span></div>
+  </div>
+  <nav class="toc" aria-label="Contents">
+    <a href="#room"><sup>1</sup>The room</a>
+    <a href="#canvas"><sup>2</sup>One big picture</a>
+    <a href="#sweet"><sup>3</sup>The sweet spot</a>
+    <a href="#routes"><sup>4</sup>Three ways to fill it</a>
+    <a href="#coords"><sup>5</sup>Where things go</a>
+    <a href="#first"><sup>6</sup>Your first scene</a>
+    <a href="#visit"><sup>7</sup>Your lab slot</a>
+    <a href="#data"><sup>8</sup>Getting data in</a>
+    <a href="#fix"><sup>9</sup>If it goes wrong</a>
+  </nav>
+</header>
+
+<!-- 1 ROOM -->
+<section id="room">
+  <div class="col">
+    <h2><sup class="n">1</sup>The room</h2>
+    <p>The lab is a box you stand inside. Projectors cover the four walls and the floor. There is no ceiling: look up and the picture stops. Your own body casts shadows on the floor image. You come in through a door in the left wall, and the door is part of the projected picture.</p>
+    <p>Drag the model to look around. Then press <strong>Show the five cameras</strong>: the 3D template draws each surface from one eye in the middle of the room.</p>
+  </div>
+  <div class="wide">
+    <div class="viewer" id="viewer" aria-label="3D model of the Immersive Lab. Drag to rotate." role="img">
+      <div class="fallback" id="viewer-fallback" hidden>The 3D model needs WebGL, which this browser has turned off. The table and diagrams below have the same information.</div>
+      <span class="hint" id="viewer-hint">Drag to look around</span>
+    </div>
+  </div>
+  <div class="col">
+    <div class="controls" role="group" aria-label="Model view">
+      <button class="tg primary" id="btn-unfold" aria-pressed="false" type="button">Unfold into one picture</button>
+      <button class="tg" id="btn-cams" aria-pressed="false" type="button">Show the five cameras</button>
+      <button class="tg" id="btn-person" aria-pressed="true" type="button">Show a 1.7 m person</button>
+    </div>
+    <p class="caption" id="viewer-caption"><strong>The room.</strong> Front and back walls are 10.5 × 3.5 m, side walls 6 × 3.5 m, floor 10.5 × 6 m. The orange dot is the eye the whole room is drawn for. The dark patch on the left wall is the door (its position here is approximate).</p>
+    <div class="legend" aria-hidden="true">
+      <span><i style="background:var(--s-front)"></i>Front</span>
+      <span><i style="background:var(--s-back)"></i>Back</span>
+      <span><i style="background:var(--s-left)"></i>Left</span>
+      <span><i style="background:var(--s-right)"></i>Right</span>
+      <span><i style="background:var(--s-floor)"></i>Floor</span>
+    </div>
+    <div class="note"><b>Which wall is Front?</b>We'll mark it on your first visit. Front matters for sound (section 8) and for the coordinates (section 5).</div>
+  </div>
+</section>
+
+<!-- 2 CANVAS -->
+<section id="canvas">
+  <div class="col">
+    <h2><sup class="n">2</sup>One big picture</h2>
+    <p>You never control the projectors one by one. The lab computer sends <strong>one tall image</strong>, 3840 pixels wide and 5400 high, and the projection system cuts it up and puts each part on its surface. Press <strong>Unfold into one picture</strong> above to watch the room flatten into that image.</p>
+  </div>
+  <div class="col">
+    <div class="pair">
+      <div class="canvasmap" aria-label="Diagram of the 3840 by 5400 pixel image: floor on top, then front, then back, then left and right side by side at the bottom.">
+        <svg viewBox="-40 -40 3920 5560" role="img">
+          <g class="svgtxt">
+            <rect x="0" y="0" width="3840" height="2160" style="fill:var(--s-floor)" class="s-ink" stroke-width="10"/>
+            <rect x="0" y="2160" width="3840" height="1080" style="fill:var(--s-front)" class="s-ink" stroke-width="10"/>
+            <rect x="0" y="3240" width="3840" height="1080" style="fill:var(--s-back)" class="s-ink" stroke-width="10"/>
+            <rect x="0" y="4320" width="1920" height="1080" style="fill:var(--s-left)" class="s-ink" stroke-width="10"/>
+            <rect x="1920" y="4320" width="1920" height="1080" style="fill:var(--s-right)" class="s-ink" stroke-width="10"/>
+            <g style="fill:var(--s-ink)" font-weight="700" font-size="260">
+              <text x="1920" y="1130" text-anchor="middle">FLOOR</text>
+              <text x="1920" y="2800" text-anchor="middle">FRONT</text>
+              <text x="1920" y="3880" text-anchor="middle">BACK</text>
+              <text x="960" y="4960" text-anchor="middle">LEFT</text>
+              <text x="2880" y="4960" text-anchor="middle">RIGHT</text>
+            </g>
+            <g style="fill:var(--s-ink)" font-size="150" opacity="0.75">
+              <text x="1920" y="1360" text-anchor="middle">3840 × 2160</text>
+              <text x="1920" y="3000" text-anchor="middle">3840 × 1080</text>
+              <text x="1920" y="4080" text-anchor="middle">3840 × 1080</text>
+              <text x="960" y="5160" text-anchor="middle">1920 × 1080</text>
+              <text x="2880" y="5160" text-anchor="middle">1920 × 1080</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>Surface</th><th class="num">Real size</th><th class="num">Pixels</th><th class="num">Make flat images</th></tr></thead>
+            <tbody>
+              <tr><td><span class="sw" style="background:var(--s-floor)"></span>Floor</td><td class="num">10.5 × 6 m</td><td class="num">3840 × 2160</td><td class="num">3840 × 2160</td></tr>
+              <tr><td><span class="sw" style="background:var(--s-front)"></span>Front</td><td class="num">10.5 × 3.5 m</td><td class="num">3840 × 1080</td><td class="num"><strong>3840 × 1280</strong></td></tr>
+              <tr><td><span class="sw" style="background:var(--s-back)"></span>Back</td><td class="num">10.5 × 3.5 m</td><td class="num">3840 × 1080</td><td class="num"><strong>3840 × 1280</strong></td></tr>
+              <tr><td><span class="sw" style="background:var(--s-left)"></span>Left</td><td class="num">6 × 3.5 m</td><td class="num">1920 × 1080</td><td class="num">1920 × 1080</td></tr>
+              <tr><td><span class="sw" style="background:var(--s-right)"></span>Right</td><td class="num">6 × 3.5 m</td><td class="num">1920 × 1080</td><td class="num">1920 × 1080</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top:14px;font-size:0.95rem">You never place these by hand: both templates put each surface in the right spot of the big picture. The last column is the size to make your own flat images; the circle test below explains the two in bold.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:36px">The circle test</h3>
+    <p style="margin-top:8px">In the unfolded picture every circle is round. Fold it back and look at the front wall: the same circle becomes a tall oval. The front and back walls are 3 times wider than they are tall, but their slice of the image is 3.56 times wider. The image gets squeezed sideways to fit, so everything flat on those walls looks about 19% taller.</p>
+    <div class="note"><b>Fix for flat images on front and back</b>Make them <span class="mono">3840 × 1280</span>: 3 : 1, the wall's real shape. The 2D template squeezes each image into its wall's pixels, so it comes out right on the wall. Side walls and floor are close enough to leave alone. 3D scenes don't need any of this.</div>
+    <p style="margin-top:18px">One pixel on the wall is about 3 mm. Think big: thin lines and small text vanish.</p>
+  </div>
+</section>
+
+<!-- 3 SWEET SPOT -->
+<section id="sweet">
+  <div class="col">
+    <h2><sup class="n">3</sup>The sweet spot</h2>
+    <p>The 3D template draws the whole room as seen from <strong>one eye</strong>, in the middle of the room, 1.5 m off the floor. From there, a 3D scene looks perfect, and corners disappear. Anywhere else, some things slide out of place. Flat images from the 2D template sit on the walls, so they are right from everywhere.</p>
+    <p>Which things? Try it. This is the room from above. Drag <strong>you</strong> around the room, and drag the <strong>object</strong> (or use the buttons).</p>
+  </div>
+  <div class="wide">
+    <div class="ss">
+      <svg id="ss-svg" viewBox="-6.2 -6.8 12.4 10.8" role="img" aria-label="Top-down view of the room showing where an object is painted on the wall compared with where it should be for a viewer.">
+        <defs>
+          <pattern id="hatch" width="0.3" height="0.3" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <line x1="0" y1="0" x2="0" y2="0.3" class="s-line" stroke-width="0.06"/>
+          </pattern>
+        </defs>
+        <rect x="-6.2" y="-6.8" width="12.4" height="3.8" fill="url(#hatch)"/>
+        <text x="0" y="-6.3" text-anchor="middle" class="svgtxt t-muted" font-size="0.32">Virtual space beyond the front wall</text>
+        <rect x="-5.25" y="-3" width="10.5" height="6" class="t-surface s-ink" stroke-width="0.07"/>
+        <line x1="-5.25" y1="-3" x2="5.25" y2="-3" class="s-ink" stroke-width="0.16"/>
+        <text x="0" y="-3.2" text-anchor="middle" class="svgtxt t-ink" font-size="0.3" font-weight="700">FRONT WALL</text>
+        <text x="0" y="3.45" text-anchor="middle" class="svgtxt t-muted" font-size="0.28">back wall</text>
+        <text x="-5.5" y="-1.7" text-anchor="middle" class="svgtxt t-muted" font-size="0.28" transform="rotate(-90 -5.5 -1.7)">left wall</text>
+        <line x1="-5.25" y1="-0.45" x2="-5.25" y2="0.45" style="stroke:var(--viewer)" stroke-width="0.12"/>
+        <text x="-4.95" y="0.1" class="svgtxt t-muted" font-size="0.26" font-weight="700">door</text>
+        <text x="5.5" y="0" text-anchor="middle" class="svgtxt t-muted" font-size="0.28" transform="rotate(90 5.5 0)">right wall</text>
+        <line id="ss-e2i" class="s-muted" stroke-width="0.04" stroke-dasharray="0.12 0.1"/>
+        <line id="ss-v2p" class="s-ink" stroke-width="0.05" stroke-dasharray="0.18 0.12"/>
+        <line id="ss-v2i" class="s-acc" stroke-width="0.07"/>
+        <circle cx="0" cy="0" r="0.2" class="t-bg s-acc" stroke-width="0.06"/>
+        <circle cx="0" cy="0" r="0.09" class="t-acc"/>
+        <text x="0" y="0.52" text-anchor="middle" class="svgtxt t-muted" font-size="0.26">sweet spot</text>
+        <circle id="ss-i" r="0.15" class="t-acc"/>
+        <text id="ss-ilab" class="svgtxt" font-size="0.26" font-weight="700" style="fill:var(--accent-ink)">painted here</text>
+        <g id="ss-p" style="cursor:grab">
+          <circle r="0.55" fill="transparent"/>
+          <rect x="-0.22" y="-0.22" width="0.44" height="0.44" class="t-ink" transform="rotate(45)"/>
+          <text y="-0.42" text-anchor="middle" class="svgtxt t-ink" font-size="0.28" font-weight="700">object</text>
+        </g>
+        <g id="ss-v" style="cursor:grab">
+          <circle r="0.6" fill="transparent"/>
+          <circle r="0.3" class="t-bg s-ink" stroke-width="0.07"/>
+          <circle r="0.11" class="t-ink"/>
+          <text y="0.68" text-anchor="middle" class="svgtxt t-ink" font-size="0.28" font-weight="700">you</text>
+        </g>
+      </svg>
+      <div class="panel">
+        <div class="group">
+          <span class="lab" id="lab-obj">Put the object</span>
+          <div class="row" role="group" aria-labelledby="lab-obj">
+            <button class="tg" type="button" data-p="wall">On the wall</button>
+            <button class="tg" type="button" data-p="room" aria-pressed="true">In the room</button>
+            <button class="tg" type="button" data-p="beyond">Beyond the wall</button>
+          </div>
+        </div>
+        <div class="group">
+          <span class="lab" id="lab-you">Put yourself</span>
+          <div class="row" role="group" aria-labelledby="lab-you">
+            <button class="tg" type="button" data-v="centre">At the sweet spot</button>
+            <button class="tg" type="button" data-v="door">By the door</button>
+            <button class="tg" type="button" data-v="side">Off to the side</button>
+          </div>
+        </div>
+        <div class="readout" aria-live="polite">
+          <div class="big" id="ss-deg">0°</div>
+          <span class="chip good" id="ss-chip">Looks right</span>
+          <p id="ss-text">How far the painted object is from where it should be, as you see it.</p>
+        </div>
+        <div class="svgkey" aria-hidden="true">
+          <span><svg viewBox="0 0 30 10"><line x1="0" y1="5" x2="30" y2="5" class="s-acc" stroke-width="3"/></svg>where you see it</span>
+          <span><svg viewBox="0 0 30 10"><line x1="0" y1="5" x2="30" y2="5" class="s-ink" stroke-width="2" stroke-dasharray="5 4"/></svg>where it should be</span>
+          <span><svg viewBox="0 0 30 10"><line x1="0" y1="5" x2="30" y2="5" class="s-muted" stroke-width="1.5" stroke-dasharray="3 3"/></svg>how the template paints it</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <p style="margin-top:22px">Two things are always true. From the sweet spot, everything lines up. And an object placed <em>on</em> a wall lines up from everywhere, because the painted picture and the object are in the same place.</p>
+    <div class="rule"><small>The rule for group work</small>Put what matters on the walls. Use depth for atmosphere.</div>
+    <p style="margin-top:18px">Your audience will stand all over the room, so anything that floats in mid-air or sits far beyond a wall will only be right for one of them. Corners show it most: a straight line that crosses a corner bends unless you stand at the centre.</p>
+    <p style="margin-top:14px">The door matters too. Everyone enters through the left wall, about 5 m from the sweet spot, so the first look anyone gets at your piece is from one of the worst places to stand. Press <strong>By the door</strong> above and try each object position. Decide what a visitor should see in their first three seconds, from there.</p>
+  </div>
+</section>
+
+<!-- 4 ROUTES -->
+<section id="routes">
+  <div class="col">
+    <h2><sup class="n">4</sup>Three ways to fill the room</h2>
+    <p>The lab has two templates. Start with the 2D one.</p>
+    <div class="tablewrap" style="margin-top:16px">
+      <table>
+        <thead><tr><th>Template</th><th>Does</th><th>Use it for</th></tr></thead>
+        <tbody>
+          <tr><td><code>lab-2d.toe</code></td><td>Flat images, one per surface</td><td>Weeks 9–10, and any piece that lives on the walls</td></tr>
+          <tr><td><code>lab-3d.toe</code></td><td>3D objects and 360° pictures</td><td>A group piece that needs real 3D</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:14px;font-size:0.95rem"><strong>Download:</strong> <a href="https://kachichan.github.io/vart3447-3d-immersive-environment/immersive-lab/templates/lab-2d.zip">lab-2d.zip</a> · <code>lab-3d.zip</code> (ready before week 11) · <a href="https://kachichan.github.io/vart3447-3d-immersive-environment/immersive-lab/templates/lab-3d-stereo.zip">lab-3d-stereo.zip</a>. Adapted from the Immersive Lab technician's original templates.</p>
+  </div>
+  <div class="wide">
+    <div class="routes">
+      <article class="route">
+        <svg viewBox="0 0 200 130" aria-hidden="true">
+          <rect x="30" y="20" width="140" height="90" class="t-surface s-ink" stroke-width="2"/>
+          <rect x="30" y="16" width="140" height="8" style="fill:var(--accent)"/>
+          <rect x="30" y="106" width="140" height="8" class="t-ink"/>
+          <rect x="26" y="20" width="8" height="90" class="t-muted"/>
+          <rect x="166" y="20" width="8" height="90" class="t-muted"/>
+          <g class="t-muted" opacity="0.5"><rect x="50" y="40" width="100" height="6"/><rect x="50" y="54" width="70" height="6"/><rect x="50" y="68" width="85" height="6"/></g>
+        </svg>
+        <h3>Flat images</h3>
+        <p>Treat the room as five screens. The 2D template has one orange slot per surface, named <code>Floor</code>, <code>Front</code>, <code>Back</code>, <code>Left</code> and <code>Right</code>. Wire an image, a video or a live visual into a slot and it fills that surface.</p>
+        <dl>
+          <dt>Where</dt><dd><code>lab-2d.toe</code>, its five slots</dd>
+          <dt>Good for</dt><dd>Graphics, text, video, reactive visuals, webcams</dd>
+          <dt>Watch out</dt><dd>Make front and back images 3 : 1 (section 2). The upside: flat images look right from anywhere in the room.</dd>
+        </dl>
+      </article>
+      <article class="route">
+        <svg viewBox="0 0 200 130" aria-hidden="true">
+          <circle cx="100" cy="65" r="58" fill="none" class="s-acc" stroke-width="2.5"/>
+          <g class="s-muted" stroke-width="1" opacity="0.6">
+            <line x1="100" y1="65" x2="100" y2="7"/><line x1="100" y1="65" x2="158" y2="65"/><line x1="100" y1="65" x2="42" y2="65"/><line x1="100" y1="65" x2="141" y2="24"/><line x1="100" y1="65" x2="59" y2="24"/><line x1="100" y1="65" x2="141" y2="106"/><line x1="100" y1="65" x2="59" y2="106"/><line x1="100" y1="65" x2="100" y2="123"/>
+          </g>
+          <rect x="74" y="50" width="52" height="30" class="t-surface s-ink" stroke-width="2"/>
+          <circle cx="100" cy="65" r="3.5" class="t-acc"/>
+        </svg>
+        <h3>A 360° picture</h3>
+        <p>Wrap the room in a 360° photo or video. The template puts it on a giant sphere around the room. Out of the box, it shows the lab's test room: a numbered checkerboard.</p>
+        <dl>
+          <dt>Where</dt><dd><code>lab-3d.toe</code>: <code>geo1</code> and <code>geo2</code> (two copies of the same sphere), coloured by <code>phong1</code> and <code>phong2</code></dd>
+          <dt>Good for</dt><dd>360° photos and video, skies, found footage</dd>
+          <dt>Watch out</dt><dd>Soft. A 360° image spreads its pixels all the way round, so the front wall gets about a quarter of its sharpness.</dd>
+        </dl>
+      </article>
+      <article class="route">
+        <svg viewBox="0 0 200 130" aria-hidden="true">
+          <rect x="30" y="20" width="140" height="90" class="t-surface s-ink" stroke-width="2"/>
+          <g class="s-acc" stroke-width="1" stroke-dasharray="3 3" opacity="0.8">
+            <line x1="100" y1="65" x2="30" y2="20"/><line x1="100" y1="65" x2="170" y2="20"/><line x1="100" y1="65" x2="30" y2="110"/><line x1="100" y1="65" x2="170" y2="110"/>
+          </g>
+          <rect x="62" y="34" width="18" height="18" class="t-ink"/>
+          <circle cx="138" cy="44" r="10" class="t-ink"/>
+          <polygon points="128,96 142,74 156,96" class="t-ink"/>
+          <circle cx="100" cy="65" r="3.5" class="t-acc"/>
+        </svg>
+        <h3>3D objects</h3>
+        <p>Build things in TouchDesigner at real sizes, in metres. Any Geometry node inside <code>project1</code> whose name <strong>starts with geo</strong> appears on all five surfaces, drawn correctly for the sweet spot.</p>
+        <dl>
+          <dt>Where</dt><dd><code>lab-3d.toe</code>: your own <code>geo…</code> nodes; lights must be named <code>light…</code></dd>
+          <dt>Good for</dt><dd>Sculpture, architecture, anything you make</dd>
+          <dt>Watch out</dt><dd>Section 3: things away from the walls slide for anyone not at the centre.</dd>
+        </dl>
+      </article>
+    </div>
+  </div>
+  <div class="col">
+    <div class="note"><b>No-glasses mode and 3D-glasses mode</b>The room starts in no-glasses mode (the lab's manual calls it "2D mode"), and everything on this page works in it, including <code>lab-3d.toe</code>. There is also a version for glasses mode, <code>lab-3d-stereo.toe</code> (stereo means one picture per eye, which the glasses separate). It makes 3D objects really sit in front of or behind the walls. It costs half the sharpness, a pair of glasses for every visitor, and the lab has to switch the room over. Talk to your tutor before planning for it.</div>
+  </div>
+</section>
+
+<!-- 5 COORDS -->
+<section id="coords">
+  <div class="col">
+    <h2><sup class="n">5</sup>Where things go</h2>
+    <p>For 3D work. Everything in the 3D template is in <strong>metres</strong>. The centre of the floor is <span class="mono">0, 0, 0</span>. A default Box in TouchDesigner is exactly 1 m on each side, so you can think in real sizes.</p>
+  </div>
+  <div class="col">
+    <div class="coords">
+      <figure>
+        <svg viewBox="-6.4 -4.4 12.8 8.8" role="img" aria-label="Top view with axes: x to the right, z towards the back wall; front wall at z minus 3.">
+          <rect x="-5.25" y="-3" width="10.5" height="6" class="t-surface s-ink" stroke-width="0.06"/>
+          <line x1="-5.25" y1="-3" x2="5.25" y2="-3" class="s-ink" stroke-width="0.14"/>
+          <line x1="-5.25" y1="-0.45" x2="-5.25" y2="0.45" style="stroke:var(--viewer)" stroke-width="0.12"/>
+          <line x1="0" y1="0" x2="2.4" y2="0" class="s-acc" stroke-width="0.09"/>
+          <polygon points="2.6,0 2.25,-0.18 2.25,0.18" class="t-acc"/>
+          <line x1="0" y1="0" x2="0" y2="2.1" class="s-acc" stroke-width="0.09"/>
+          <polygon points="0,2.3 -0.18,1.95 0.18,1.95" class="t-acc"/>
+          <circle r="0.12" class="t-ink"/>
+          <g class="svgtxt" font-size="0.36">
+            <text x="2.75" y="0.12" style="fill:var(--accent-ink)" font-weight="700">+x</text>
+            <text x="0.25" y="2.35" style="fill:var(--accent-ink)" font-weight="700">+z</text>
+            <text x="0.25" y="-0.25" class="t-ink">0, 0</text>
+            <text x="0" y="-3.3" text-anchor="middle" class="t-ink" font-weight="700">Front wall · z = −3</text>
+            <text x="0" y="3.6" text-anchor="middle" class="t-muted">Back wall · z = +3</text>
+            <text x="-5.05" y="-2.55" class="t-muted" font-size="0.3">x = −5.25</text>
+            <text x="5.05" y="-2.55" text-anchor="end" class="t-muted" font-size="0.3">x = +5.25</text>
+            <text x="-4.95" y="0.75" class="t-muted" font-size="0.3" font-weight="700">door</text>
+          </g>
+        </svg>
+        <figcaption>From above. Facing the front wall, x goes right and z comes towards you. So the front wall is at negative z.</figcaption>
+      </figure>
+      <figure>
+        <svg viewBox="-6.4 -1 12.8 5.4" role="img" aria-label="Side view: floor at y 0, eye at y 1.5, top of walls at y 3.5, no ceiling.">
+          <g transform="scale(1,-1) translate(0,-3.9)">
+            <line x1="-5.25" y1="0" x2="5.25" y2="0" class="s-ink" stroke-width="0.1"/>
+            <line x1="-5.25" y1="0" x2="-5.25" y2="3.5" class="s-ink" stroke-width="0.1"/>
+            <line x1="5.25" y1="0" x2="5.25" y2="3.5" class="s-ink" stroke-width="0.1"/>
+            <line x1="-5.25" y1="3.5" x2="5.25" y2="3.5" class="s-muted" stroke-width="0.05" stroke-dasharray="0.2 0.16"/>
+            <rect x="-0.16" y="0" width="0.32" height="1.36" rx="0.12" class="t-muted"/>
+            <circle cx="0" cy="1.55" r="0.15" class="t-muted"/>
+            <circle cx="0" cy="1.5" r="0.08" class="t-acc"/>
+            <line x1="0.3" y1="1.5" x2="4.9" y2="1.5" class="s-acc" stroke-width="0.04" stroke-dasharray="0.14 0.1"/>
+          </g>
+          <g class="svgtxt" font-size="0.34">
+            <text x="0" y="-0.3" text-anchor="middle" class="t-muted">no ceiling above 3.5 m</text>
+            <text x="4.95" y="2.25" text-anchor="end" style="fill:var(--accent-ink)" font-weight="700">eye · y = 1.5</text>
+            <text x="-4.95" y="3.65" class="t-ink">floor · y = 0</text>
+            <text x="-4.95" y="0.75" class="t-ink">top of walls · y = 3.5</text>
+          </g>
+        </svg>
+        <figcaption>From the side. y goes up. The template's eye is a 1.5 m tall viewer standing at the centre.</figcaption>
+      </figure>
+    </div>
+    <div class="tablewrap" style="margin-top:22px">
+      <table>
+        <thead><tr><th>To put something…</th><th class="num">Translate (x, y, z)</th></tr></thead>
+        <tbody>
+          <tr><td>On the floor in the middle</td><td class="num mono">0, 0, 0</td></tr>
+          <tr><td>At eye height, in the middle of the front wall</td><td class="num mono">0, 1.5, −3</td></tr>
+          <tr><td>At eye height, 1 m in front of the front wall</td><td class="num mono">0, 1.5, −2</td></tr>
+          <tr><td>Behind the front wall, as if through a window</td><td class="num mono">0, 1.5, −8</td></tr>
+          <tr><td>Centre of the left wall / right wall</td><td class="num mono">∓5.25, 1.75, 0</td></tr>
+          <tr><td>Centre of the back wall</td><td class="num mono">0, 1.75, 3</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:14px;font-size:0.95rem">TouchDesigner's Translate sets the <em>centre</em> of an object. A 1 m box at <span class="mono">0, 0, 0</span> is half under the floor; use <span class="mono">0, 0.5, 0</span> to stand it on the floor. Anything directly above you, higher than the walls, is in the hole where the ceiling would be.</p>
+  </div>
+</section>
+
+<!-- 6 FIRST SCENE -->
+<section id="first">
+  <div class="col">
+    <h2><sup class="n">6</sup>Your first scene</h2>
+    <p>Do this at home, on your own laptop, before you book the room.</p>
+    <ol class="steps">
+      <li><h3>Install the right TouchDesigner</h3><p>Install <strong>TouchDesigner 2025</strong>, the exact build listed on Moodle, so your file opens on the lab computer. Use the <strong>Educational licence</strong> from your tutor. The free Non-Commercial licence stops at 1280 × 1280 pixels, far too small for this room.</p></li>
+      <li><h3>Make your project folder</h3><p>Download <a href="https://kachichan.github.io/vart3447-3d-immersive-environment/immersive-lab/templates/lab-2d.zip">lab-2d.zip</a> and unzip it to get <code>lab-2d.toe</code>. Make a folder for your project, put the file in it and rename it after your project. Make a <code>media</code> folder next to it.</p></li>
+      <li><h3>Open it and look around</h3><p>Open the file and double-click <code>project1</code> to go inside. Five orange boxes are named after the surfaces: <code>Floor</code>, <code>Front</code>, <code>Back</code>, <code>Left</code>, <code>Right</code>. Each one is a slot, already the right size for its surface. The pictures going into them are demos from TouchDesigner's own sample files.</p></li>
+      <li><h3>Put your own image on the front wall</h3><p>Copy your image into <code>media</code>. In TouchDesigner press <span class="kbd">Tab</span>, choose <strong>TOP → Movie File In</strong>, place it and pick your file. Drag a wire from its right edge to the left edge of <code>Front</code>. The new wire replaces the demo. Videos work the same way.</p></li>
+      <li><h3>Get the shape right</h3><p>Front and back images should be <span class="mono">3840 × 1280</span> (section 2). Side walls and floor can use their pixel size.</p></li>
+      <li><h3>Check the whole picture</h3><p><code>out1</code> shows exactly what the room receives: floor on top, then front, back, and the two side walls side by side.</p></li>
+      <li><h3>Save into your folder</h3><p>Keep the <code>.toe</code> and every image, video and sound inside your project folder (section 7).</p></li>
+    </ol>
+
+    <h3 style="margin-top:34px">When your group needs 3D</h3>
+    <p style="margin-top:8px">For 3D objects or a 360° picture, use <code>lab-3d.toe</code> instead. Download <code>lab-3d.zip</code> from section 4 (ready before week 11), unzip it, and keep its <code>model</code> folder next to the <code>.toe</code>: the 360° test room lives there.</p>
+    <ol class="steps">
+      <li><h3>Leave the engine alone</h3><p>Inside <code>project1</code>, <code>CaveConfigParser</code> cuts the picture up for the room. Don't edit it, and never press its <em>Reload</em> button. Its <strong>Preview</strong> button is safe.</p></li>
+      <li><h3>Add an object</h3><p>Press <span class="kbd">Tab</span>, choose <strong>COMP → Geometry</strong> and place it. Rename it so it starts with <code>geo</code>, for example <code>geo_first</code> (edit the name at the top of its parameter window). It arrives with a doughnut inside, and it is now on every surface.</p></li>
+      <li><h3>Move it in metres</h3><p>On its <strong>Xform</strong> page set <strong>Translate</strong> to <span class="mono">0, 1.5, −2</span>: eye height, 1 m in front of the front wall. Then try <span class="mono">0, 1.5, −3</span>, exactly on the wall. Section 3 explains why the second one is safer.</p></li>
+      <li><h3>Check it in the preview</h3><p>The <code>preview</code> node shows your scene on a small model of the room. If it's empty, press <strong>Preview</strong> on <code>CaveConfigParser</code>'s Custom page.</p></li>
+      <li><h3>Hide the test room when you don't need it</h3><p><code>geo1</code> and <code>geo2</code> are the 360° test room. Turn off their Render flag to hide it, and back on to check alignment in the lab.</p></li>
+    </ol>
+    <div class="note"><b>At home, F1 opens a giant window</b>F1 sends the picture to the room in the lab. On your laptop it opens a 3840 × 6480 window off the edge of your screen. Press <span class="kbd">Esc</span> to get back.</div>
+  </div>
+</section>
+
+<!-- 7 VISIT -->
+<section id="visit">
+  <div class="col">
+    <h2><sup class="n">7</sup>Your lab slot</h2>
+    <p>The lab is <strong>AVA121</strong>, HKBU Kai Tak campus, 51 Kwun Tong Road, Ngau Tau Kok (牛頭角觀塘道51號). Slots are 30 minutes. <a href="https://calendar.app.google/RjF3h7oaYYhBo3eBA" target="_blank" rel="noopener">Book a slot</a>.</p>
+    <div class="rules">
+      <div><b>5 minutes late = no slot</b>The slot is cancelled and staff can't help latecomers.</div>
+      <div><b>Shoes off</b>Before you step onto the floor.</div>
+      <div><b>No food or drink</b>Not even water.</div>
+      <div><b>Leave it as you found it</b>Props packed away before your 30 minutes end.</div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="timeline" aria-label="A suggested 30 minute slot: arrive by minute 0, set up until 5, load until 10, test until 25, pack up until 30.">
+      <svg viewBox="0 0 720 132" role="img">
+        <g class="svgtxt">
+          <rect x="0" y="40" width="120" height="34" class="t-surface s-line" stroke-width="1"/>
+          <rect x="120" y="40" width="120" height="34" class="t-surface s-line" stroke-width="1"/>
+          <rect x="240" y="40" width="360" height="34" style="fill:var(--accent-wash)" class="s-acc" stroke-width="1.5"/>
+          <rect x="600" y="40" width="120" height="34" class="t-surface s-line" stroke-width="1"/>
+          <g font-size="13" font-weight="700" class="t-ink">
+            <text x="10" y="62">Shoes off</text>
+            <text x="130" y="62">Copy &amp; open</text>
+            <text x="420" y="62" text-anchor="middle">Test from different spots</text>
+            <text x="610" y="62">Save, tidy</text>
+          </g>
+          <g font-size="12" class="t-muted">
+            <text x="0" y="96">0</text><text x="120" y="96" text-anchor="middle">5</text><text x="240" y="96" text-anchor="middle">10</text><text x="600" y="96" text-anchor="middle">25</text><text x="720" y="96" text-anchor="end">30 min</text>
+          </g>
+          <line x1="120" y1="20" x2="120" y2="80" class="s-acc" stroke-width="2"/>
+          <text x="126" y="28" font-size="12" font-weight="700" style="fill:var(--accent-ink)">Grace ends: slot gone if you're not here</text>
+          <text x="0" y="122" font-size="12" class="t-muted">A suggested plan. Authoring happens at home; the room is for testing.</text>
+        </g>
+      </svg>
+    </div>
+
+    <h3 style="margin-top:34px">Before you come</h3>
+    <ul class="checks">
+      <li><span>Everything is in <strong>one folder</strong>: your <code>.toe</code> and all images, video, sound and 3D models. With <code>lab-3d</code>, the <code>model</code> folder too.</span></li>
+      <li><span>Put media in the folder <em>before</em> you load it into TouchDesigner, so paths stay short (like <span class="mono">media/sky.jpg</span>). Test: rename the folder and reopen the file. Anything missing has a wrong path.</span></li>
+      <li><span>The folder is on a <strong>USB drive</strong>, or <strong>zipped</strong> on Google Drive. Unzipped folders take ages to download.</span></li>
+      <li><span>You know what you're testing. Write down three questions the room has to answer.</span></li>
+    </ul>
+
+    <h3 style="margin-top:34px">In the room</h3>
+    <ol class="steps">
+      <li><h3>Copy and open</h3><p>Copy your folder to the lab computer and open the <code>.toe</code>.</p></li>
+      <li><h3>Window popped up inside the room?</h3><p>The room is the computer's main display, so new windows often open there. Don't try to click them on the wall. Press <span class="kbd">Win</span> + <span class="kbd">←</span> or <span class="kbd">→</span> to move them back to the desk screen.</p></li>
+      <li><h3>Send it to the room</h3><p>Go to the top level (press <span class="kbd">U</span> until you can't go higher), select the <code>perform</code> node and press <strong>Open as Separate Window</strong>. Or press <span class="kbd">F1</span> for Perform mode; <span class="kbd">Esc</span> leaves it.</p></li>
+      <li><h3>Check the edges first</h3><p>Look at each surface: your image should reach every edge of its wall. With <code>lab-3d</code>, turn the test room on and stand at the centre: the numbered grid should run unbroken round every corner. Walk to a corner and watch it bend. Now you know where the sweet spot is.</p></li>
+      <li><h3>Keep the door shut</h3><p>The door is part of the left wall's picture, and any light from outside washes it out.</p></li>
+      <li><h3>Test from where your audience will stand</h3><p>Start at the door: that's where everyone first sees your piece. Then try other spots, not only the centre. Bring a phone to film the room for your documentation.</p></li>
+      <li><h3>Leave on time</h3><p>Save, copy your file back, close TouchDesigner, pack up props.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 8 DATA -->
+<section id="data">
+  <div class="col">
+    <h2><sup class="n">8</sup>Getting data and sound in</h2>
+    <p>For later weeks. The lab computer is cabled to the router of the lab's Wi-Fi network, <strong>vCave</strong> (password <span class="mono">vcave123</span>). Anything on vCave can send to it: numbers with <strong>OSC</strong>, live video with <strong>NDI</strong>.</p>
+  </div>
+  <div class="col">
+    <div class="netwrap">
+      <svg viewBox="0 0 720 230" role="img" aria-label="Diagram: laptop or phone sends over vCave Wi-Fi to the router, which is cabled to the lab PC, which sends one image to the projectors. A webcam plugs into the wall USB socket.">
+        <g class="svgtxt">
+          <g font-size="13">
+            <rect x="8" y="30" width="150" height="58" rx="6" class="t-bg s-ink" stroke-width="1.5"/>
+            <text x="83" y="55" text-anchor="middle" font-weight="700" class="t-ink">Your laptop / phone</text>
+            <text x="83" y="74" text-anchor="middle" class="t-muted">sensors, RealSense</text>
+            <rect x="228" y="30" width="110" height="58" rx="6" class="t-bg s-ink" stroke-width="1.5"/>
+            <text x="283" y="55" text-anchor="middle" font-weight="700" class="t-ink">vCave router</text>
+            <text x="283" y="74" text-anchor="middle" class="t-muted">Wi-Fi</text>
+            <rect x="408" y="30" width="120" height="58" rx="6" style="fill:var(--accent-wash)" class="s-acc" stroke-width="2"/>
+            <text x="468" y="55" text-anchor="middle" font-weight="700" class="t-ink">Lab PC</text>
+            <text x="468" y="74" text-anchor="middle" class="t-muted">TouchDesigner</text>
+            <rect x="598" y="30" width="114" height="58" rx="6" class="t-bg s-ink" stroke-width="1.5"/>
+            <text x="655" y="55" text-anchor="middle" font-weight="700" class="t-ink">Projectors</text>
+            <text x="655" y="74" text-anchor="middle" class="t-muted">5 surfaces</text>
+            <rect x="408" y="150" width="120" height="50" rx="6" class="t-bg s-ink" stroke-width="1.5"/>
+            <text x="468" y="173" text-anchor="middle" font-weight="700" class="t-ink">Webcam</text>
+            <text x="468" y="190" text-anchor="middle" class="t-muted">wall USB socket</text>
+          </g>
+          <g class="s-muted" stroke-width="2" fill="none">
+            <path d="M158 59 H226" stroke-dasharray="6 5"/>
+            <path d="M338 59 H406"/>
+            <path d="M528 59 H596"/>
+            <path d="M468 150 V90"/>
+          </g>
+          <g class="t-muted">
+            <polygon points="228,59 220,55 220,63"/><polygon points="408,59 400,55 400,63"/><polygon points="598,59 590,55 590,63"/><polygon points="468,90 464,98 472,98"/>
+          </g>
+          <g font-size="12" class="t-muted">
+            <text x="192" y="22" text-anchor="middle">Wi-Fi</text>
+            <text x="192" y="110" text-anchor="middle">OSC numbers</text>
+            <text x="192" y="126" text-anchor="middle">NDI video</text>
+            <text x="372" y="22" text-anchor="middle">cable</text>
+            <text x="562" y="22" text-anchor="middle">one image</text>
+            <text x="478" y="125">USB 2.0</text>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="tablewrap" style="margin-top:22px">
+      <table>
+        <thead><tr><th>Device</th><th>Connect to</th><th>In TouchDesigner</th></tr></thead>
+        <tbody>
+          <tr><td>Webcam</td><td>USB socket in the wall</td><td><strong>Video Device In</strong> TOP. <strong>Face Track</strong> CHOP finds a face.</td></tr>
+          <tr><td>Vive tracker</td><td>Wireless; press its button to switch on</td><td><strong>OpenVR</strong> CHOP, Output set to <em>Trackers</em>. Only works inside the room area.</td></tr>
+          <tr><td>RealSense depth camera</td><td>Your laptop, not the lab PC (it needs USB 3.0; the wall has 2.0)</td><td><strong>RealSense</strong> TOP on your laptop → <strong>NDI Out</strong> → <strong>NDI In</strong> on the lab PC</td></tr>
+          <tr><td>Arduino sensors</td><td>USB</td><td><strong>Serial</strong> CHOP or DAT. Same port and baud rate as your Arduino code.</td></tr>
+          <tr><td>Phone or laptop controls</td><td>vCave Wi-Fi</td><td><strong>OSC In</strong> CHOP. Same IP address and port on both ends.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note"><b>Design for blobs, not skeletons</b>Tracking in the lab is rough. Pieces that respond to presence, position and movement survive. Pieces that need every finger tracked don't.</div>
+    <h3 style="margin-top:34px">Sound</h3>
+    <p style="margin-top:8px">The lab has a 7.1 surround system, but it runs as 2.1 unless set up specially: the sound comes from the front. If sound matters, put your main image on the front wall too.</p>
+  </div>
+</section>
+
+<!-- 9 FIX -->
+<section id="fix">
+  <div class="col">
+    <h2><sup class="n">9</sup>If it goes wrong</h2>
+    <div class="tablewrap" style="margin-top:20px">
+      <table>
+        <thead><tr><th>What you see</th><th>Why</th><th>Fix</th></tr></thead>
+        <tbody>
+          <tr><td>A window popped up on the wall</td><td>The room is the main display</td><td><span class="kbd">Win</span> + arrow keys to move it to the desk screen</td></tr>
+          <tr><td>Your image is on the wrong wall</td><td>It's wired into the wrong slot</td><td>Each slot is named after its surface: <code>Floor</code>, <code>Front</code>, <code>Back</code>, <code>Left</code>, <code>Right</code></td></tr>
+          <tr><td>A slot still shows the demo picture</td><td>Your new wire didn't land on the slot</td><td>Drag again, from your node's right edge to the slot's left edge</td></tr>
+          <tr><td>The 360° sphere is blank (lab-3d)</td><td>The <code>model</code> folder isn't next to the <code>.toe</code></td><td>Put it back, or re-download the template</td></tr>
+          <tr><td>Everything broke after you pressed Reload</td><td>Reload rebuilds the engine from a file that only exists on the lab PC</td><td>Close without saving and reopen. If you saved, start again from a fresh template</td></tr>
+          <tr><td>Your object doesn't appear</td><td>Its name doesn't start with <code>geo</code>, it's not inside <code>project1</code>, or its Render flag is off</td><td>Rename it, move it into <code>project1</code>, turn Render on</td></tr>
+          <tr><td>Your object is there at home but missing in the room</td><td>It's above 3.5 m, in the ceiling hole</td><td>Bring it down or push it towards a wall</td></tr>
+          <tr><td>A washed-out patch on the left wall</td><td>The door is open and outside light is getting in</td><td>Close the door</td></tr>
+          <tr><td>Lines bend at the corners</td><td>You're not at the sweet spot</td><td>Expected. Stand at the centre to check, then design for the walls (section 3)</td></tr>
+          <tr><td>Flat images look tall on front and back</td><td>Those walls squeeze the image sideways</td><td>Make them 3840 × 1280 (section 2)</td></tr>
+          <tr><td>Images and video missing on the lab PC</td><td>Their paths point to your laptop</td><td>Keep all media inside your project folder (section 7)</td></tr>
+          <tr><td>The file won't open in the lab</td><td>Saved in a different TouchDesigner version</td><td>Install the build listed on Moodle and re-save</td></tr>
+          <tr><td>The picture is cut off at 1280 pixels</td><td>Non-Commercial licence</td><td>Use the Educational licence</td></tr>
+          <tr><td>A huge window disappeared off your laptop screen</td><td>You pressed F1 at home</td><td><span class="kbd">Esc</span></td></tr>
+          <tr><td>Arduino: "port already open"</td><td>Only one program can use a serial port</td><td>Close the Arduino Serial Monitor</td></tr>
+          <tr><td>RealSense not found on the lab PC</td><td>The wall sockets are USB 2.0</td><td>Run it on your laptop and send it over NDI</td></tr>
+          <tr><td>Sound only from the front</td><td>The system runs as 2.1 by default</td><td>Expected. Ask before planning surround sound</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer class="col">
+  Numbers come from the lab's own projection setup and the technician's Immersive Lab manual. The templates are adapted from the technician's originals. VART3447 3D Immersive Environment, Academy of Visual Arts, HKBU.
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function () {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+  /* ---------------- 3D room ---------------- */
+  const host = document.getElementById('viewer');
+  const caption = document.getElementById('viewer-caption');
+  const btnUnfold = document.getElementById('btn-unfold');
+  const btnCams = document.getElementById('btn-cams');
+  const btnPerson = document.getElementById('btn-person');
+
+  function webglOK() {
+    try { const c = document.createElement('canvas'); return !!(window.WebGLRenderingContext && (c.getContext('webgl') || c.getContext('experimental-webgl'))); } catch (e) { return false; }
+  }
+
+  if (typeof THREE === 'undefined' || !webglOK()) {
+    document.getElementById('viewer-fallback').hidden = false;
+    document.getElementById('viewer-hint').hidden = true;
+    [btnUnfold, btnCams, btnPerson].forEach(b => b.disabled = true);
+  } else {
+    initRoom();
+  }
+
+  function initRoom() {
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    renderer.outputEncoding = THREE.sRGBEncoding;
+    host.prepend(renderer.domElement);
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(40, 1.6, 0.1, 200);
+
+    function setBg() { renderer.setClearColor(new THREE.Color(css('--viewer') || '#efede8'), 1); }
+    setBg();
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setBg);
+    new MutationObserver(setBg).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+    const U = 10.5 / 3840, CY = 2.2;            // metres per canvas pixel; canvas centre height
+    const surfaces = [
+      { id: 'floor', name: 'FLOOR', w: 10.5, h: 6,   px: [3840, 2160], o: [0, 0],       pos: [0, 0.002, 0],  rot: [-Math.PI / 2, 0, 0], col: '--s-floor' },
+      { id: 'front', name: 'FRONT', w: 10.5, h: 3.5, px: [3840, 1080], o: [0, 2160],    pos: [0, 1.75, -3],  rot: [0, 0, 0],            col: '--s-front' },
+      { id: 'back',  name: 'BACK',  w: 10.5, h: 3.5, px: [3840, 1080], o: [0, 3240],    pos: [0, 1.75, 3],   rot: [0, Math.PI, 0],      col: '--s-back' },
+      { id: 'left',  name: 'LEFT',  w: 6,    h: 3.5, px: [1920, 1080], o: [0, 4320],    pos: [-5.25, 1.75, 0], rot: [0, Math.PI / 2, 0], col: '--s-left' },
+      { id: 'right', name: 'RIGHT', w: 6,    h: 3.5, px: [1920, 1080], o: [1920, 4320], pos: [5.25, 1.75, 0],  rot: [0, -Math.PI / 2, 0], col: '--s-right' },
+    ];
+
+    function drawTex(s) {
+      const k = 2, sc = 1024 / 3840;
+      const cw = Math.round(s.px[0] * sc), ch = Math.round(s.px[1] * sc);
+      const c = s.canvas || (s.canvas = document.createElement('canvas'));
+      c.width = cw * k; c.height = ch * k;
+      const g = c.getContext('2d'); g.setTransform(k, 0, 0, k, 0, 0);
+      g.fillStyle = css(s.col) || '#ddd'; g.fillRect(0, 0, cw, ch);
+      g.strokeStyle = 'rgba(0,0,0,0.09)'; g.lineWidth = 1;
+      const cell = 32;
+      for (let x = cell; x < cw; x += cell) { g.beginPath(); g.moveTo(x, 0); g.lineTo(x, ch); g.stroke(); }
+      for (let y = cell; y < ch; y += cell) { g.beginPath(); g.moveTo(0, y); g.lineTo(cw, y); g.stroke(); }
+      g.strokeStyle = 'rgba(0,0,0,0.45)'; g.lineWidth = 3; g.strokeRect(1.5, 1.5, cw - 3, ch - 3);
+      const ink = css('--s-ink') || '#1b1a18';
+      const r = ch * 0.27, cx = cw / 2, cy = ch / 2;
+      g.strokeStyle = ink; g.lineWidth = 3;
+      g.beginPath(); g.arc(cx, cy, r, 0, Math.PI * 2); g.stroke();
+      g.lineWidth = 1.5; g.beginPath(); g.moveTo(cx - r, cy); g.lineTo(cx + r, cy); g.moveTo(cx, cy - r); g.lineTo(cx, cy + r); g.stroke();
+      g.fillStyle = ink;
+      const big = Math.round(Math.min(ch * 0.17, 56));
+      g.font = '800 ' + big + 'px "Rethink Sans", system-ui, sans-serif';
+      g.textBaseline = 'top'; g.fillText(s.name, 14, 12);
+      const small = Math.max(15, Math.round(big * 0.38));
+      g.font = '500 ' + small + 'px "Rethink Sans", system-ui, sans-serif';
+      g.textBaseline = 'bottom';
+      g.fillText(s.w + ' × ' + s.h + ' m', 14, ch - 12 - small * 1.25);
+      g.fillText(s.px[0] + ' × ' + s.px[1] + ' px', 14, ch - 12);
+      if (s.tex) s.tex.needsUpdate = true;
+    }
+
+    const plane = new THREE.PlaneGeometry(1, 1);
+    const maxAniso = renderer.capabilities.getMaxAnisotropy();
+    surfaces.forEach(s => {
+      drawTex(s);
+      s.tex = new THREE.CanvasTexture(s.canvas);
+      s.tex.encoding = THREE.sRGBEncoding; s.tex.anisotropy = maxAniso;
+      s.mat = new THREE.MeshBasicMaterial({ map: s.tex, side: THREE.DoubleSide, transparent: true, opacity: 1 });
+      s.mesh = new THREE.Mesh(plane, s.mat);
+      scene.add(s.mesh);
+      s.pRoom = new THREE.Vector3(...s.pos);
+      s.qRoom = new THREE.Quaternion().setFromEuler(new THREE.Euler(...s.rot));
+      s.sRoom = new THREE.Vector3(s.w, s.h, 1);
+      const pw = s.px[0], ph = s.px[1];
+      s.pCanvas = new THREE.Vector3((s.o[0] + pw / 2 - 1920) * U, CY - (s.o[1] + ph / 2 - 2700) * U, 0);
+      s.qCanvas = new THREE.Quaternion();
+      s.sCanvas = new THREE.Vector3(pw * U, ph * U, 1);
+      s.normal = new THREE.Vector3(0, 0, 1).applyQuaternion(s.qRoom);
+      s.op = 1;
+    });
+    if (document.fonts && document.fonts.load) {
+      Promise.all([document.fonts.load('800 40px "Rethink Sans"'), document.fonts.load('500 16px "Rethink Sans"')])
+        .then(() => surfaces.forEach(drawTex)).catch(() => {});
+    }
+
+    // door: in the left wall, inside its projected image (position along the wall approximate)
+    const leftS = surfaces.find(s => s.id === 'left');
+    const dc = document.createElement('canvas'); dc.width = 180; dc.height = 420;
+    const dg = dc.getContext('2d');
+    dg.fillStyle = '#5d5850'; dg.fillRect(0, 0, 180, 420);
+    dg.strokeStyle = '#2b2925'; dg.lineWidth = 8; dg.strokeRect(4, 4, 172, 412);
+    dg.fillStyle = '#f3f0ea'; dg.beginPath(); dg.arc(146, 222, 8, 0, Math.PI * 2); dg.fill();
+    dg.font = '800 40px "Rethink Sans", system-ui, sans-serif'; dg.textAlign = 'center'; dg.fillText('DOOR', 90, 80);
+    const doorTex = new THREE.CanvasTexture(dc); doorTex.encoding = THREE.sRGBEncoding;
+    const doorMat = new THREE.MeshBasicMaterial({ map: doorTex, side: THREE.DoubleSide, transparent: true });
+    const door = new THREE.Mesh(plane, doorMat);
+    door.position.set(0, (1.05 - 1.75) / 3.5, 0.012);
+    door.scale.set(0.9 / 6, 2.1 / 3.5, 1);
+    leftS.mesh.add(door);
+
+    // ceiling outline (the hole)
+    const top = new THREE.BufferGeometry().setFromPoints([
+      new THREE.Vector3(-5.25, 3.5, -3), new THREE.Vector3(5.25, 3.5, -3), new THREE.Vector3(5.25, 3.5, 3), new THREE.Vector3(-5.25, 3.5, 3), new THREE.Vector3(-5.25, 3.5, -3)]);
+    const topMat = new THREE.LineDashedMaterial({ color: 0x8a857d, dashSize: 0.25, gapSize: 0.18, transparent: true });
+    const topLine = new THREE.Line(top, topMat); topLine.computeLineDistances(); scene.add(topLine);
+
+    // person + eye
+    const person = new THREE.Group();
+    const pm = new THREE.MeshBasicMaterial({ color: 0x8f8a82, transparent: true });
+    const body = new THREE.Mesh(new THREE.CylinderGeometry(0.17, 0.2, 1.36, 20), pm); body.position.y = 0.68; person.add(body);
+    const head = new THREE.Mesh(new THREE.SphereGeometry(0.135, 20, 14), pm); head.position.y = 1.56; person.add(head);
+    scene.add(person);
+    const eyeMat = new THREE.MeshBasicMaterial({ color: 0xf0821e, depthTest: false, transparent: true });
+    const eye = new THREE.Mesh(new THREE.SphereGeometry(0.09, 16, 12), eyeMat);
+    eye.position.set(0, 1.5, 0); eye.renderOrder = 10; scene.add(eye);
+
+    // five camera frusta
+    const EYE = new THREE.Vector3(0, 1.5, 0);
+    const pts = [];
+    surfaces.forEach(s => {
+      [[-0.5, -0.5], [0.5, -0.5], [0.5, 0.5], [-0.5, 0.5]].forEach(([a, b]) => {
+        const p = new THREE.Vector3(a * s.w, b * s.h, 0).applyQuaternion(s.qRoom).add(s.pRoom);
+        pts.push(EYE.clone(), p);
+      });
+    });
+    const camLines = new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(pts),
+      new THREE.LineBasicMaterial({ color: 0xf0821e, transparent: true, opacity: 0.7, depthTest: false }));
+    camLines.renderOrder = 9; camLines.visible = false; scene.add(camLines);
+
+    // orbit state
+    let theta = 0.55, phi = 1.02, radius = 19, auto = !reduce, visible = true;
+    const target = new THREE.Vector3(0, 1.3, 0);
+    let mode = 0, t = 0, animFrom = 0, animStart = 0, animating = false;
+    const DUR = reduce ? 1 : 1700;
+
+    function size() {
+      const w = host.clientWidth, h = host.clientHeight;
+      renderer.setSize(w, h, false);
+      camera.aspect = w / h; camera.updateProjectionMatrix();
+      const tan = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
+      radius = Math.max(8.6 / tan, 7.2 / (tan * camera.aspect)) * 0.7;
+    }
+    function canvasCam() {
+      const tan = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
+      const H = 5400 * U, W = 3840 * U;
+      const d = Math.max((H / 2 * 1.1) / tan, (W / 2 * 1.15) / (tan * camera.aspect));
+      return { pos: new THREE.Vector3(0, CY, d), tgt: new THREE.Vector3(0, CY, 0) };
+    }
+    size();
+    new ResizeObserver(size).observe(host);
+
+    const ease = x => x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+    const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
+    const vA = new THREE.Vector3(), vB = new THREE.Vector3(), qT = new THREE.Quaternion();
+
+    function frame(now) {
+      requestAnimationFrame(frame);
+      if (!visible) return;
+      if (animating) {
+        const raw = clamp((now - animStart) / DUR, 0, 1);
+        t = animFrom + (mode - animFrom) * raw;
+        if (raw >= 1) animating = false;
+      }
+      if (auto && mode === 0 && !animating) theta += 0.0016;
+
+      surfaces.forEach((s, i) => {
+        const lt = ease(clamp((t - i * 0.06) / 0.76, 0, 1));
+        s.mesh.position.lerpVectors(s.pRoom, s.pCanvas, lt);
+        qT.copy(s.qRoom).slerp(s.qCanvas, lt); s.mesh.quaternion.copy(qT);
+        s.mesh.scale.lerpVectors(s.sRoom, s.sCanvas, lt);
+      });
+      const e = ease(t);
+      const orbit = new THREE.Vector3(
+        target.x + radius * Math.sin(phi) * Math.sin(theta),
+        target.y + radius * Math.cos(phi),
+        target.z + radius * Math.sin(phi) * Math.cos(theta));
+      const cc = canvasCam();
+      vA.lerpVectors(orbit, cc.pos, e); vB.lerpVectors(target, cc.tgt, e);
+      camera.position.copy(vA); camera.lookAt(vB);
+
+      surfaces.forEach(s => {
+        let want = 1;
+        if (s.id !== 'floor') {
+          vA.subVectors(camera.position, s.pRoom);
+          if (vA.dot(s.normal) < 0) want = 0.07;
+        }
+        want = want + (1 - want) * e;
+        s.op += (want - s.op) * (reduce ? 1 : 0.15);
+        s.mat.opacity = s.op; s.mat.depthWrite = s.op > 0.98;
+      });
+      doorMat.opacity = leftS.op; doorMat.depthWrite = leftS.op > 0.98;
+      const fade = 1 - clamp(t * 2.5, 0, 1);
+      pm.opacity = fade; eyeMat.opacity = fade; topMat.opacity = fade * 0.9;
+      camLines.material.opacity = 0.7 * fade;
+      person.visible = btnPerson.getAttribute('aria-pressed') === 'true' && fade > 0.01;
+      eye.visible = fade > 0.01; topLine.visible = fade > 0.01;
+      renderer.render(scene, camera);
+    }
+    requestAnimationFrame(frame);
+    new IntersectionObserver(es => { visible = es[0].isIntersecting; }).observe(host);
+
+    // drag to orbit
+    let drag = null;
+    host.addEventListener('pointerdown', ev => {
+      if (mode === 1) return;
+      drag = { x: ev.clientX, y: ev.clientY, touch: ev.pointerType === 'touch' };
+      auto = false; host.setPointerCapture(ev.pointerId);
+      document.getElementById('viewer-hint').hidden = true;
+    });
+    host.addEventListener('pointermove', ev => {
+      if (!drag) return;
+      const dx = ev.clientX - drag.x, dy = ev.clientY - drag.y;
+      drag.x = ev.clientX; drag.y = ev.clientY;
+      theta -= dx * 0.008;
+      if (!drag.touch) phi = clamp(phi - dy * 0.006, 0.12, 1.42);
+    });
+    ['pointerup', 'pointercancel'].forEach(n => host.addEventListener(n, () => { drag = null; }));
+
+    const captions = [
+      '<strong>The room.</strong> Front and back walls are 10.5 × 3.5 m, side walls 6 × 3.5 m, floor 10.5 × 6 m. The orange dot is the eye the whole room is drawn for. The dark patch on the left wall is the door (its position here is approximate).',
+      '<strong>Unfolded.</strong> The five surfaces are one image, 3840 × 5400 pixels: floor on top, then front, back, and the two side walls. Every circle is round here. Fold it back and look at the front wall.'
+    ];
+    btnUnfold.addEventListener('click', () => {
+      const next = mode === 0 ? 1 : 0;
+      animFrom = t; mode = next; animStart = performance.now(); animating = true;
+      btnUnfold.setAttribute('aria-pressed', String(next === 1));
+      btnUnfold.textContent = next === 1 ? 'Fold back into the room' : 'Unfold into one picture';
+      btnCams.disabled = next === 1; btnPerson.disabled = next === 1;
+      caption.innerHTML = captions[next];
+      document.getElementById('viewer-hint').hidden = next === 1;
+      host.style.cursor = next === 1 ? 'default' : '';
+    });
+    btnCams.addEventListener('click', () => {
+      const on = btnCams.getAttribute('aria-pressed') !== 'true';
+      btnCams.setAttribute('aria-pressed', String(on)); camLines.visible = on;
+      caption.innerHTML = on
+        ? '<strong>Five cameras, one eye.</strong> Each orange pyramid is a camera that sees exactly one surface, all starting from the same point: the sweet spot, 1.5 m up in the middle of the room.'
+        : captions[0];
+    });
+    btnPerson.addEventListener('click', () => {
+      const on = btnPerson.getAttribute('aria-pressed') !== 'true';
+      btnPerson.setAttribute('aria-pressed', String(on));
+    });
+  }
+
+  /* ---------------- sweet spot ---------------- */
+  const svg = document.getElementById('ss-svg');
+  const el = id => document.getElementById(id);
+  const st = { P: { x: 2, z: -1.5 }, V: { x: 3.2, z: 1.6 } };
+  const presetsP = { wall: { x: 2, z: -3 }, room: { x: 2, z: -1.5 }, beyond: { x: 2, z: -5.6 } };
+  const presetsV = { centre: { x: 0, z: 0 }, door: { x: -4.55, z: 0 }, side: { x: 3.2, z: 1.6 } };
+
+  function paintPoint(P) {
+    let t = Infinity;
+    if (P.x !== 0) t = Math.min(t, 5.25 / Math.abs(P.x));
+    if (P.z !== 0) t = Math.min(t, 3 / Math.abs(P.z));
+    return { x: P.x * t, z: P.z * t };
+  }
+  function set(id, a) { const n = el(id); for (const k in a) n.setAttribute(k, a[k]); }
+
+  function draw() {
+    const { P, V } = st, I = paintPoint(P);
+    set('ss-e2i', { x1: 0, y1: 0, x2: I.x, y2: I.z });
+    set('ss-v2p', { x1: V.x, y1: V.z, x2: P.x, y2: P.z });
+    set('ss-v2i', { x1: V.x, y1: V.z, x2: I.x, y2: I.z });
+    set('ss-i', { cx: I.x, cy: I.z });
+    const lab = el('ss-ilab');
+    const onFront = Math.abs(I.z + 3) < 1e-6;
+    let lx = I.x, ly = I.z, anchor = 'middle';
+    if (onFront) { ly = I.z + 0.45; if (V.x > I.x) { lx = I.x - 0.25; anchor = 'end'; } else { lx = I.x + 0.25; anchor = 'start'; } }
+    else if (Math.abs(I.z - 3) < 1e-6) { ly = I.z - 0.3; }
+    else if (I.x > 0) { lx = I.x - 0.3; anchor = 'end'; ly = I.z + 0.08; }
+    else { lx = I.x + 0.3; anchor = 'start'; ly = I.z + 0.08; }
+    lx = Math.max(-5.6, Math.min(5.6, lx));
+    set('ss-ilab', { x: lx, y: ly, 'text-anchor': anchor });
+    el('ss-p').setAttribute('transform', 'translate(' + P.x + ' ' + P.z + ')');
+    el('ss-v').setAttribute('transform', 'translate(' + V.x + ' ' + V.z + ')');
+
+    const a1 = Math.atan2(I.z - V.z, I.x - V.x), a2 = Math.atan2(P.z - V.z, P.x - V.x);
+    let d = Math.abs(a1 - a2) * 180 / Math.PI; if (d > 180) d = 360 - d;
+    const atCentre = Math.hypot(V.x, V.z) < 0.15;
+    const same = Math.hypot(P.x - I.x, P.z - I.z) < 0.05;
+    el('ss-deg').textContent = (d < 0.5 ? 0 : Math.round(d)) + '°';
+    const chip = el('ss-chip'), txt = el('ss-text');
+    if (d < 3) { chip.className = 'chip good'; chip.textContent = 'Looks right'; }
+    else if (d < 10) { chip.className = 'chip warn'; chip.textContent = 'A bit off'; }
+    else { chip.className = 'chip bad'; chip.textContent = 'In the wrong place'; }
+    if (same) txt.textContent = 'The object sits on the wall, so it is painted exactly where it is. Walk anywhere: it stays right.';
+    else if (atCentre) txt.textContent = 'You are at the sweet spot, the one place the template draws for. Everything lines up from here.';
+    else if (d < 3) txt.textContent = 'From here the error is small. Move further from the centre, or move the object away from the wall, and watch it grow.';
+    else txt.textContent = 'The template painted the object for the sweet spot. From where you stand, the painted version is ' + Math.round(d) + '° away from where the object should be.';
+
+    document.querySelectorAll('[data-p]').forEach(b => {
+      const p = presetsP[b.dataset.p]; b.setAttribute('aria-pressed', String(Math.hypot(p.x - P.x, p.z - P.z) < 0.01));
+    });
+    document.querySelectorAll('[data-v]').forEach(b => {
+      const p = presetsV[b.dataset.v]; b.setAttribute('aria-pressed', String(Math.hypot(p.x - V.x, p.z - V.z) < 0.01));
+    });
+  }
+
+  function toSvg(ev) {
+    const pt = svg.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY;
+    const p = pt.matrixTransform(svg.getScreenCTM().inverse()); return { x: p.x, z: p.y };
+  }
+  let dragging = null;
+  function startDrag(which, ev) { dragging = which; svg.setPointerCapture(ev.pointerId); ev.preventDefault(); }
+  el('ss-p').addEventListener('pointerdown', ev => startDrag('P', ev));
+  el('ss-v').addEventListener('pointerdown', ev => startDrag('V', ev));
+  ['ss-p', 'ss-v'].forEach(id => el(id).addEventListener('touchstart', ev => ev.preventDefault(), { passive: false }));
+  svg.addEventListener('pointermove', ev => {
+    if (!dragging) return;
+    const p = toSvg(ev);
+    if (dragging === 'V') {
+      st.V = { x: Math.max(-4.9, Math.min(4.9, p.x)), z: Math.max(-2.65, Math.min(2.65, p.z)) };
+    } else {
+      let x = Math.max(-5.9, Math.min(5.9, p.x)), z = Math.max(-6.4, Math.min(2.7, p.z));
+      if (Math.abs(z + 3) < 0.15 && Math.abs(x) < 5.25) z = -3;           // snap onto the front wall
+      if (Math.hypot(x, z) < 0.45) { const k = 0.45 / (Math.hypot(x, z) || 1); x = (x || 0.01) * k; z = z * k; }
+      st.P = { x, z };
+    }
+    draw();
+  });
+  ['pointerup', 'pointercancel'].forEach(n => svg.addEventListener(n, () => { dragging = null; }));
+  document.querySelectorAll('[data-p]').forEach(b => b.addEventListener('click', () => { st.P = { ...presetsP[b.dataset.p] }; draw(); }));
+  document.querySelectorAll('[data-v]').forEach(b => b.addEventListener('click', () => { st.V = { ...presetsV[b.dataset.v] }; draw(); }));
+  draw();
+})();
+</script>
