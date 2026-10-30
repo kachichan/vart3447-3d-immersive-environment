@@ -28,6 +28,8 @@ title: Immersive Lab
   --f-serif: "Hedvig Letters Serif", Georgia, serif;
   --f-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 }
+/* site.css has no [hidden] rule, and component display rules would override the browser default */
+.lab [hidden] { display: none !important; }
 .lab .mono { font-family: var(--f-mono); font-size: 0.86em; }
 .lab h2 sup.n { font-size: 0.6em; color: var(--muted); font-weight: 400; margin-right: 0.3em; vertical-align: 0.8em; }
 .lab td.num, .lab th.num { white-space: nowrap; }
