@@ -245,13 +245,38 @@ title: Immersive Lab
             </tbody>
           </table>
         </div>
-        <p style="margin-top:14px;font-size:0.95rem">You never place these by hand: both templates put each surface in the right spot of the big picture. The last column is the size to make your own flat images; the circle test below explains the two in bold.</p>
+        <p style="margin-top:14px;font-size:0.95rem">You never place these by hand: both templates put each surface in the right spot of the big picture. The last column is the size to make your own flat images. The next part explains why front and back are different.</p>
       </div>
     </div>
 
-    <h3 style="margin-top:36px">The circle test</h3>
-    <p style="margin-top:8px">In the unfolded picture every circle is round. Fold it back and look at the front wall: the same circle becomes a tall oval. The front and back walls are 3 times wider than they are tall, but their slice of the image is 3.56 times wider. The image gets squeezed sideways to fit, so everything flat on those walls looks about 19% taller.</p>
-    <div class="note"><b>Fix for flat images on front and back</b>Make them <span class="mono">3840 × 1280</span>: 3 : 1, the wall's real shape. The 2D template squeezes each image into its wall's pixels, so it comes out right on the wall. Side walls and floor are close enough to leave alone. 3D scenes don't need any of this.</div>
+    <h3 style="margin-top:36px">Front and back walls stretch flat pictures</h3>
+    <p style="margin-top:8px">On the front and back walls, each pixel is a little taller than it is wide: about 2.7 mm wide and 3.2 mm tall. So a picture made at the wall's pixel size, 3840 × 1080, comes out about a fifth taller on the wall. Circles turn into ovals and faces get long.</p>
+    <div style="overflow-x:auto;margin-top:16px">
+      <svg viewBox="0 0 590 182" role="img" aria-label="Top: a picture made 3840 by 1080 with a circle in it becomes a tall oval on the front wall. Bottom: a picture made 3840 by 1280 keeps its circle round on the wall." style="width:100%;min-width:430px;max-width:590px;height:auto;display:block">
+        <g class="svgtxt" font-size="14">
+          <text x="0" y="14" font-weight="700" class="t-ink">You make 3840 × 1080</text>
+          <rect x="0" y="24" width="178" height="50" style="fill:var(--s-front)" class="s-ink" stroke-width="1.5"/>
+          <circle cx="89" cy="49" r="20" fill="none" class="s-ink" stroke-width="2"/>
+          <line x1="196" y1="49" x2="276" y2="49" class="s-muted" stroke-width="1.5"/>
+          <polygon points="284,49 274,44 274,54" class="t-muted"/>
+          <text x="300" y="14" font-weight="700" class="t-ink">On the front wall</text>
+          <rect x="300" y="24" width="150" height="50" style="fill:var(--s-front)" class="s-ink" stroke-width="1.5"/>
+          <ellipse cx="375" cy="49" rx="16.9" ry="20" fill="none" class="s-ink" stroke-width="2"/>
+          <text x="464" y="54" font-weight="700" style="fill:var(--bad)">✗ stretched tall</text>
+          <text x="0" y="112" font-weight="700" class="t-ink">You make 3840 × 1280</text>
+          <rect x="0" y="122" width="150" height="50" style="fill:var(--s-front)" class="s-ink" stroke-width="1.5"/>
+          <circle cx="75" cy="147" r="20" fill="none" class="s-ink" stroke-width="2"/>
+          <line x1="196" y1="147" x2="276" y2="147" class="s-muted" stroke-width="1.5"/>
+          <polygon points="284,147 274,142 274,152" class="t-muted"/>
+          <text x="300" y="112" font-weight="700" class="t-ink">On the front wall</text>
+          <rect x="300" y="122" width="150" height="50" style="fill:var(--s-front)" class="s-ink" stroke-width="1.5"/>
+          <circle cx="375" cy="147" r="20" fill="none" class="s-ink" stroke-width="2"/>
+          <text x="464" y="152" font-weight="700" style="fill:var(--good)">✓ round</text>
+        </g>
+      </svg>
+    </div>
+    <div class="note"><b>The fix</b>Make front and back pictures <span class="mono">3840 × 1280</span>: the wall's real shape, 3 times wider than tall. The 2D template squeezes them into the wall's pixels, and they come out right. Side walls and floor are close enough to leave alone, and 3D scenes are corrected for you.</div>
+    <p style="margin-top:14px">You can see it in the model at the top: unfold it and every circle is round; fold it back and the circle on the front wall stands tall.</p>
     <p style="margin-top:18px">One pixel on the wall is about 3 mm. Think big: thin lines and small text vanish.</p>
   </div>
 </section>
@@ -353,7 +378,7 @@ title: Immersive Lab
         </tbody>
       </table>
     </div>
-    <p style="margin-top:14px;font-size:0.95rem"><strong>Download:</strong> <a href="https://kachichan.github.io/vart3447-3d-immersive-environment/immersive-lab/templates/lab-2d.zip">lab-2d.zip</a> · <code>lab-3d.zip</code> (ready before week 11) · <a href="https://kachichan.github.io/vart3447-3d-immersive-environment/immersive-lab/templates/lab-3d-stereo.zip">lab-3d-stereo.zip</a>. Adapted from the Immersive Lab technician's original templates.</p>
+    <p style="margin-top:14px;font-size:0.95rem"><strong>Download:</strong> <a href="https://kachichan.github.io/vart3447-3d-immersive-environment/immersive-lab/templates/lab-2d.zip">lab-2d.zip</a> · <a href="https://kachichan.github.io/vart3447-3d-immersive-environment/immersive-lab/templates/lab-3d.zip">lab-3d.zip</a> · <a href="https://kachichan.github.io/vart3447-3d-immersive-environment/immersive-lab/templates/lab-3d-stereo.zip">lab-3d-stereo.zip</a>. Adapted from the Immersive Lab technician's original templates.</p>
   </div>
   <div class="wide">
     <div class="routes">
@@ -503,7 +528,7 @@ title: Immersive Lab
     </ol>
 
     <h3 style="margin-top:34px">When your group needs 3D</h3>
-    <p style="margin-top:8px">For 3D objects or a 360° picture, use <code>lab-3d.toe</code> instead. Download <code>lab-3d.zip</code> from section 4 (ready before week 11), unzip it, and keep its <code>model</code> folder next to the <code>.toe</code>: the 360° test room lives there.</p>
+    <p style="margin-top:8px">For 3D objects or a 360° picture, use <code>lab-3d.toe</code> instead. Download <a href="https://kachichan.github.io/vart3447-3d-immersive-environment/immersive-lab/templates/lab-3d.zip">lab-3d.zip</a>, unzip it, and keep its <code>model</code> folder next to the <code>.toe</code>: the 360° test room lives there.</p>
     <ol class="steps">
       <li><h3>Leave the engine alone</h3><p>Inside <code>project1</code>, <code>CaveConfigParser</code> cuts the picture up for the room. Don't edit it, and never press its <em>Reload</em> button. Its <strong>Preview</strong> button is safe.</p></li>
       <li><h3>Add an object</h3><p>Press <span class="kbd">Tab</span>, choose <strong>COMP → Geometry</strong> and place it. Rename it so it starts with <code>geo</code>, for example <code>geo_first</code> (edit the name at the top of its parameter window). It arrives with a doughnut inside, and it is now on every surface.</p></li>
@@ -648,7 +673,7 @@ title: Immersive Lab
           <tr><td>A window popped up on the wall</td><td>The room is the main display</td><td><span class="kbd">Win</span> + arrow keys to move it to the desk screen</td></tr>
           <tr><td>Your image is on the wrong wall</td><td>It's wired into the wrong slot</td><td>Each slot is named after its surface: <code>Floor</code>, <code>Front</code>, <code>Back</code>, <code>Left</code>, <code>Right</code></td></tr>
           <tr><td>A slot still shows the demo picture</td><td>Your new wire didn't land on the slot</td><td>Drag again, from your node's right edge to the slot's left edge</td></tr>
-          <tr><td>The 360° sphere is blank (lab-3d)</td><td>The <code>model</code> folder isn't next to the <code>.toe</code></td><td>Put it back, or re-download the template</td></tr>
+          <tr><td>The 360° sphere is blank (lab-3d)</td><td>The <code>model</code> folder isn't next to the <code>.toe</code></td><td>Put it back, or re-download the template. If the folder is there and it's still blank, the test model itself didn't load; carry on, it's only a test pattern.</td></tr>
           <tr><td>Everything broke after you pressed Reload</td><td>Reload rebuilds the engine from a file that only exists on the lab PC</td><td>Close without saving and reopen. If you saved, start again from a fresh template</td></tr>
           <tr><td>Your object doesn't appear</td><td>Its name doesn't start with <code>geo</code>, it's not inside <code>project1</code>, or its Render flag is off</td><td>Rename it, move it into <code>project1</code>, turn Render on</td></tr>
           <tr><td>Your object is there at home but missing in the room</td><td>It's above 3.5 m, in the ceiling hole</td><td>Bring it down or push it towards a wall</td></tr>
