@@ -35,7 +35,7 @@ filed by week (HKBU login). This page is the list; Moodle is the shelf.
 
 ## For week 10
 - Myron Krueger, "Responsive Environments" — excerpt. *(Moodle)*
-- Jun'ichirō Tanizaki, *In Praise of Shadows* — excerpt. *(Moodle)*
+- Jun'ichirō Tanizaki, *In Praise of Shadows* — pp. 17–23: the eaves, the dark room, the alcove, gold in the dark. *(Moodle)*
 
 Weeks 11–13 have no new reading: the final project.
 

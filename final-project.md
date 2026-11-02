@@ -4,7 +4,7 @@ title: Final project
 
 <!--
 Drafted 2 Nov 2026 from Kachi's brief: any format, teams of 3–4; weeks 10–11 tutorials in the lab
-(half the teams each week, the rest self-directed at AVA, Hin takes attendance); week 12 every team
+(half the teams each week, the rest self-directed at CVA, Hin takes attendance); week 12 every team
 checked; week 13 final presentation.
 Rule 1 (at least one interaction) and the interactive framing from Kachi, 2 Nov. ASSUMPTIONS for Kachi to confirm: rules 2–3 ("only works in this room", "runs on its own"),
 the grading split (mirrors the mid-term), documentation due Sun 6 Dec 23:59. Sign-up sheet made 2 Nov (6 slots × 2 weeks, 30 min).
@@ -37,14 +37,14 @@ the grading split (mirrors the mid-term), documentation due Sun 6 Dec 23:59. Sig
 | Week | Date | Where you are |
 |---|---|---|
 | 9 | 3 Nov | Everyone: a 60-second loop in the lab. [Week 9](weeks/week09.md) |
-| 10 | 10 Nov | **Half the teams**: tutorial with your teacher in **AVA121**. The other half: work on your project at **AVA** |
-| 11 | 17 Nov | **The other half**: tutorial in **AVA121**. The first half: work at **AVA** |
+| 10 | 10 Nov | **Half the teams**: tutorial with your teacher in **AVA121**. The other half: work on your project at **CVA** |
+| 11 | 17 Nov | **The other half**: tutorial in **AVA121**. The first half: work at **CVA** |
 | 12 | 24 Nov | **Every team**: final check in **AVA121**. Your piece should be running |
 | 13 | 1 Dec | **Final presentation** |
 
 **Sign up for your week 10 or 11 slot:** [tutorial sign-up sheet](https://docs.google.com/spreadsheets/d/1ZGxXKL0cWstr0ZPKqwPwoyAyl4kH4kMMIsWxMd2Uix0/edit?usp=sharing), by **Friday 6 November, 23:59**. One 30-minute slot per team. Put every team member's name in, and edit only your own row.
 
-**Attendance is taken every week**, also when you're not in a tutorial. Hin takes it at AVA.
+**Attendance is taken every week**, also when you're not in a tutorial. Hin takes it at CVA.
 
 Need more time in the room? Book a 30-minute slot yourselves: see [Your lab slot](immersive-lab/#visit).
 
@@ -104,4 +104,4 @@ More in the [week 9 lecture](weeks/week09.md) and the [Immersive Lab guide](imme
 | **20%** | **Technical and reliability**: it works cold, without you, and when the sensor fails |
 | **20%** | **Presentation and documentation**: the talk, the video, the statement |
 
-You must be able to explain everything in your piece, including any code from Gemini.
+You must be able to explain everything in your piece, including any code from an AI.

@@ -265,7 +265,7 @@ Read: Alan Lightman, *Einstein's Dreams*, three dreams *(Moodle)*:
 | No spatial / showReach ticks | Click the script asset → **Parse**. Re-add it. |
 | The bubbles are in my published room | Untick **showReach**, publish again. |
 | The headset stutters since I added sounds | Fewer sounds. Four at most. |
-| I pasted Gemini's code and now nothing works | Look for `pc.createScript`: that's the other language. Use the [preamble](../gemini.md). |
+| I pasted AI code and now nothing works | Look for `pc.createScript`: that's the other language. Use the [preamble](../ai-playcanvas.md). |
 | Headset shows last week's room | Week 5 is a **new link**. Did you **Set Primary Build**? |
 | buzz does nothing | Controllers, not hands? In the headset, not the Launch window? **strength** above 0? Published and Set Primary? |
 | buzz never stops | You're inside **radius**: make it smaller. **gapMs** `0` means one long hum. |

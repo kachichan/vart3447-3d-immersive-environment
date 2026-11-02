@@ -236,7 +236,7 @@ Read: Nagel, "What Is It Like to Be a Bat?". The first ten pages. *(Moodle)*
 | No console line | fitScan is on the scan, not on **Holder**. Or you haven't pressed **Launch**. |
 | proximity never fires / grab holds from far away | The script is on the scan. Put it on **Holder**. |
 | The headset stutters since the scan arrived | Fewer splats: delete more in SuperSplat. Then **Settings → Rendering → Anti-Alias** off. Still stuttering? Tell us, and we'll switch you to mesh. |
-| I pasted Gemini's code and now nothing works | Look for `pc.createScript`: that's the other language. Use the [preamble](../gemini.md). |
+| I pasted AI code and now nothing works | Look for `pc.createScript`: that's the other language. Use the [preamble](../ai-playcanvas.md). |
 | No line when I pull the trigger | **teleport** isn't on the **Rig**, or you didn't publish. Or you're using your hands: teleport needs a **controller**. Next to your real thing? That pull is a grab: step back. |
 | The line is red | Point **down** at the floor. Red with a ring: too far. Point closer, or raise **Max Distance** (but keep it inside your walls). |
 | I landed inside a wall, or outside the room | **Max Distance** is bigger than your room. Make it smaller. |

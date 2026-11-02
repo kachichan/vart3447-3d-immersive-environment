@@ -19,7 +19,7 @@ Make work you're willing to have seen.
 **One unit is one metre.** Your body will notice when you get this wrong.
 That's the course working as intended.
 
-**You can use Gemini to help with code.** Condition: you must be able to
+**You can use AI to help with code**: Gemini or any other assistant. Condition: you must be able to
 explain any line in your project. Code you can't read is a dependency,
 not a skill. (There is no code until week 3 anyway.)
 

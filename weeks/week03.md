@@ -19,7 +19,7 @@ No buttons, no menus, nothing floating.
 |---|---|
 | Template | [playcanvas.com/project/1594630/overview/vart3447template](https://playcanvas.com/project/1594630/overview/vart3447template) |
 | Scripts as text | [proximity.mjs](../scripts/proximity.mjs) · [look-at.mjs](../scripts/look-at.mjs) · [grab.mjs](../scripts/grab.mjs) · [desk-walk.mjs](../scripts/desk-walk.mjs) · [xr-enter.mjs](../scripts/xr-enter.mjs) · [hand-markers.mjs](../scripts/hand-markers.mjs) |
-| Gemini page | [How to ask Gemini](../gemini.md) |
+| AI page | [AI for PlayCanvas](../ai-playcanvas.md) |
 | Class board | [padlet.com/chankachi/vart3447](https://padlet.com/chankachi/vart3447) — **Week 03** column |
 
 ---
@@ -124,9 +124,9 @@ You may **keep** it as it is. Or:
 {: start="12"}
 12. Double-click the script in **Assets** and read it. Change a number.
 
-13. Want more? Go to [How to ask Gemini](../gemini.md). The rules fit on one line: **start from a script that works · one change · you can explain every line you keep.**
+13. Want more? Go to [AI for PlayCanvas](../ai-playcanvas.md). The rules fit on one line: **start from a script that works · one change · you can explain every line you keep.**
 
-14. If it breaks: **Launch** ▶ → open the console (Chrome: **F12** / **Cmd-Option-J**) → find the **red** line → paste it into Gemini with the script.
+14. If it breaks: **Launch** ▶ → open the console (Chrome: **F12** / **Cmd-Option-J**) → find the **red** line → paste it into your AI chat with the script.
 
 *(The red line looks like `Uncaught TypeError: …` — copy the whole line.)*
 
@@ -158,7 +158,7 @@ Read: Borges, "On Exactitude in Science." One paragraph. Twice.
 | grab won't pick it up | Put your **palm** on it, not the tip of the controller. Wait for the dot to turn **yellow**, then pull the **trigger** (not the grip). Dot stays white even up close? Raise **Radius**. |
 | No dot on my controller or hand | `handMarkers` isn't on the **Rig**: redo step 7. Still nothing? Your `hand-markers.mjs` is an old copy. Paste it again from the link at the top. |
 | grab does nothing with hands | Your `xr-enter.mjs` is the old one. Redo step 6. |
-| I pasted Gemini's code and now nothing works | Look for `pc.createScript` — that's the other language. Ask Gemini again with the [preamble](../gemini.md). |
-| Red line in the console | Copy it. Paste into Gemini with the script: *"This error appeared. Explain in one sentence, then give me the whole corrected file."* Three tries, then a human. |
+| I pasted AI code and now nothing works | Look for `pc.createScript` — that's the other language. Ask again with the [preamble](../ai-playcanvas.md). |
+| Red line in the console | Copy it. Paste into your AI chat with the script: *"This error appeared. Explain in one sentence, then give me the whole corrected file."* Three tries, then a human. |
 | Headset shows last week's room | Week 3 is a **new link**. Set Primary Build? |
 | Testing on my iPhone doesn't work | It never will. Headset. |

@@ -31,8 +31,8 @@ that *is* a room. Everything you make is published, every week, from week 1.
 | 7 | 20 Oct | [Artist Sharing: k0j0 + VRC visit](weeks/week07.md) | Notes |
 | 8 | 27 Oct | [Mid-term: What Is It Like to Be a ___?](weeks/week08.md) | A VR experience from inside something that isn't you |
 | 9 | 3 Nov | [The Room That Performs](weeks/week09.md) | A 60-second loop in the lab (teams) |
-| 10 | 10 Nov | Tutorials: half the teams | [Final project](final-project.md): a tutorial in the lab, or work at AVA |
-| 11 | 17 Nov | Tutorials: the other half | [Final project](final-project.md): a tutorial in the lab, or work at AVA |
+| 10 | 10 Nov | Tutorials: half the teams | [Final project](final-project.md): a tutorial in the lab (AVA121), or work at CVA |
+| 11 | 17 Nov | Tutorials: the other half | [Final project](final-project.md): a tutorial in the lab (AVA121), or work at CVA |
 | 12 | 24 Nov | Final check: every team | Your piece running in the lab |
 | 13 | 1 Dec | Final Presentation | Your piece, running in the lab |
 

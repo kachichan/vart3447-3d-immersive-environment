@@ -21,10 +21,10 @@ is here on this site, no login needed.
 - **Your PlayCanvas account page** — lists every project you've made.
   That's your Part A portfolio.
 
-## Gemini
+## AI assistants
 
-- [gemini.google.com](https://gemini.google.com) — the AI assistant for this course. Before you ask it
-  anything about a script, read [How to ask Gemini](gemini.md) and paste the block at the top of that page.
+- Any AI assistant is fine: [Gemini](https://gemini.google.com) works in Hong Kong without extra steps. Before you ask one
+  anything about a PlayCanvas script, read [AI for PlayCanvas](ai-playcanvas.md) and paste the block at the top of that page.
 - The five course scripts, as text: [proximity.mjs](scripts/proximity.mjs) · [look-at.mjs](scripts/look-at.mjs)
   · [grab.mjs](scripts/grab.mjs) · [desk-walk.mjs](scripts/desk-walk.mjs) · [xr-enter.mjs](scripts/xr-enter.mjs)
   (and week 2's [sun-cycle.mjs](scripts/sun-cycle.mjs) · [breathe.mjs](scripts/breathe.mjs) · [colour-drift.mjs](scripts/colour-drift.mjs),

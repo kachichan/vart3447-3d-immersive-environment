@@ -134,7 +134,7 @@ Or ask your teacher for the cable.
 
 ## Artist statement · 150–200 words
 
-One per group, submitted with the video. **Write it yourselves**, not Gemini. Answer these four, in order:
+One per group, submitted with the video. **Write it yourselves**, not an AI. Answer these four, in order:
 
 1. **Title, and your answer.** *What is it like to be a ___?* One sentence.
 2. **The visitor's new body.** Its scale, its senses, what it can and can't do.
@@ -160,4 +160,4 @@ It counts towards **Concept and creativity** and **Presentation and video**, not
 | A piece won't load from the Padlet | Wait 30 seconds; big scans are slow on shared Wi-Fi. Still nothing? Move on to the next post, and comment on theirs later. |
 | The live demo won't load | It opens from your Padlet post: is that the `/p/` link, and did you **Set Primary Build**? Otherwise play your 30-second clip. |
 | It ran smoothly last week and stutters now | Too much stuff. See the size limits on [Sources](../sources.md#keep-it-small). |
-| I pasted Gemini's code and now nothing works | Look for `pc.createScript`: that's the other language. Use the [preamble](../gemini.md). |
+| I pasted AI code and now nothing works | Look for `pc.createScript`: that's the other language. Use the [preamble](../ai-playcanvas.md). |
