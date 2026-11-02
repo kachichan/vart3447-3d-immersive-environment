@@ -32,14 +32,12 @@ filed by week (HKBU login). This page is the list; Moodle is the shelf.
 
 ## For week 9
 - Ray Bradbury, "There Will Come Soft Rains". *(Moodle)*
-- Myron Krueger, "Responsive Environments" — excerpt (pages on the
-  week 8 page). *(Moodle)*
 
 ## For week 10
-- Jun'ichirō Tanizaki, *In Praise of Shadows* — excerpt (pages on the
-  week 9 page). *(Moodle)*
+- Myron Krueger, "Responsive Environments" — excerpt. *(Moodle)*
+- Jun'ichirō Tanizaki, *In Praise of Shadows* — excerpt. *(Moodle)*
 
-Weeks 11–13 have no new reading: production.
+Weeks 11–13 have no new reading: the final project.
 
 Read in class, week 1: Italo Calvino, *Invisible Cities*, "Cities &
 Memory 3" (Zaira). No need to read it in advance.

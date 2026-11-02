@@ -14,6 +14,7 @@ that *is* a room. Everything you make is published, every week, from week 1.
 - [Readings](readings.md)
 - [Links: template, demos, class board](links.md)
 - [Where to find things: models, textures, sounds](sources.md)
+- [Final project](final-project.md)
 
 ---
 
@@ -29,11 +30,11 @@ that *is* a room. Everything you make is published, every week, from week 1.
 | 6 | 13 Oct | [Tutorial](weeks/week06.md) | Sign up for a slot about your mid-term |
 | 7 | 20 Oct | [Artist Sharing: k0j0 + VRC visit](weeks/week07.md) | Notes |
 | 8 | 27 Oct | [Mid-term: What Is It Like to Be a ___?](weeks/week08.md) | A VR experience from inside something that isn't you |
-| 9 | 3 Nov | The Room That Performs | A 3-minute loop in the CAVE (groups) |
-| 10 | 10 Nov | Silhouettes and Blobs | A room changed by someone being in it |
-| 11 | 17 Nov | Only Works in This Room | Your group piece, declared and first-tested |
-| 12 | 24 Nov | Opening Night Rule | The piece running 10 minutes unattended. Then fixes only, and documentation filmed |
-| 13 | 1 Dec | Final Presentation | A public opening |
+| 9 | 3 Nov | [The Room That Performs](weeks/week09.md) | A 60-second loop in the lab (teams) |
+| 10 | 10 Nov | Tutorials: half the teams | [Final project](final-project.md): a tutorial in the lab, or work at AVA |
+| 11 | 17 Nov | Tutorials: the other half | [Final project](final-project.md): a tutorial in the lab, or work at AVA |
+| 12 | 24 Nov | Final check: every team | Your piece running in the lab |
+| 13 | 1 Dec | Final Presentation | Your piece, running in the lab |
 
 Weeks 2–13 become links as each handout is published, the week before class.
 
@@ -54,7 +55,7 @@ PlayCanvas in the browser. Nothing to install.
 **Part B (weeks 9–12):** group work in the school's immersive lab — a
 four-wall-and-floor projection room (CAVE) driven by TouchDesigner. One
 room, shared on a rotation; the piece only works there, which is the point.
-Before your first visit, read the [Immersive Lab guide](immersive-lab/).
+Before your first visit, read the [Immersive Lab guide](immersive-lab/). The brief: [Final project](final-project.md).
 
 ## Assessment
 
