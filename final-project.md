@@ -7,7 +7,7 @@ Drafted 2 Nov 2026 from Kachi's brief: any format, teams of 3–4; weeks 10–11
 (half the teams each week, the rest self-directed at AVA, Hin takes attendance); week 12 every team
 checked; week 13 final presentation.
 Rule 1 (at least one interaction) and the interactive framing from Kachi, 2 Nov. ASSUMPTIONS for Kachi to confirm: rules 2–3 ("only works in this room", "runs on its own"),
-the grading split (mirrors the mid-term), documentation due Sun 6 Dec 23:59, and the tutorial sign-up link (TODO).
+the grading split (mirrors the mid-term), documentation due Sun 6 Dec 23:59. Sign-up sheet made 2 Nov (6 slots × 2 weeks, 30 min).
 -->
 
 # Final project
@@ -42,7 +42,7 @@ the grading split (mirrors the mid-term), documentation due Sun 6 Dec 23:59, and
 | 12 | 24 Nov | **Every team**: final check in **AVA121**. Your piece should be running |
 | 13 | 1 Dec | **Final presentation** |
 
-**Sign up for your week 10 or 11 slot:** the link is coming soon. One slot per team. How long each slot is depends on how many teams there are.
+**Sign up for your week 10 or 11 slot:** [tutorial sign-up sheet](https://docs.google.com/spreadsheets/d/1ZGxXKL0cWstr0ZPKqwPwoyAyl4kH4kMMIsWxMd2Uix0/edit?usp=sharing), by **Friday 6 November, 23:59**. One 30-minute slot per team. Put every team member's name in, and edit only your own row.
 
 **Attendance is taken every week**, also when you're not in a tutorial. Hin takes it at AVA.
 

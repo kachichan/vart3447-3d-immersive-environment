@@ -80,7 +80,7 @@ More detail: [Your first scene](../immersive-lab/#first) in the guide.
 - Myron Krueger, "Responsive Environments" (excerpt, on Moodle)
 - Jun'ichirō Tanizaki, *In Praise of Shadows* (excerpt, on Moodle)
 
-Next week the tutorials start. See the [final project](../final-project.md) page.
+Next week the tutorials start. **Before you leave the lab, sign up your team** on the [tutorial sign-up sheet](https://docs.google.com/spreadsheets/d/1ZGxXKL0cWstr0ZPKqwPwoyAyl4kH4kMMIsWxMd2Uix0/edit?usp=sharing) (deadline Fri 6 Nov, 23:59). See the [final project](../final-project.md) page.
 
 ---
 
