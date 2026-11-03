@@ -45,6 +45,14 @@ title: Immersive Lab
 .lab nav.toc { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 0.85rem; margin: 0 0 1rem; }
 .lab nav.toc a { text-decoration: none; }
 .lab nav.toc sup { color: var(--accent); font-size: 0.7em; margin-right: 2px; }
+/* template downloads at the top */
+.lab .dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 1.2rem 0 0.5rem; }
+.lab .dl a { display: flex; flex-direction: column; gap: 2px; padding: 11px 13px; border: 1px solid var(--line); text-decoration: none; color: var(--ink); }
+.lab .dl a:hover { border-color: var(--ink); color: var(--ink); }
+.lab .dl a.primary { border-color: var(--accent); background: var(--accent-wash); }
+.lab .dl b { font-family: var(--f-mono); font-size: 0.84rem; font-weight: 500; }
+.lab .dl b::before { content: "\2193  "; color: var(--accent-ink); }
+.lab .dl span { font-size: 0.76rem; color: var(--muted); line-height: 1.35; }
 
 /* 3D room viewer */
 .lab .viewer { position: relative; margin-top: 1.5rem; background: var(--viewer); overflow: hidden; aspect-ratio: 16 / 10; max-width: 100%; touch-action: pan-y; cursor: grab; user-select: none; }
@@ -136,6 +144,7 @@ title: Immersive Lab
 .lab .credit { color: var(--muted); font-size: 0.82rem; margin-top: 3rem; }
 
 @media (max-width: 40em) {
+  .lab .dl { grid-template-columns: minmax(0, 1fr); }
   .lab .pair, .lab .ss, .lab .coords { grid-template-columns: minmax(0, 1fr); }
   .lab .pair .canvasmap { max-width: 200px; }
   .lab .route { grid-template-columns: minmax(0, 1fr); }
@@ -148,6 +157,11 @@ title: Immersive Lab
 <header>
   <h1>Inside the Immersive Lab</h1>
   <p class="lede">Four walls, a floor, and one big picture. This guide explains how the room works, how the lab's two TouchDesigner templates fill it, and what to do before your first 30 minutes inside.</p>
+  <nav class="dl" aria-label="Download the templates">
+    <a class="primary" href="https://kachichan.github.io/vart3447-3d-immersive-environment/immersive-lab/templates/lab-2d.zip"><b>lab-2d.zip</b><span>Flat images, one per surface. Start here.</span></a>
+    <a href="https://kachichan.github.io/vart3447-3d-immersive-environment/immersive-lab/templates/lab-3d.zip"><b>lab-3d.zip</b><span>3D scene, no-glasses mode</span></a>
+    <a href="https://kachichan.github.io/vart3447-3d-immersive-environment/immersive-lab/templates/lab-3d-stereo.zip"><b>lab-3d-stereo.zip</b><span>3D scene, glasses mode</span></a>
+  </nav>
   <div class="facts">
     <div class="fact"><b>10.5 × 6 m</b><span>floor, walls 3.5 m high</span></div>
     <div class="fact"><b>5 surfaces</b><span>4 walls + floor, no ceiling</span></div>

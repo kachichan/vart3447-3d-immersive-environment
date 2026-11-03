@@ -81,6 +81,14 @@ nav.toc { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 6px 18px; font-
 nav.toc a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
 nav.toc a:hover { border-color: var(--accent); }
 nav.toc sup { color: var(--muted); font-size: 0.7em; margin-right: 2px; }
+.dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 24px; }
+.dl a { display: flex; flex-direction: column; gap: 2px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 6px; text-decoration: none; color: var(--ink); }
+.dl a:hover { border-color: var(--ink); color: var(--ink); }
+.dl a.primary { border-color: var(--accent); background: var(--accent-wash); }
+.dl b { font-family: var(--f-mono); font-size: 0.86rem; font-weight: 500; }
+.dl b::before { content: "↓ "; color: var(--accent-ink); }
+.dl span { font-size: 0.8rem; color: var(--muted); line-height: 1.35; }
+@media (max-width: 560px) { .dl { grid-template-columns: minmax(0, 1fr); } }
 
 section { padding-top: 64px; }
 section > .col > h2 + p, section > .col > p + p { margin-top: 14px; }
@@ -201,6 +209,11 @@ footer { margin-top: 72px; border-top: 1px solid var(--line); padding-top: 18px;
   <div class="eyebrow">VART3447 · Part B · AVA121</div>
   <h1>Inside the Immersive Lab<span class="dot">.</span></h1>
   <p class="lede">Four walls, a floor, and one big picture. This guide explains how the room works, how the lab's two TouchDesigner templates fill it, and what to do before your first 30 minutes inside.</p>
+  <nav class="dl" aria-label="Download the templates">
+    <a class="primary" href="https://kachichan.github.io/vart3447-3d-immersive-environment/immersive-lab/templates/lab-2d.zip"><b>lab-2d.zip</b><span>Flat images, one per surface. Start here.</span></a>
+    <a href="https://kachichan.github.io/vart3447-3d-immersive-environment/immersive-lab/templates/lab-3d.zip"><b>lab-3d.zip</b><span>3D scene, no-glasses mode</span></a>
+    <a href="https://kachichan.github.io/vart3447-3d-immersive-environment/immersive-lab/templates/lab-3d-stereo.zip"><b>lab-3d-stereo.zip</b><span>3D scene, glasses mode</span></a>
+  </nav>
   <div class="facts">
     <div class="fact"><b>10.5 × 6 m</b><span>floor, walls 3.5 m high</span></div>
     <div class="fact"><b>5 surfaces</b><span>4 walls + floor, no ceiling</span></div>
