@@ -85,13 +85,22 @@ body {
 }
 .sidebar nav a:hover sup { color: var(--accent); }
 
-.sidebar nav .part-b a { font-weight: 700; }
-.sidebar nav .part-b sup { color: var(--accent); font-weight: 700; }
-
-.sidebar nav .secondary {
+/* groups: Part A, Part B, Course */
+.sidebar nav .nav-label {
+  margin: 0 0 0.8rem;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grey);
+}
+.sidebar nav .nav-group {
   padding-top: 1.5rem;
   border-top: 1px solid var(--hairline);
 }
+/* a part's guides and briefs, after its weeks */
+.sidebar nav li:not(.res) + li.res { margin-top: 0.9rem; }
+.sidebar nav li.res a { font-weight: 700; }
 .sidebar nav .secondary a { color: var(--grey); font-weight: 400; }
 .sidebar nav .secondary a:hover { color: var(--ink); }
 
@@ -232,7 +241,9 @@ body {
     gap: 0.2rem 1.1rem;
   }
   .sidebar nav li { margin: 0 0 0.4rem; }
-  .sidebar nav .secondary { padding-top: 0.6rem; }
+  .sidebar nav .nav-group { padding-top: 0.6rem; }
+  .sidebar nav li:not(.res) + li.res { margin-top: 0; }
+  .sidebar nav .nav-label { margin-bottom: 0.5rem; }
 
   .content {
     margin-left: 0;

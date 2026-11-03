@@ -15,27 +15,36 @@
   <a class="wordmark" href="{{ '/' | relative_url }}">3D Immersive Environment</a>
 
   <nav>
+    {% assign weekpages = site.pages | where_exp: "p", "p.path contains 'weeks/'" | sort: "path" %}
+
+    <p class="nav-label">Part A · Headset</p>
     <ul>
-      {% assign weekpages = site.pages | where_exp: "p", "p.path contains 'weeks/'" | sort: "path" %}
-      {% for p in weekpages %}
-      <li>
-        <a href="{{ p.url | relative_url }}">{{ p.nav_label | default: p.title }}<sup>{{ forloop.index | prepend: '00' | slice: -2, 2 }}</sup></a>
-      </li>
-      {% endfor %}
+      {% for p in weekpages %}{% if forloop.index <= 8 %}
+      <li><a href="{{ p.url | relative_url }}">{{ p.nav_label | default: p.title }}<sup>{{ forloop.index | prepend: '00' | slice: -2, 2 }}</sup></a></li>
+      {% endif %}{% endfor %}
+      <li class="res"><a href="{{ '/ai-playcanvas' | relative_url }}">AI for PlayCanvas</a></li>
     </ul>
 
-    <ul class="part-b">
-      <li><a href="{{ '/immersive-lab/' | relative_url }}">Immersive Lab<sup>B</sup></a></li>
-    </ul>
+    <div class="nav-group">
+      <p class="nav-label">Part B · Room</p>
+      <ul>
+        {% for p in weekpages %}{% if forloop.index > 8 %}
+        <li><a href="{{ p.url | relative_url }}">{{ p.nav_label | default: p.title }}<sup>{{ forloop.index | prepend: '00' | slice: -2, 2 }}</sup></a></li>
+        {% endif %}{% endfor %}
+        <li class="res"><a href="{{ '/immersive-lab/' | relative_url }}">Immersive Lab</a></li>
+        <li class="res"><a href="{{ '/final-project' | relative_url }}">Final project</a></li>
+      </ul>
+    </div>
 
-    <ul class="secondary">
-      <li><a href="{{ '/rules' | relative_url }}">Rules</a></li>
-      <li><a href="{{ '/readings' | relative_url }}">Readings</a></li>
-      <li><a href="{{ '/links' | relative_url }}">Links</a></li>
-      <li><a href="{{ '/sources' | relative_url }}">Sources</a></li>
-      <li><a href="{{ '/ai-playcanvas' | relative_url }}">AI for PlayCanvas</a></li>
-      <li><a href="{{ '/final-project' | relative_url }}">Final project</a></li>
-    </ul>
+    <div class="nav-group">
+      <p class="nav-label">Course</p>
+      <ul class="secondary">
+        <li><a href="{{ '/rules' | relative_url }}">Rules</a></li>
+        <li><a href="{{ '/readings' | relative_url }}">Readings</a></li>
+        <li><a href="{{ '/links' | relative_url }}">Links</a></li>
+        <li><a href="{{ '/sources' | relative_url }}">Sources</a></li>
+      </ul>
+    </div>
   </nav>
 </aside>
 
