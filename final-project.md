@@ -39,10 +39,10 @@ the grading split (mirrors the mid-term), documentation due Sun 6 Dec 23:59. Sig
 | 9 | 3 Nov | Everyone: a 60-second loop in the lab. [Week 9](weeks/week09.md) |
 | 10 | 10 Nov | **Half the teams**: tutorial with your teacher in **AVA121**. The other half: work on your project at **CVA** |
 | 11 | 17 Nov | **The other half**: tutorial in **AVA121**. The first half: work at **CVA** |
-| 12 | 24 Nov | **Every team**: final check in **AVA121**. Your piece should be running |
+| 12 | 24 Nov | **Every team**: final check in **AVA121**, 15 minutes. Your piece should be running. Sign up on the same sheet by **Fri 20 Nov, 23:59** |
 | 13 | 1 Dec | **Final presentation** |
 
-**Sign up for your week 10 or 11 slot:** [tutorial sign-up sheet](https://docs.google.com/spreadsheets/d/1ZGxXKL0cWstr0ZPKqwPwoyAyl4kH4kMMIsWxMd2Uix0/edit?usp=sharing), by **Friday 6 November, 23:59**. One 30-minute slot per team. Put every team member's name in, and edit only your own row.
+**Sign up for your week 10 or 11 slot, and later your week 12 slot:** [tutorial sign-up sheet](https://docs.google.com/spreadsheets/d/1ZGxXKL0cWstr0ZPKqwPwoyAyl4kH4kMMIsWxMd2Uix0/edit?usp=sharing), by **Friday 6 November, 23:59**. One 30-minute slot per team. Put every team member's name in, and edit only your own row.
 
 **Attendance is taken every week**, also when you're not in a tutorial. Hin takes it at CVA.
 
