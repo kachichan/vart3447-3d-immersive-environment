@@ -85,6 +85,9 @@ body {
 }
 .sidebar nav a:hover sup { color: var(--accent); }
 
+.sidebar nav .part-b a { font-weight: 700; }
+.sidebar nav .part-b sup { color: var(--accent); font-weight: 700; }
+
 .sidebar nav .secondary {
   padding-top: 1.5rem;
   border-top: 1px solid var(--hairline);
