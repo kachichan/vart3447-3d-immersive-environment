@@ -5,7 +5,7 @@ nav_label: "The Room That Performs"
 
 <!--
 Drafted 2 Nov 2026. Times from Kachi (2 Nov): upload to the class Drive folder by 4:30, meet at AVA121 at 5:15.
-The Drive upload link is on Moodle only: the folder is "anyone with the link can edit".
+Drive upload link added to this page 3 Nov (Kachi). The folder is "anyone with the link can edit" and this site is public: remove the link, or restrict the folder, after class.
 TO VERIFY at the lab before class: lab-2d slots stretch their input (half-size files rely on it);
 Movie File In loops a 60 s clip without being cut by the timeline.
 -->
@@ -17,7 +17,7 @@ Movie File In loops a 60 s clip without being cut by the timeline.
 | | |
 |---|---|
 | **2:30** | CVA, our usual room: lecture, then the 2D template |
-| **by 4:30** | Your files uploaded to the **class Drive folder** (link on Moodle) |
+| **by 4:30** | Your files uploaded to the [**class Drive folder**](https://drive.google.com/drive/folders/1-fzJlCQdOCFGfjJzDITllUYyMBFPV7Oz?usp=drive_link) |
 | **5:15** | **AVA121, Immersive Lab**, HKBU Kai Tak campus, 51 Kwun Tong Road, Ngau Tau Kok. Meet at the lab door |
 
 Teams of **3–4**, fixed until week 13. The [final project](../final-project.md) starts today.
@@ -59,7 +59,7 @@ Half size this week, so uploads are fast. Front and back are **3 : 1**: the [Imm
 2. Put your five files in `media`.
 3. In TouchDesigner press **Tab → TOP → Movie File In**. Pick `media/front.mp4`.
 4. Drag a wire into the orange **Front** slot. Do the same for the other four.
-5. Rename your folder and open the `.toe` again. Nothing red? **Zip the folder** and upload it to the class Drive folder by **4:30**, named like `G3_title.zip`.
+5. Rename your folder and open the `.toe` again. Nothing red? **Zip the folder** and upload it to the [class Drive folder](https://drive.google.com/drive/folders/1-fzJlCQdOCFGfjJzDITllUYyMBFPV7Oz?usp=drive_link) by **4:30**, named like `G3_title.zip`.
 
 Also bring the folder on a **USB drive** in case the Wi-Fi is slow.
 
